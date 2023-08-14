@@ -1,0 +1,24 @@
+[
+    { "name": "Number of new admissions", "id": "TSFP_TS_New" },
+    { "name": "Number of readmissions", "id": "TSFP_TS_Readmission" },
+    { "name": "Number of exits recovered", "id": "TSFP_TS_Exit_Recovered" },
+    {
+        "name": "Number of exits none response",
+        "id": "TSFP_TS_Exit_None_response"
+    },
+    { "name": "Number of exits moved to SC", "id": "TSFP_TS_Exit_Moved_to_SC" },
+    {
+        "name": "Number of exits moved to other OTP",
+        "id": "TSFP_TS_Exit_Moved_to_OTP"
+    },
+    {
+        "name": "Number of exits moved to TSFP",
+        "id": "TSFP_TS_Exit_Moved_to_TSFP"
+    },
+    {
+        "name": "Number of exits medical referral",
+        "id": "TSFP_TS_Exit_External_referral"
+    },
+    { "name": "Number of exits death", "id": "TSFP_TS_Report_death" },
+    { "name": "Number of exits defaulter", "id": "TSFP_TS_Report_defaulter" }
+]

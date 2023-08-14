@@ -1,0 +1,8 @@
+[
+    { "name": "Assault", "id": "OPD_TS_inj_Assault" },
+    { "name": "Bites", "id": "OPD_TS_inj_Bites" },
+    { "name": "Accidents", "id": "OPD_TS_inj_Accidents" },
+    { "name": "Self-harm", "id": "OPD_TS_inj_Self_harm" },
+    { "name": "Suicidal Attempt", "id": "OPD_TS_inj_Suicidal_Attempt" },
+    { "name": "Other", "id": "OPD_TS_inj_Other" }
+]

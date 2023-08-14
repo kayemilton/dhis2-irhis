@@ -1,0 +1,34 @@
+[
+    { "name": "Family Planning", "id": "" },
+    {
+        "name": "Combined Pill - Low Dose",
+        "id": "FP_TS_Combined_Pill_Low_Dose"
+    },
+    {
+        "name": "Combined Pill - High Dose",
+        "id": "FP_TS_Combined_Pill_High_Dose"
+    },
+    {
+        "name": "Progestogen-only Pill (Micro-val; Micro-lut)",
+        "id": "FP_TS_Progestogen_only_Pill_Micro_val_Micro_lut"
+    },
+    {
+        "name": "Emergency Contraceptive Pill",
+        "id": "FP_TS_Emergency_Contraceptive_Pill"
+    },
+    {
+        "name": "Injectable (Depo-Provera)",
+        "id": "FP_TS_Injectable_Depo_Provera"
+    },
+    { "name": "Implantable (Norplant)", "id": "FP_TS_Implantable_Norplant" },
+    {
+        "name": "Intra-Uterine Device (IUD)",
+        "id": "FP_TS_Intra_Uterine_Device_IUD"
+    },
+    { "name": "Condom (Male)", "id": "FP_TS_Condom_M" },
+    { "name": "Condom (Female)", "id": "FP_TS_Condom_F" },
+    { "name": "Sterilisation (Male)", "id": "FP_TS_Sterilisation_M" },
+    { "name": "Sterilisation (Female)", "id": "FP_TS_Sterilisation_F" },
+    { "name": "Counselling Only", "id": "FP_TS_Counselling_Only" },
+    { "name": "Other", "id": "FP_TS_Other" }
+]

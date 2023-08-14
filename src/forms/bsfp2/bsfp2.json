@@ -1,0 +1,17 @@
+[
+    { "name": "Number of new admissions", "id": "BSFP_PL_TS_New_" },
+    { "name": "Number of exits recovered", "id": "BSFP_PL_TS_Exit_Recovered" },
+    {
+        "name": "Number of exits medical referral",
+        "id": "BSFP_PL_TS_Exit_External_referral"
+    },
+    { "name": "Number of exits death", "id": "BSFP_PL_TS_Exit_Death" },
+    {
+        "name": "Number of exits moved to other TSFP",
+        "id": "BSFP_PL_TS_Exit_Moved_to_TSFP"
+    },
+    {
+        "name": "Number of exits end of lactation",
+        "id": "BSFP_PL_TS_Exit_End_of_lactation_period"
+    }
+]

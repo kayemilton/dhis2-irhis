@@ -1,0 +1,33 @@
+[
+    {
+        "name": "New cases started on ART",
+        "id": "HIV_New_Cases_started_on_ART"
+    },
+    {
+        "name": "New cases HIV ART transfer in",
+        "id": "HIV_New_Cases_HIV_ART_Transfer_in"
+    },
+    {
+        "name": "New cases restarted on ART",
+        "id": "HIV_New_Cases_Number_restarted_on_HIV_ART"
+    },
+    {
+        "name": "New cases pregnant started on ART",
+        "id": "HIV_New_Cases_pregnant_started_on_HIV_ART"
+    },
+    {
+        "name": "New cases lactating started on ART",
+        "id": "HIV_New_Cases_lactating_started_on_HIV_ART"
+    },
+    { "name": "Stopped", "id": "HIV_New_Cases_HIV_ART_Stopped_HIV_ART" },
+    {
+        "name": "Transfer out",
+        "id": "HIV_New_Cases_Number_Transfer_out_HIV_ART"
+    },
+    {
+        "name": "Lost to follow up",
+        "id": "HIV_New_Cases_Number_Lost_to_follow_HIV_ART"
+    },
+    { "name": "Deaths", "id": "HIV_New_Cases_Number_Deaths_HIV_ART" },
+    { "name": "Unknown", "id": "HIV_New_Cases_Number_unknown_HIV_ART" }
+]

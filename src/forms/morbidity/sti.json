@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Urethral Discharge Syndrome",
+        "id": "OPD_TS_std_Urethral_Discharge_Syndrome"
+    },
+    {
+        "name": "Vaginal Discharge Syndrome",
+        "id": "OPD_TS_std_Vaginal_Discharge_Syndrome"
+    },
+    { "name": "Genital Ulcer Disease", "id": "OPD_TS_std_Genital_Ulcer" },
+    {
+        "name": "Pelvic Inflammatory Disease",
+        "id": "OPD_TS_std_Pelvic_Inflammatory"
+    },
+    { "name": "Congenital Syphilis", "id": "OPD_TS_std_Congenital_Syphilis" },
+    {
+        "name": "Ophthalmia Neonatorum",
+        "id": "OPD_TS_std_Ophthalmia_Neonatorum"
+    },
+    { "name": "Other", "id": "OPD_TS_std_Other" }
+]

@@ -1,0 +1,92 @@
+[
+    { "name": "Malaria (suspected)", "id": "Mort_TS_Malaria_susp" },
+    { "name": "Malaria (confirmed)", "id": "Mort_TS_Malaria_conf" },
+    { "name": "URTI", "id": "Mort_TS_URTI" },
+    { "name": "LRTI", "id": "Mort_TS_LRTI" },
+    { "name": "Neonatal Death", "id": "Mort_TS_Neonatal_Death" },
+    { "name": "Sexuality Transmitted Infections", "id": "Mort_TS_STI" },
+    { "name": "Watery Diarrhoea", "id": "Mort_TS_Watery_Diarrhoea" },
+    { "name": "Bloody Diarrhoea", "id": "Mort_TS_Bloody_Diarrhoea" },
+    { "name": "Tuberculosis", "id": "Mort_TS_TBC" },
+    { "name": "Meningitis (other)", "id": "Mort_TS_Meningitis" },
+    { "name": "HIV/AIDS", "id": "Mort_TS_HIV_AIDS" },
+    { "name": "Acute Malnutrition", "id": "Mort_TS_Acute_Malnutrition" },
+    { "name": "Chronic Malnutrition", "id": "Mort_TS_Chronic_Malnutrition" },
+    { "name": "Anaemia", "id": "Mort_TS_Anaemia" },
+    {
+        "name": "Acute Jaundice Syndrome",
+        "id": "Mort_TS_Acute_Jaundice_Syndrome"
+    },
+    {
+        "name": "Influenza-like Illness",
+        "id": "Mort_TS_Influenza_like_Illness"
+    },
+    { "name": "Other", "id": "Mort_TS_Other" },
+    { "name": "Asthma", "id": "Mort_TS_Asthma" },
+    { "name": "Cancer", "id": "Mort_TS_Cancer" },
+    {
+        "name": "Cardiovascular Disease (other)",
+        "id": "Mort_TS_Cardiovascular"
+    },
+    { "name": "Ischaemic Heart Disease", "id": "Mort_TS_Ischaemic_Heart" },
+    {
+        "name": "Chronic Obstructive Pulmonary Disease (other)",
+        "id": "Mort_TS_Chronic_Obstructive_Pulmonary"
+    },
+    { "name": "Diabetes", "id": "Mort_TS_Diabetes" },
+    { "name": "Hypertension", "id": "Mort_TS_Hypertension" },
+    { "name": "Liver Disease", "id": "Mort_TS_Liver" },
+    {
+        "name": "Musculoskeletal Disorders",
+        "id": "Mort_TS_Musculoskeletal_Disorders"
+    },
+    { "name": "Mental Health", "id": "Mort_TS_Mental_Health" },
+    { "name": "Others", "id": "Mort_TS_Others" },
+    { "name": "Mat Death -Hemorrhage", "id": "Mort_TS_Hemorrhage" },
+    {
+        "name": "Mat Death -Hypertensive Disorder",
+        "id": "Mort_TS_Hypertensive_Disorder"
+    },
+    { "name": "Mat Death -Infections", "id": "Mort_TS_Infections" },
+    { "name": "Mat Death -Abortion", "id": "Mort_TS_Abortion" },
+    { "name": "Mat Death -Embolism", "id": "Mort_TS_Embolism" },
+    {
+        "name": "Mat Death -Other Direct Causes",
+        "id": "Mort_TS_Other_Direct_Causes"
+    },
+    {
+        "name": "Mat Death -Indirect Causes",
+        "id": "Mort_TS_Indirect_Causes"
+    },
+    {
+        "name": "Acute Flaccid Paralysis",
+        "id": "Mort_TS_Acute_Flaccid_Paralysis"
+    },
+    { "name": "Cholera", "id": "Mort_TS_Cholera" },
+    { "name": "Yellow Fever", "id": "Mort_TS_Yellow_Fever" },
+    {
+        "name": "Viral Hemorrhagic Fever",
+        "id": "Mort_TS_Viral_Hemorrhagic_Fever"
+    },
+    { "name": "Plague", "id": "Mort_TS_Plague" },
+    { "name": "Measles", "id": "Mort_TS_Measles" },
+    {
+        "name": "Meningococcal Meningitis",
+        "id": "Mort_TS_Meningococcal_Meningitis"
+    },
+    { "name": "Salmonelosis", "id": "Mort_TS_Salmonelosis" },
+    { "name": "Shigella", "id": "Mort_TS_Shigella" },
+    { "name": "Tetanus", "id": "Mort_TS_Tetanus" },
+    {
+        "name": "Varicella (Chicken pox)",
+        "id": "Mort_TS_Varicella_Chicken_pox"
+    },
+    { "name": "Whooping Cough", "id": "Mort_TS_Whooping_Cough" },
+    { "name": "COVID-19", "id": "Mort_TS_COVID_19" },
+    { "name": "Monkey Pox", "id": "Mort_TS_Monkey_Pox" },
+    { "name": "Assault", "id": "Mort_TS_Assault" },
+    { "name": "Bites", "id": "Mort_TS_Bites" },
+    { "name": "Accidents", "id": "Mort_TS_Accidents" },
+    { "name": "Self-harm", "id": "Mort_TS_Self_harm" },
+    { "name": "Suicidal Attempt", "id": "Mort_TS_Suicidal_Attempt" }
+]

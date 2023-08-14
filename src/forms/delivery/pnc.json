@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Attended for 3 postnatal visits < 6 weeks of delivery",
+        "id": "PNC_TS_Attended_for_3_postnatal_visits_lt_6_weeks_of_delivery"
+    },
+    {
+        "name": "Number of children received co-trimoxazole",
+        "id": "PNC_TS_children_received_co_trimoxazole"
+    }
+]

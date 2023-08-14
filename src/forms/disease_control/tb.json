@@ -1,0 +1,11 @@
+[
+    {
+        "name": "Number of new TB cases in program",
+        "id": "TB_TS_tb_leprosy_number_of_new_cases"
+    },
+    { "name": "Treatment success", "id": "TB_TS_tb_leprosy_success" },
+    { "name": "Treatment failure", "id": "TB_TS_tb_leprosy_failure" },
+    { "name": "Death", "id": "TB_TS_tb_leprosy_death" },
+    { "name": "Default", "id": "TB_TS_tb_leprosy_defaulters" },
+    { "name": "Transfer out", "id": "TB_TS_tb_leprosy_transfer_out" }
+]

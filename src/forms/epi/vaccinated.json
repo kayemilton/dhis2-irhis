@@ -1,0 +1,31 @@
+[
+    { "name": "BCG", "id": "IMM_TS_BCG" },
+    { "name": "IPV", "id": "IMM_TS_IPV" },
+    { "name": "Pentavalent/DPT 1", "id": "IMM_TS_Penta_1" },
+    { "name": "Pentavalent/DPT 2", "id": "IMM_TS_Penta_2" },
+    { "name": "Pentavalent/DPT 3", "id": "IMM_TS_Penta_3" },
+    { "name": "Pneumococcal Vaccine 1", "id": "IMM_TS_Pneumo_1" },
+    { "name": "Pneumococcal Vaccine 2", "id": "IMM_TS_Pneumo_2" },
+    { "name": "Pneumococcal Vaccine 3", "id": "IMM_TS_Pneumo_3" },
+    { "name": "Polio 0", "id": "IMM_TS_Polio_0" },
+    { "name": "Polio 1", "id": "IMM_TS_Polio_1" },
+    { "name": "Polio 2", "id": "IMM_TS_Polio_2" },
+    { "name": "Polio 3", "id": "IMM_TS_Polio_3" },
+    { "name": "Rotavirus 1", "id": "IMM_TS_Rotavirus_1" },
+    { "name": "Rotavirus 2", "id": "IMM_TS_Rotavirus_2" },
+    { "name": "Varicella", "id": "IMM_TS_Varicella" },
+    { "name": "Yellow Fever", "id": "IMM_TS_Yellow_Fever" },
+    { "name": "Vitamin A", "id": "IMM_TS_Vitamin_A" },
+    { "name": "Tetanus Toxoid WRA", "id": "IMM_TS_Tetanus_Toxoid_WRA" },
+    {
+        "name": "Tetanus Toxoid Injuries",
+        "id": "IMM_TS_Tetanus_Toxoid_Injuries"
+    },
+    {
+        "name": "Tetanus Toxoid Pregnant",
+        "id": "IMM_TS_Tetanus_Toxoid_Pregnant"
+    },
+    { "name": "MCV - 9 months", "id": "IMM_TS_MCV_9_mon" },
+    { "name": "MCV - 15 months", "id": "IMM_TS_MCV_15_mon" },
+    { "name": "MCV - 18 months", "id": "IMM_TS_MCV_18_mon" }
+]

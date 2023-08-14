@@ -1,0 +1,13 @@
+.yellow{
+	background-color: #0172BB;
+	color: white;
+}
+
+.link{
+	padding: 5px;
+	
+}
+
+.link:hover {
+	background-color: #38a2e9;
+}

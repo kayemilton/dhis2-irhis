@@ -1,0 +1,29 @@
+[
+    { "name": "Deliveries", "id": "" },
+    { "name": "Live births", "id": "Delivery_TS_Live_births" },
+    {
+        "name": "HIV positive live births",
+        "id": "Delivery_TS_HIV_positive_live_births"
+    },
+    { "name": "Still births", "id": "Delivery_TS_Still_births" },
+    {
+        "name": "Low birth weight (< 2500g)",
+        "id": "Delivery_TS_Low_birth_weight_lt_2500g"
+    },
+    {
+        "name": "Attended by a skilled health worker (excluding TBA)",
+        "id": "Delivery_TS_Attended_by_a_skilled_health_worker_excluding_TBA"
+    },
+    {
+        "name": "Number of obstetric complications",
+        "id": "Delivery_TS_obstetric_complications"
+    },
+    {
+        "name": "Number of obstetric complications referred",
+        "id": "Delivery_TS_obstetric_complications_referred"
+    },
+    {
+        "name": "Number of caesarean sections performed",
+        "id": "Delivery_TS_caesarean_sections_performed"
+    }
+]

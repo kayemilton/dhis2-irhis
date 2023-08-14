@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Sum number of days stay for authorized discharges",
+        "id": "IPD_TS_Ind_ipd_days"
+    },
+    {
+        "name": "Number of days in reporting period",
+        "id": "IPD_TS_Ind_ipd_reporting_period_days"
+    }
+]

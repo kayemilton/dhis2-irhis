@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Rape survivors examined within 72 hours",
+        "id": "SGBV_TS_within_72_hours"
+    },
+    {
+        "name": "Rape survivors examined within 72 - 120 hours",
+        "id": "SGBV_TS_within_72_120_hours"
+    },
+    {
+        "name": "Rape survivors examined within 120 hours - 2 weeks",
+        "id": "SGBV_TS_120_hours_2_weeks"
+    },
+    {
+        "name": "Rape survivors examined after 2 weeks",
+        "id": "SGBV_TS_gt_2_weeks"
+    },
+    { "name": "Rape survivors given PEP within 72 hours", "id": "" },
+    { "name": "Female rape survivors given ECP within 120 hours", "id": "" },
+    {
+        "name": "Rape survivors given STI presumptive treatment < 2 weeks",
+        "id": ""
+    },
+    {
+        "name": "Cases of trauma due to domestic violence",
+        "id": "SGBV_TS_Cases_of_trauma_in_health_centre_due_to_domestic_violence"
+    }
+]

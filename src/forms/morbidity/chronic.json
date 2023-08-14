@@ -1,0 +1,21 @@
+[
+    { "name": "Asthma", "id": "OPD_TS_ncd_Asthma" },
+    { "name": "Cancer", "id": "OPD_TS_ncd_Cancer" },
+    {
+        "name": "Cardiovascular Disease (other)",
+        "id": "OPD_TS_ncd_Cardiovascular"
+    },
+    { "name": "Ischaemic Heart Disease", "id": "OPD_TS_ncd_Ischaemic_Heart" },
+    {
+        "name": "Chronic Obstructive Pulmonary Disease (other)",
+        "id": "OPD_TS_ncd_Chronic_Obstructive_Pulmonary"
+    },
+    { "name": "Diabetes", "id": "OPD_TS_ncd_Diabetes" },
+    { "name": "Hypertension", "id": "OPD_TS_ncd_Hypertension" },
+    { "name": "Liver Disease", "id": "OPD_TS_ncd_LIver" },
+    {
+        "name": "Musculoskeletal Disorders",
+        "id": "OPD_TS_ncd_Musculoskeletal_Disorders"
+    },
+    { "name": "Others", "id": "OPD_TS_ncd_Others" }
+]

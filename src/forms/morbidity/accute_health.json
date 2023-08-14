@@ -1,0 +1,34 @@
+[
+    { "name": "Malaria (suspected)", "id": "OPD_TS_ahc_Malaria_susp" },
+    { "name": "Malaria (confirmed)", "id": "OPD_TS_ahc_Malaria_conf" },
+    { "name": "URTI", "id": "OPD_TS_ahc_URTI" },
+    { "name": "LRTI", "id": "OPD_TS_ahc_LRTI" },
+    { "name": "Skin Disease", "id": "OPD_TS_ahc_Skin" },
+    { "name": "Eye Disease", "id": "OPD_TS_ahc_Eye" },
+    { "name": "Ear Diseases", "id": "OPD_TS_ahc_Ear_s" },
+    { "name": "Dental Conditions", "id": "OPD_TS_ahc_Dental_Conditions" },
+    { "name": "Intestinal Worms", "id": "OPD_TS_ahc_Intestinal_Worms" },
+    { "name": "Watery Diarrhoea", "id": "OPD_TS_ahc_Watery_Diarrhoea" },
+    { "name": "Bloody Diarrhoea", "id": "OPD_TS_ahc_Bloody_Diarrhoea" },
+    { "name": "Tuberculosis (suspected)", "id": "OPD_TS_ahc_TBC_susp" },
+    { "name": "Meningitis (other)", "id": "OPD_TS_ahc_Meningitis" },
+    { "name": "HIV/AIDS", "id": "OPD_TS_ahc_HIV_AIDS" },
+    { "name": "Leishmaniasis", "id": "OPD_TS_ahc_Leishmaniasis" },
+    { "name": "Acute Malnutrition", "id": "OPD_TS_ahc_Acute_Malnutrition" },
+    { "name": "Chronic Malnutrition", "id": "OPD_TS_ahc_Chronic_Malnutrition" },
+    { "name": "Anaemia", "id": "OPD_TS_ahc_Anaemia" },
+    {
+        "name": "Acute Jaundice Syndrome",
+        "id": "OPD_TS_ahc_Acute_Jaundice_Syndrome"
+    },
+    { "name": "Abortion", "id": "OPD_TS_ahc_Abortion" },
+    {
+        "name": "Urinary Tract Infections",
+        "id": "OPD_TS_ahc_Urinary_Tract_Infections"
+    },
+    {
+        "name": "Influenza-like Illness",
+        "id": "OPD_TS_ahc_Influenza_like_Illness"
+    },
+    { "name": "Other", "id": "OPD_TS_ahc_Other" }
+]

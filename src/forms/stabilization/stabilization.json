@@ -1,0 +1,15 @@
+[
+    { "name": "Number of new admissions", "id": "SC_TS_New" },
+    { "name": "Number of readmissions", "id": "SC_TS_Readmission" },
+    {
+        "name": "Number of exits promoted to OTP / TSFP",
+        "id": "SC_TS_Exit_Promoted_to_OTP_TSFP"
+    },
+    { "name": "Number of exits recovered", "id": "SC_TS_Exit_Recovered" },
+    {
+        "name": "Number of exits medical referral",
+        "id": "SC_TS_Exit_External_referral"
+    },
+    { "name": "Number of exits death", "id": "SC_TS_Report_death" },
+    { "name": "Number of exits defaulter", "id": "SC_TS_Report_defaulter" }
+]

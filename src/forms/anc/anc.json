@@ -1,0 +1,35 @@
+[
+    {
+        "name": "First antenatal visit <= 1st trimester",
+        "id": "ANC_TS_First_antenatal_visit_lte_1st_trimester"
+    },
+    {
+        "name": "First antenatal visit > 1st trimester",
+        "id": "ANC_TS_First_antenatal_visit_gt_1st_trimester"
+    },
+    { "name": "Repeat antenatal visit", "id": "ANC_TS_Repeat_antenatal_visit" },
+    { "name": "Number tested for syphilis", "id": "ANC_TS_tested_syphilis" },
+    {
+        "name": "Number tested positive for syphilis",
+        "id": "ANC_TS_positive_syphilis"
+    },
+    {
+        "name": "Number of high-risk pregnancies detected",
+        "id": "ANC_TS_high_risk_pregnancies_detected"
+    },
+    { "name": "Number tested for anemia", "id": "ANC_TS_tested_anemia" },
+    {
+        "name": "Number confirmed severe and moderate anemia",
+        "id": "ANC_TS_conf_severe_and_moderate_anemia"
+    },
+    { "name": "Number of ANC HIV tested", "id": "ANC_TS_ANC_HIV_tested" },
+    {
+        "name": "Number of ANC HIV tested positive",
+        "id": "ANC_TS_ANC_HIV_positive"
+    },
+    {
+        "name": "Number of ANC HIV tested positive on ART",
+        "id": "ANC_TS_ANC_HIV_positive_on_ART"
+    },
+    { "name": "Number of abortions", "id": "ANC_TS_abortions" }
+]

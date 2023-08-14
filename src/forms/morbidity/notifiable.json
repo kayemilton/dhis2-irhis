@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Acute Flaccid Paralysis",
+        "id": "OPD_TS_nd_Acute_Flaccid_Paralysis"
+    },
+    { "name": "Cholera", "id": "OPD_TS_nd_Cholera" },
+    { "name": "Yellow Fever", "id": "OPD_TS_nd_Yellow_Fever" },
+    {
+        "name": "Viral Hemorrhagic Fever",
+        "id": "OPD_TS_nd_Viral_Hemorrhagic_Fever"
+    },
+    { "name": "Plague", "id": "OPD_TS_nd_Plague" },
+    { "name": "Measles", "id": "OPD_TS_nd_Measles" },
+    {
+        "name": "Meningococcal Meningitis",
+        "id": "OPD_TS_nd_Meningococcal_Meningitis"
+    },
+    { "name": "Salmonelosis", "id": "OPD_TS_nd_Salmonelosis" },
+    { "name": "Shigella", "id": "OPD_TS_nd_Shigella" },
+    { "name": "Tetanus", "id": "OPD_TS_nd_Tetanus" },
+    {
+        "name": "Varicella (Chicken pox)",
+        "id": "OPD_TS_nd_Varicella_Chicken_pox"
+    },
+    { "name": "Whooping Cough", "id": "OPD_TS_nd_Whooping_Cough" },
+    { "name": "COVID-19", "id": "OPD_TS_nd_COVID_19" },
+    { "name": "Monkey Pox", "id": "OPD_TS_nd_MONKEY_POX" }
+]
