@@ -2,7 +2,15 @@ import React from "react";
 import { Stack, Text } from "@chakra-ui/react";
 
 import AggTable from "../../components/AggTable";
-import { AGE_18_G_YRS, MALE_FEMALE, NATIONAL, REFUGEE } from "../../utils";
+import {
+    AGE_18_G_YRS,
+    MALE_FEMALE,
+    NATIONAL,
+    REFUGEE,
+    YEARS_LT_20,
+    YEARS_GT_20,
+    YEARS_T0TAL,
+} from "../../utils";
 import sgbv from "./sgbv.json";
 
 export const SGBV = ({ data }: { data: any }) => {
@@ -22,7 +30,11 @@ export const SGBV = ({ data }: { data: any }) => {
             <Stack>
                 <Text>Sexual and Gender-based Violence</Text>
                 <AggTable
-                    refugeeColumns={[[REFUGEE], AGE_18_G_YRS, MALE_FEMALE]}
+                    refugeeColumns={[
+                        [REFUGEE],
+                        [YEARS_LT_20, YEARS_GT_20],
+                        MALE_FEMALE,
+                    ]}
                     nationalColumns={[[NATIONAL], AGE_18_G_YRS]}
                     rows={sgbv}
                     data={data}

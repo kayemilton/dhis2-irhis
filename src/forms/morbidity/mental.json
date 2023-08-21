@@ -1,28 +1,106 @@
 [
-    { "name": "Epilepsy / Seizures", "id": "OPD_TS_mh_Epilepsy_Seizures" },
     {
-        "name": "Alcohol or other substance use disorder",
-        "id": "OPD_TS_mh_Alcohol_or_substance"
+        "name": "Epilepsy / Seizures",
+        "id": "OPD_TS_mh_Epilepsy_Seizures"
     },
     {
-        "name": "Intellectual disability and developmental disorders",
-        "id": "OPD_TS_mh_Intellectual_and_developmental"
+        "name": "Alcohol or other substance use disorder",
+        "id": "OPD_TS_mh_"
+    },
+    {
+        "name": "Alcohol-related disorders",
+        "id": "OPD_TS_mh_alcohol-related_disorders_"
+    },
+    {
+        "name": "Substance use disorders related to opiate use",
+        "id": "OPD_TS_mh_substance_use_disorders_related_to_opiate_use_"
+    },
+    {
+        "name": "Substance use disorders related to benzodiazepine or other prescription medication",
+        "id": "OPD_TS_mh_substance_use_disorders_related_to_benzodiazepine_or_other_prescription_medication"
+    },
+    {
+        "name": "Other substance use disorders",
+        "id": "OPD_TS_mh_other_substance_use_disorders"
+    },
+    {
+        "name": "Intellectual disability and developmental disorder",
+        "id": "OPD_TS_mh_intellectual_disability_and_developmental_disorder"
+    },
+    {
+        "name": "Intellectual disability",
+        "id": "OPD_TS_mh_intellectual_disability"
+    },
+    {
+        "name": "Developmental disorders",
+        "id": "OPD_TS_mh_developmental_disorders"
     },
     {
         "name": "Psychosis (including bipolar disorder)",
-        "id": "OPD_TS_mh_Psychosis_including_bipolar"
+        "id": "OPD_TS_mh_psychosis_(including_bipolar_disorder)"
+    },
+    {
+        "name": "Acute psychosis",
+        "id": "OPD_TS_mh_acute_psychosis"
+    },
+    {
+        "name": "Chronic psychosis",
+        "id": "OPD_TS_mh_chronic_psychosis"
+    },
+    {
+        "name": "Bipolar disorders (Mania)",
+        "id": "OPD_TS_mh_bipolar_disorders_(mania)"
+    },
+    {
+        "name": "Dementia or Delirium",
+        "id": "OPD_TS_mh_dementia_or_delirium"
+    },
+    {
+        "name": "Dementia",
+        "id": "OPD_TS_mh_dementia"
+    },
+    {
+        "name": "Delirium",
+        "id": "OPD_TS_mh_delirium"
     },
     {
         "name": "Moderate-severe emotional disorder",
-        "id": "OPD_TS_mh_Moderate_severe_emotional"
+        "id": "OPD_TS_mh_moderate-severe_emotional_disorder"
     },
     {
-        "name": "Other psychological complaint",
-        "id": "OPD_TS_mh_Other_psychological_complaint"
+        "name": "Moderate-severe depression",
+        "id": "OPD_TS_mh_moderate-severe_depression"
+    },
+    {
+        "name": "Posttraumatic stress disorder",
+        "id": "OPD_TS_mh_posttraumatic_stress_disorder"
+    },
+    {
+        "name": "Other moderate-severe emotional disorders",
+        "id": "OPD_TS_mh_other_moderate-severe_emotional_disorders"
     },
     {
         "name": "Medically unexplained somatic complaint",
         "id": "OPD_TS_mh_Medically_unexplained_somatic_complaint"
     },
-    { "name": "Dementia or Delirium", "id": "OPD_TS_mh_Dementia_or_Delirium" }
+    {
+        "name": "Self-harm/suicide attempt",
+        "id": "OPD_TS_mh_self-harm/suicide_attempt"
+    },
+    {
+        "name": "Acute Stress",
+        "id": "OPD_TS_mh_acute_stress"
+    },
+    {
+        "name": "Dissociative disorder",
+        "id": "OPD_TS_mh_dissociative_disorder"
+    },
+    {
+        "name": "Grief",
+        "id": "OPD_TS_mh_grief"
+    },
+    {
+        "name": "Other psychological complaint",
+        "id": "OPD_TS_mh_Other_psychological_complaint"
+    }
 ]

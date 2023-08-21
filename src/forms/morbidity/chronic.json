@@ -1,21 +1,66 @@
 [
-    { "name": "Asthma", "id": "OPD_TS_ncd_Asthma" },
-    { "name": "Cancer", "id": "OPD_TS_ncd_Cancer" },
+    {
+        "name": "Asthma",
+        "id": "OPD_TS_ncd_Asthma"
+    },
+    {
+        "name": "Cancer",
+        "id": "OPD_TS_ncd_Cancer"
+    },
     {
         "name": "Cardiovascular Disease (other)",
         "id": "OPD_TS_ncd_Cardiovascular"
     },
-    { "name": "Ischaemic Heart Disease", "id": "OPD_TS_ncd_Ischaemic_Heart" },
+    {
+        "name": "Ischaemic Heart Diseases",
+        "id": "OPD_TS_ncd_Ischaemic_Heart"
+    },
+    {
+        "name": "Chronic Heart Diseases",
+        "id": "OPD_TS_ncd_rheumatic_heart_diseases"
+    },
+    {
+        "name": "Rheumatic Heart Diseases",
+        "id": "OPD_TS_ncd_heart_failure"
+    },
+    {
+        "name": "Heart Failure",
+        "id": "OPD_TS_ncd_chronic_obstructive_pulmonary_disease_(other)"
+    },
     {
         "name": "Chronic Obstructive Pulmonary Disease (other)",
         "id": "OPD_TS_ncd_Chronic_Obstructive_Pulmonary"
     },
-    { "name": "Diabetes", "id": "OPD_TS_ncd_Diabetes" },
-    { "name": "Hypertension", "id": "OPD_TS_ncd_Hypertension" },
-    { "name": "Liver Disease", "id": "OPD_TS_ncd_LIver" },
+    {
+        "name": "Diabetes",
+        "id": "OPD_TS_ncd_Diabetes"
+    },
+    {
+        "name": "Hypertension",
+        "id": "OPD_TS_ncd_Hypertension"
+    },
+    {
+        "name": "Liver Disease",
+        "id": "OPD_TS_ncd_Liver"
+    },
     {
         "name": "Musculoskeletal Disorders",
         "id": "OPD_TS_ncd_Musculoskeletal_Disorders"
     },
-    { "name": "Others", "id": "OPD_TS_ncd_Others" }
+    {
+        "name": "Renal disease",
+        "id": "OPD_TS_ncd_sickle_cell_disease"
+    },
+    {
+        "name": "Sickle cell disease",
+        "id": "OPD_TS_ncd_thyroid_disorders"
+    },
+    {
+        "name": "Thyroid disorders",
+        "id": "OPD_TS_ncd_other_ncds"
+    },
+    {
+        "name": "Other NCDs",
+        "id": "OPD_TS_ncd_Others"
+    }
 ]

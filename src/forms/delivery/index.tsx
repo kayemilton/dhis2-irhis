@@ -8,6 +8,9 @@ import {
     AGE_18_G_YRS,
     REFUGEE,
     NATIONAL,
+    YEARS_LT_20,
+    YEARS_GT_20,
+    YEARS_T0TAL,
 } from "../../utils";
 import AggTable from "../../components/AggTable";
 import deliveries from "./deliveries.json";
@@ -22,10 +25,13 @@ export const Delivery = ({ data }: { data: any }) => {
                 <AggTable
                     refugeeColumns={[
                         [REFUGEE],
-                        AGE_18_G_YRS,
+                        [YEARS_LT_20, YEARS_GT_20, YEARS_T0TAL],
                         [HOME_DELIVERY, FACILITY_DELIVERY],
                     ]}
-                    nationalColumns={[[NATIONAL], AGE_18_G_YRS]}
+                    nationalColumns={[
+                        [NATIONAL],
+                        [YEARS_LT_20, YEARS_GT_20, YEARS_T0TAL],
+                    ]}
                     rows={deliveries}
                     data={data}
                 />
@@ -35,7 +41,10 @@ export const Delivery = ({ data }: { data: any }) => {
                     Number of pregnant women at time of delivery who
                 </Text>
                 <AggTable
-                    refugeeColumns={[REFUGEE_NATIONAL, AGE_18_G_YRS]}
+                    refugeeColumns={[
+                        REFUGEE_NATIONAL,
+                        [YEARS_LT_20, YEARS_GT_20, YEARS_T0TAL],
+                    ]}
                     rows={pregnant_women_at_delivery}
                     data={data}
                 />
@@ -43,7 +52,10 @@ export const Delivery = ({ data }: { data: any }) => {
             <Stack>
                 <Text fontWeight="bold">Postnatal care</Text>
                 <AggTable
-                    refugeeColumns={[REFUGEE_NATIONAL, AGE_18_G_YRS]}
+                    refugeeColumns={[
+                        REFUGEE_NATIONAL,
+                        [YEARS_LT_20, YEARS_GT_20, YEARS_T0TAL],
+                    ]}
                     rows={pnc}
                     data={data}
                 />

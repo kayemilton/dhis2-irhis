@@ -1,15 +1,46 @@
 [
-    { "name": "BCG", "id": "IMM_TS_BCG" },
-    { "name": "Polio", "id": "IMM_TS_Polio" },
-    { "name": "Pentavalent/DPT", "id": "IMM_TS_Penta" },
+    {
+        "name": "BCG",
+        "id": "IMM_TS_BCG"
+    },
+    {
+        "name": "Polio",
+        "id": "IMM_TS_Polio"
+    },
+    {
+        "name": "IPV",
+        "id": "IMM_TS_IPV"
+    },
+    {
+        "name": "Pentavalent/DPT",
+        "id": "IMM_TS_Penta"
+    },
     {
         "name": "Measles Containing Vaccine (MCV)",
         "id": "IMM_TS_MCV"
     },
-    { "name": "Rotavirus", "id": "IMM_TS_Rotavirus" },
-    { "name": "Pneumococcal Vaccine (PCV)", "id": "IMM_TS_Pneumo" },
-    { "name": "Varicella", "id": "IMM_TS_Varicella" },
-    { "name": "Yellow Fever", "id": "IMM_TS_Yellow_Fever" },
-    { "name": "Vitamin A", "id": "IMM_TS_Vitamin_A" },
-    { "name": "Tetanus Toxoid", "id": "IMM_TS_Tetanus" }
+    {
+        "name": "Rotavirus",
+        "id": "IMM_TS_Rotavirus"
+    },
+    {
+        "name": "Pneumococcal Vaccine (PCV)",
+        "id": "IMM_TS_Pneumo"
+    },
+    {
+        "name": "Varicella",
+        "id": "IMM_TS_Varicella"
+    },
+    {
+        "name": "Yellow Fever",
+        "id": "IMM_TS_Yellow_Fever"
+    },
+    {
+        "name": "Vitamin A",
+        "id": "IMM_TS_Vitamin_A"
+    },
+    {
+        "name": "Tetanus Toxoid",
+        "id": "IMM_TS_Tetanus_Toxoid"
+    }
 ]

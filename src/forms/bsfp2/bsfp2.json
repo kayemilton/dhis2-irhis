@@ -1,11 +1,24 @@
 [
-    { "name": "Number of new admissions", "id": "BSFP_PL_TS_New_" },
-    { "name": "Number of exits recovered", "id": "BSFP_PL_TS_Exit_Recovered" },
+    {
+        "name": "Number at beginning of reporting period",
+        "id": "BSFP_PL_TS_number_at_beginning_of_reporting_period"
+    },
+    {
+        "name": "Number of new admissions",
+        "id": "BSFP_PL_TS_New"
+    },
+    {
+        "name": "Number of exits recovered",
+        "id": "BSFP_PL_TS_"
+    },
     {
         "name": "Number of exits medical referral",
         "id": "BSFP_PL_TS_Exit_External_referral"
     },
-    { "name": "Number of exits death", "id": "BSFP_PL_TS_Exit_Death" },
+    {
+        "name": "Number of exits death",
+        "id": "BSFP_PL_TS_Exit_Death"
+    },
     {
         "name": "Number of exits moved to other TSFP",
         "id": "BSFP_PL_TS_Exit_Moved_to_TSFP"
@@ -13,5 +26,21 @@
     {
         "name": "Number of exits end of lactation",
         "id": "BSFP_PL_TS_Exit_End_of_lactation_period"
+    },
+    {
+        "name": "End of pregnancy",
+        "id": "BSFP_PL_TS_end_of_pregnancy"
+    },
+    {
+        "name": "Number reached during the reporting period",
+        "id": "BSFP_PL_TS_number_reached_during_the_reporting_period_"
+    },
+    {
+        "name": "Number of eligible",
+        "id": "BSFP_PL_TS_number_of_eligible"
+    },
+    {
+        "name": "Number at the end of reporting period",
+        "id": "BSFP_PL_TS_number_at_the_end_of_reporting_period"
     }
 ]

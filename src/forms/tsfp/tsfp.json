@@ -1,24 +1,66 @@
 [
-    { "name": "Number of new admissions", "id": "TSFP_TS_New" },
-    { "name": "Number of readmissions", "id": "TSFP_TS_Readmission" },
-    { "name": "Number of exits recovered", "id": "TSFP_TS_Exit_Recovered" },
+    {
+        "name": "Number at beginning of reporting period",
+        "id": "TSFP_TS_number_at_beginning_of_reporting_period"
+    },
+    {
+        "name": "Number of new admissions ( (WFH/BMI, MUAC)*",
+        "id": "TSFP_TS_New"
+    },
+    {
+        "name": "Number of readmissions**",
+        "id": "TSFP_TS_Readmissions"
+    },
+    {
+        "name": "Number of relapse***",
+        "id": "TSFP_TS_number_of_relapse***"
+    },
+    {
+        "name": "Number moved in from other  TSFP",
+        "id": "TSFP_TS_number_moved_in_from_other__tsfp"
+    },
+    {
+        "name": "Other admissions",
+        "id": "TSFP_TS_other_admissions"
+    },
+    {
+        "name": "Number of exits recovered",
+        "id": "TSFP_TS_Exit_Recovered"
+    },
     {
         "name": "Number of exits none response",
         "id": "TSFP_TS_Exit_None_response"
     },
-    { "name": "Number of exits moved to SC", "id": "TSFP_TS_Exit_Moved_to_SC" },
     {
-        "name": "Number of exits moved to other OTP",
+        "name": "Number of exits moved to SC",
+        "id": "TSFP_TS_Exit_Promoted_to_SC"
+    },
+    {
+        "name": "Number of exits moved to OTP",
         "id": "TSFP_TS_Exit_Moved_to_OTP"
     },
     {
-        "name": "Number of exits moved to TSFP",
+        "name": "Number of exits moved to other TSFP",
         "id": "TSFP_TS_Exit_Moved_to_TSFP"
     },
     {
         "name": "Number of exits medical referral",
         "id": "TSFP_TS_Exit_External_referral"
     },
-    { "name": "Number of exits death", "id": "TSFP_TS_Report_death" },
-    { "name": "Number of exits defaulter", "id": "TSFP_TS_Report_defaulter" }
+    {
+        "name": "Number of exits death",
+        "id": "TSFP_TS_Report_death"
+    },
+    {
+        "name": "Number of exits defaulter",
+        "id": "TSFP_TS_Report_defaulter"
+    },
+    {
+        "name": "Other exits",
+        "id": "TSFP_TS_other_exits"
+    },
+    {
+        "name": "Number at the end of reporting period",
+        "id": "TSFP_TS_number_at_the_end_of_reporting_period"
+    }
 ]

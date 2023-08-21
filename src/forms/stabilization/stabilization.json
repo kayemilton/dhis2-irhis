@@ -1,15 +1,54 @@
 [
-    { "name": "Number of new admissions", "id": "SC_TS_New" },
-    { "name": "Number of readmissions", "id": "SC_TS_Readmission" },
+    {
+        "name": "Number at beginning of reporting period",
+        "id": "SC_TS_number_at_beginning_of_reporting_period"
+    },
+    {
+        "name": "Number of new admissions (WFH/BMI, MUAC, oedema)*",
+        "id": "SC_TS_New"
+    },
+    {
+        "name": "Number of relapse**",
+        "id": "SC_TS_number_of_relapse**"
+    },
+    {
+        "name": "Number of readmissions***",
+        "id": "SC_TS_Readmission"
+    },
+    {
+        "name": "Number moved in from OTP",
+        "id": "SC_TS_number_moved_in_from_otp"
+    },
+    {
+        "name": "Other admissions",
+        "id": "SC_TS_other_admissions"
+    },
     {
         "name": "Number of exits promoted to OTP / TSFP",
-        "id": "SC_TS_Exit_Promoted_to_OTP_TSFP"
+        "id": "SC_TS_Exit_Promoted_to_OTP"
     },
-    { "name": "Number of exits recovered", "id": "SC_TS_Exit_Recovered" },
+    {
+        "name": "Number of exits recovered",
+        "id": "SC_TS_Exit_Recovered"
+    },
     {
         "name": "Number of exits medical referral",
         "id": "SC_TS_Exit_External_referral"
     },
-    { "name": "Number of exits death", "id": "SC_TS_Report_death" },
-    { "name": "Number of exits defaulter", "id": "SC_TS_Report_defaulter" }
+    {
+        "name": "Number of exits death",
+        "id": "SC_TS_Report_death"
+    },
+    {
+        "name": "Number of exits non-response",
+        "id": "SC_TS_number_of_exits_non-response"
+    },
+    {
+        "name": "Number of exits defaulter",
+        "id": "SC_TS_Report_defaulter"
+    },
+    {
+        "name": "Number at the end of reporting period",
+        "id": "SC_TS_number_at_the_end_of_reporting_period"
+    }
 ]

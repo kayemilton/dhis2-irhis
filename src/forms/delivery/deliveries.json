@@ -1,11 +1,24 @@
 [
-    { "name": "Deliveries", "id": "" },
-    { "name": "Live births", "id": "Delivery_TS_Live_births" },
     {
-        "name": "HIV positive live births",
+        "name": "Live births",
+        "id": "Delivery_TS_Live_births"
+    },
+    {
+        "name": "Newborn (live births) to HIV positive mothers",
         "id": "Delivery_TS_HIV_positive_live_births"
     },
-    { "name": "Still births", "id": "Delivery_TS_Still_births" },
+    {
+        "name": "Still births",
+        "id": "Delivery_TS_Still_births"
+    },
+    {
+        "name": "Number of newborns breastfed within 1 hour of birth",
+        "id": "Delivery_TS_number_of_newborns_breastfed_within_1_hour_of_birth"
+    },
+    {
+        "name": "Neonatal death",
+        "id": "Delivery_TS_neonatal_death"
+    },
     {
         "name": "Low birth weight (< 2500g)",
         "id": "Delivery_TS_Low_birth_weight_lt_2500g"
@@ -25,5 +38,21 @@
     {
         "name": "Number of caesarean sections performed",
         "id": "Delivery_TS_caesarean_sections_performed"
+    },
+    {
+        "name": "Number of abortions",
+        "id": "Delivery_TS_number_of_abortions"
+    },
+    {
+        "name": "HIV test done in maternity",
+        "id": "Delivery_TS_hiv_test_done_in_maternity"
+    },
+    {
+        "name": "Positive HIV test in maternity",
+        "id": "Delivery_TS_positive_hiv_test_in_maternity"
+    },
+    {
+        "name": "Number of HIV+ women on ART at delivery",
+        "id": "Delivery_TS_number_of_hiv+_women_on_art_at_delivery"
     }
 ]

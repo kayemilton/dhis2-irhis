@@ -1,12 +1,40 @@
 [
-    { "name": "Number of new admissions", "id": "OTP_TS_New" },
-    { "name": "Number of readmissions", "id": "OTP_TS_Readmission" },
-    { "name": "Number of exits recovered", "id": "OTP_TS_Exit_Recovered" },
     {
-        "name": "Number of exits none response",
+        "name": "Number at beginning of reporting period",
+        "id": "OTP_TS_number_at_beginning_of_reporting_period"
+    },
+    {
+        "name": "Number of new admissions (WFH/BMI, MUAC, oedema)*",
+        "id": "OTP_TS_New"
+    },
+    {
+        "name": "Number of relapse**",
+        "id": "OTP_TS_number_of_relapse**"
+    },
+    {
+        "name": "Number of readmissions***",
+        "id": "OTP_TS_Readimission"
+    },
+    {
+        "name": "Number moved in from SC/OTP",
+        "id": "OTP_TS_number_moved_in_from_sc/otp"
+    },
+    {
+        "name": "Other admissions",
+        "id": "OTP_TS_other_admissions"
+    },
+    {
+        "name": "Number of exits recovered",
+        "id": "OTP_TS_Exit_Recovered"
+    },
+    {
+        "name": "Number of exits non response",
         "id": "OTP_TS_Exit_None_response"
     },
-    { "name": "Number of exits moved to SC", "id": "OTP_TS_Exit_Moved_to_SC" },
+    {
+        "name": "Number of exits moved to SC",
+        "id": "OTP_TS_Exit_Promoted_to_SC"
+    },
     {
         "name": "Number of exits moved to other OTP",
         "id": "OTP_TS_Exit_Moved_to_OTP"
@@ -19,6 +47,20 @@
         "name": "Number of exits medical referral",
         "id": "OTP_TS_Exit_External_referral"
     },
-    { "name": "Number of exits death", "id": "OTP_TS_Report_death" },
-    { "name": "Number of exits defaulter", "id": "OTP_TS_Report_defaulter" }
+    {
+        "name": "Number of exits death",
+        "id": "OTP_TS_Report_death"
+    },
+    {
+        "name": "Number of exits defaulter",
+        "id": "OTP_TS_Report_defaulter"
+    },
+    {
+        "name": "Other exits",
+        "id": "OTP_TS_other_exits"
+    },
+    {
+        "name": "Number at the end of reporting period",
+        "id": "OTP_TS_number_at_the_end_of_reporting_period"
+    }
 ]

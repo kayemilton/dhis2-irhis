@@ -27,6 +27,9 @@ export const FEMALE = { id: "F", name: "F" };
 export const YEARS_0_T0_4 = { id: "0_4_yrs", name: "0-4" };
 export const YEARS_0_T0_4_LT = { id: "lt_0_4", name: "0-4" };
 export const YEARS_T0_1 = { id: "lt_1", name: "<1" };
+export const YEARS_T0TAL_LT_5 = { id: "lt_5", name: "Total < 5" };
+export const YEARS_T0TAL_GT_5 = { id: "gte_5", name: "Total > 5" };
+export const YEARS_T0TAL = { id: "total_crude", name: "Total Crude" };
 export const YEARS_T0_1L = { id: "lt1", name: "<1" };
 export const YEARS_1_T0_4 = { id: "1_4_yrs", name: "1-4" };
 export const YEARS_5_TO_17 = { id: "5_17_yrs", name: "5-17" };
@@ -74,24 +77,31 @@ export const POSITIVE = { id: "positive", name: "Positive" };
 export const ADMINISTERED = { id: "administered", name: "Doses Administered" };
 export const SUPPLIED = { id: "supplied", name: "Doses Supplied" };
 
+export const YEARS_LT_20 = { id: "lt_20_yrs", name: "<20" };
+export const YEARS_GT_20 = { id: "gte_20_yrs", name: ">=20" };
+
 export const REFUGEE_NATIONAL = [REFUGEE, NATIONAL];
 export const MALE_FEMALE = [MALE, FEMALE];
 export const ADMIN_DEATHS = [ADMISSION, DEATHS];
 export const AGE_1_TO_60 = [
     YEARS_T0_1,
     YEARS_1_T0_4,
+    YEARS_T0TAL_LT_5,
     YEARS_5_TO_17,
     YEARS_18_TO_59,
     YEARS_FROM_60,
+    YEARS_T0TAL,
 ];
 export const EPI_AGE = [
     YEARS_T0_1L,
     YEARS_1_T0_4,
+    YEARS_T0TAL_LT_5,
     YEARS_5_TO_9,
     YEARS_10_TO_14,
     YEARS_15_TO_49,
     YEARS_50_TO_60,
     YEARS_FROM_60_IM,
+    YEARS_T0TAL,
 ];
 export const AGE_0_TO_60 = [
     YEARS_0_T0_4,
@@ -117,6 +127,7 @@ export const AGE_0_TO_59_MONTHS = [
     MONTHS_0_TO_6,
     MONTHS_6_TO_23,
     MONTHS_24_TO_59,
+    YEARS_T0TAL_LT_5,
 ];
 
 export const AGE_0_TO_59_MONTHS_TB_PREG = [
@@ -149,7 +160,7 @@ export const REF_AGE_0_TO_60_GENDER_MOB = [
 export const NAT_AGE_0_TO_60_MOB = [[NATIONAL], AGE_0_TO_60_YRS];
 export const NAT_AGE_0_TO_60_ADMIN = [
     REFUGEE_NATIONAL,
-    AGE_0_TO_60,
+    [...AGE_0_TO_60, YEARS_T0TAL],
     ADMIN_DEATHS,
 ];
 
@@ -160,7 +171,6 @@ export const findMerged = (
         Array<{ id: string; name: string; span?: number }>
     > = [];
     for (let index = 0; index < list.length; index++) {
-        const col = list[index];
         let currentValues = list[index];
         if (index === 0) {
             finalColumns[0] = currentValues;
@@ -249,3 +259,47 @@ export const sendData = async ({
         );
     }
 };
+
+export const join2 = (
+    a1: Array<{ id: string; name: string }>,
+    a2: Array<{ id: string; name: string }>
+) => {
+    return a1.flatMap((a) => {
+        return a2.map((b) => {
+            return { id: `${a.id}_${b.id}`, name: `${a.name} ${b.name}` };
+        });
+    });
+};
+
+const columns0To4 = join2([YEARS_0_T0_4], MALE_FEMALE);
+const columns5To14 = join2([YEARS_5_TO_14, YEARS_FROM_14], MALE_FEMALE);
+const yearsColumns = [
+    ...columns0To4,
+    YEARS_T0TAL_LT_5,
+    ...columns5To14,
+    YEARS_T0TAL,
+];
+
+const nationalColumn = [
+    YEARS_0_T0_4,
+    YEARS_5_TO_14,
+    YEARS_FROM_14,
+    YEARS_T0TAL,
+];
+
+export const diseaseControlColumns = [
+    [
+        { ...REFUGEE, span: yearsColumns.length },
+        { ...NATIONAL, span: nationalColumn.length },
+    ],
+    [
+        ...yearsColumns.map((a) => ({
+            ...a,
+            id: `${REFUGEE.id}_${a.id}`,
+        })),
+        ...nationalColumn.map((a) => ({
+            ...a,
+            id: `${NATIONAL.id}_${a.id}`,
+        })),
+    ],
+];

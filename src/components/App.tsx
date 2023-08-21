@@ -59,8 +59,15 @@ export default function App() {
                     h="calc(100vh - 48px)"
                     direction="row"
                     bg="gray.200"
+                    w="100%"
                 >
-                    <Stack w="200px" p="10px" bg="white">
+                    <Stack
+                        w="200px"
+                        p="10px"
+                        bg="white"
+                        maxW="200px"
+                        minW="200px"
+                    >
                         <ILink search="mortality" label="Mortality" />
                         <ILink search="morbidity" label="Morbidity" />
                         <ILink search="ipd" label="IPD" />
@@ -92,7 +99,12 @@ export default function App() {
                             </Link>
                         </Stack>
                     </Stack>
-                    <Stack flex={1} p="10px" bg="white">
+                    <Stack
+                        p="10px"
+                        bg="white"
+                        // overflow="auto"
+                        // w="calc(100vw - 210px)"
+                    >
                         <Outlet />
                     </Stack>
                 </Stack>

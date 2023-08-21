@@ -1,6 +1,11 @@
 import React from "react";
 import { Stack, Text } from "@chakra-ui/react";
-import { REFUGEE_NATIONAL, AGE_0_TO_59_MONTHS } from "../../utils";
+import {
+    REFUGEE_NATIONAL,
+    AGE_0_TO_59_MONTHS,
+    PREGNANT_LACTATING,
+    YEARS_T0TAL,
+} from "../../utils";
 import AggTable from "../../components/AggTable";
 
 const rows = [
@@ -31,7 +36,7 @@ export const MUAC = ({ data }: { data: any }) => {
             <Stack>
                 <Text>GMP (Community)</Text>
                 <AggTable
-                    refugeeColumns={[AGE_0_TO_59_MONTHS, REFUGEE_NATIONAL]}
+                    refugeeColumns={[REFUGEE_NATIONAL, AGE_0_TO_59_MONTHS]}
                     rows={rows}
                     data={data}
                 />
@@ -39,7 +44,14 @@ export const MUAC = ({ data }: { data: any }) => {
             <Stack>
                 <Text>MUAC (Health Facility)</Text>
                 <AggTable
-                    refugeeColumns={[AGE_0_TO_59_MONTHS, REFUGEE_NATIONAL]}
+                    refugeeColumns={[
+                        REFUGEE_NATIONAL,
+                        [
+                            ...AGE_0_TO_59_MONTHS,
+                            PREGNANT_LACTATING,
+                            YEARS_T0TAL,
+                        ],
+                    ]}
                     rows={rows1}
                     data={data}
                 />

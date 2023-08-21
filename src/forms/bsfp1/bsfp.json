@@ -1,14 +1,31 @@
 [
-    { "name": "New admission", "id": "BSFP_U5_TS_New" },
-    { "name": "Exits age > target", "id": "BSFP_U5_TS_Exits_Age_gt_target" },
+    {
+        "name": "Number at beginning of reporting period",
+        "id": "BSFP_U5_TS_number_at_beginning_of_reporting_period"
+    },
+    {
+        "name": "New admission",
+        "id": "BSFP_U5_TS_New"
+    },
+    {
+        "name": "Other admissions",
+        "id": "BSFP_U5_TS_other_admissions"
+    },
+    {
+        "name": "Exits age > target",
+        "id": "BSFP_U5_TS_Exits_Age_gt_tagert"
+    },
     {
         "name": "Number of exits medical referral",
+        "id": "BSFP_U5_TS_Exits_external"
+    },
+    {
+        "name": "Number of exits death",
         "id": "BSFP_U5_TS_Exits_External_referral"
     },
-    { "name": "Number of exits death", "id": "BSFP_U5_TS_Exits_Report_death" },
     {
         "name": "Number of exits moved to SC",
-        "id": "BSFP_U5_TS_Exits_Moved_to_SC"
+        "id": "BSFP_U5_TS_Exits_Promoted_to_SC"
     },
     {
         "name": "Number of exits moved to OTP",
@@ -18,5 +35,20 @@
         "name": "Number of exits moved to TSFP",
         "id": "BSFP_U5_TS_Exits_Moved_to_TSFP"
     },
-    { "name": "Number of exits other", "id": "BSFP_U5_TS_Exits_Other" }
+    {
+        "name": "Number of exits other",
+        "id": "BSFP_U5_TS_Exists_Other"
+    },
+    {
+        "name": "Number reached during the reporting period",
+        "id": "BSFP_U5_TS_number_reached_during_the_reporting_period"
+    },
+    {
+        "name": "Number of eligible",
+        "id": "BSFP_U5_TS_number_of_eligible"
+    },
+    {
+        "name": "Number at the end of reporting period",
+        "id": "BSFP_U5_TS_number_at_the_end_of_reporting_period_"
+    }
 ]

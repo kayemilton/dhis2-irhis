@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Blood transfusion",
+        "id": "Delivery_TS_blood_transfusion"
+    },
+    {
+        "name": "Cervical tear repair",
+        "id": "Delivery_TS_cervical_tear_repair"
+    },
+    {
+        "name": "Episiotomy",
+        "id": "Delivery_TS_episiotomy"
+    },
+    {
+        "name": "FGM / female circumcision management (deinfibulation)",
+        "id": "Delivery_TS_fgm_/_female_circumcision_management_(deinfibulation)"
+    },
+    {
+        "name": "Laceration (perineal tear) repaired",
+        "id": "Delivery_TS_laceration_(perineal_tear)_repaired"
+    },
+    {
+        "name": "Magnesium sulphate given for pre-eclampsia/eclampsia",
+        "id": "Delivery_TS_magnesium_sulphate_given_for_pre-eclampsia/eclampsia"
+    },
+    {
+        "name": "Management to prevent (and/or treat) obstetric fistula",
+        "id": "Delivery_TS_management_to_prevent_(and/or_treat)_obstetric_fistula"
+    },
+    {
+        "name": "Manual exploration of uterus",
+        "id": "Delivery_TS_manual_exploration_of_uterus"
+    },
+    {
+        "name": "Manual removal of placenta",
+        "id": "Delivery_TS_manual_removal_of_placenta"
+    },
+    {
+        "name": "Neonatal resuscitation",
+        "id": "Delivery_TS_neonatal_resuscitation"
+    },
+    {
+        "name": "Parenteral antibiotics given for peripartum infection",
+        "id": "Delivery_TS_parenteral_antibiotics_given_for_peripartum_infection"
+    },
+    {
+        "name": "Post-abortion care (Manual vacuum aspiration or curettage)",
+        "id": "Delivery_TS_post-abortion_care_(manual_vacuum_aspiration_or_curettage)"
+    },
+    {
+        "name": "Repair of ruptured uterus",
+        "id": "Delivery_TS_repair_of_ruptured_uterus_"
+    },
+    {
+        "name": "Shoulder dystocia management",
+        "id": "Delivery_TS_shoulder_dystocia_management"
+    },
+    {
+        "name": "Uterotonic (oxytocin) given to manage postpartum hemorrhage",
+        "id": "Delivery_TS_uterotonic_(oxytocin)_given_to_manage_postpartum_hemorrhage"
+    },
+    {
+        "name": "Vaginal breech delivery",
+        "id": "Delivery_TS_vaginal_breech_delivery"
+    },
+    {
+        "name": "VBAC (Vaginal birth after Caesearan)",
+        "id": "Delivery_TS_vbac_(vaginal_birth_after_caesearan)"
+    },
+    {
+        "name": "Other",
+        "id": "Delivery_TS_other"
+    }
+]

@@ -6,5 +6,9 @@
     {
         "name": "Number of days in reporting period",
         "id": "IPD_TS_Ind_ipd_reporting_period_days"
+    },
+    {
+        "name": "Number of beds (Do not count delivery beds)",
+        "id": "IPD_TS_nr_beds"
     }
 ]

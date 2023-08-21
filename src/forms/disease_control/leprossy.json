@@ -1,11 +1,34 @@
 [
     {
-        "name": "Number of new leprosy cases in program",
+        "name": "Number at beginning of reporting period",
+        "id": "TB_TS_tb_leprosy_number_at_beginning_of_reporting_period"
+    },
+    {
+        "name": "Number of new  and relapse leprosy cases in program",
         "id": "TB_TS_tb_leprosy_number_of_new_cases"
     },
-    { "name": "Treatment success", "id": "TB_TS_tb_leprosy_success" },
-    { "name": "Treatment failure", "id": "TB_TS_tb_leprosy_failure" },
-    { "name": "Death", "id": "TB_TS_tb_leprosy_death" },
-    { "name": "Default", "id": "TB_TS_tb_leprosy_defaulters" },
-    { "name": "Transfer out", "id": "TB_TS_tb_leprosy_transfer_out" }
+    {
+        "name": "Treatment success",
+        "id": "TB_TS_tb_leprosy_success"
+    },
+    {
+        "name": "Treatment failure",
+        "id": "TB_TS_tb_leprosy_failure"
+    },
+    {
+        "name": "Death",
+        "id": "TB_TS_tb_leprosy_death"
+    },
+    {
+        "name": "Default",
+        "id": "TB_TS_tb_leprosy_defaulters"
+    },
+    {
+        "name": "Transfer out",
+        "id": "TB_TS_tb_leprosy_transfer_out"
+    },
+    {
+        "name": "Number at the end of reporting period",
+        "id": "TB_TS_tb_leprosy_number_at_the_end_of_reporting_period"
+    }
 ]

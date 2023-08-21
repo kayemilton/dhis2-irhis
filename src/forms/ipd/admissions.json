@@ -1,8 +1,34 @@
 [
-    { "name": "Admissions", "id": "IPD_TS" },
-    { "name": "Authorized exits", "id": "IPD_TS_Exits_Discharged_cured" },
-    { "name": "Unauthorized exits", "id": "IPD_TS_Exits_Defaulted" },
-    { "name": "Death exits", "id": "IPD_TS_Exits" },
-    { "name": "Referral exits", "id": "IPD_TS_Exits_Referred" },
-    { "name": "Death within 24 hours", "id": "IPD_TS_Death_lt24h" }
+    {
+        "name": "Number at beginning of reporting period",
+        "id": "IPD_TS_Exits_number_at_beginning_of_reporting_period"
+    },
+    {
+        "name": "Admissions",
+        "id": "IPD_TS"
+    },
+    {
+        "name": "Authorized exits",
+        "id": "IPD_TS_Exits_Exits_Discharged_cured"
+    },
+    {
+        "name": "Unauthorized exits",
+        "id": "IPD_TS_Exits_Exits_Defaulted"
+    },
+    {
+        "name": "Death exits",
+        "id": "IPD_TS_Exits"
+    },
+    {
+        "name": "Referral exits",
+        "id": "IPD_TS_Exits_Exits_Referred"
+    },
+    {
+        "name": "Death within 24 hours",
+        "id": "IPD_TS_Death_lt24h"
+    },
+    {
+        "name": "Number at the end of reporting period",
+        "id": "IPD_TS_Exits"
+    }
 ]

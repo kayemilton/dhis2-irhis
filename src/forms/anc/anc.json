@@ -7,8 +7,18 @@
         "name": "First antenatal visit > 1st trimester",
         "id": "ANC_TS_First_antenatal_visit_gt_1st_trimester"
     },
-    { "name": "Repeat antenatal visit", "id": "ANC_TS_Repeat_antenatal_visit" },
-    { "name": "Number tested for syphilis", "id": "ANC_TS_tested_syphilis" },
+    {
+        "name": "First antenatal visit",
+        "id": "ANC_TS_first_antenatal_visit"
+    },
+    {
+        "name": "Repeat antenatal visit",
+        "id": "ANC_TS_Repeat_antenatal_visit"
+    },
+    {
+        "name": "Number tested for syphilis",
+        "id": "ANC_TS_tested_syphilis"
+    },
     {
         "name": "Number tested positive for syphilis",
         "id": "ANC_TS_positive_syphilis"
@@ -17,19 +27,52 @@
         "name": "Number of high-risk pregnancies detected",
         "id": "ANC_TS_high_risk_pregnancies_detected"
     },
-    { "name": "Number tested for anemia", "id": "ANC_TS_tested_anemia" },
     {
-        "name": "Number confirmed severe and moderate anemia",
+        "name": "Number tested for anemia at ANC 1st contact/visit",
+        "id": "ANC_TS_tested_anemia"
+    },
+    {
+        "name": "Number confirmed anemia (Hb<10) at ANC 1st contact/visit",
         "id": "ANC_TS_conf_severe_and_moderate_anemia"
     },
-    { "name": "Number of ANC HIV tested", "id": "ANC_TS_ANC_HIV_tested" },
+    {
+        "name": "Number that received breastfeeding counselling",
+        "id": "ANC_TS_number_that_received_breastfeeding_counselling"
+    },
+    {
+        "name": "Number tested for urine proteine",
+        "id": "ANC_TS_number_tested_for_urine_proteine"
+    },
+    {
+        "name": "Number tested positive for urine proteine",
+        "id": "ANC_TS_number_tested_positive_for_urine_proteine"
+    },
+    {
+        "name": "Number tested for hepatitis B",
+        "id": "ANC_TS_number_tested_for_hepatitis_b"
+    },
+    {
+        "name": "Number tested hepatitis B positive",
+        "id": "ANC_TS_number_tested_hepatitis_b_positive"
+    },
+    {
+        "name": "Number known to be HIV+",
+        "id": "ANC_TS_number_known_to_be_hiv+"
+    },
+    {
+        "name": "Number of ANC HIV tested",
+        "id": "ANC_TS_ANC_HIV_teste"
+    },
     {
         "name": "Number of ANC HIV tested positive",
         "id": "ANC_TS_ANC_HIV_positive"
     },
     {
-        "name": "Number of ANC HIV tested positive on ART",
+        "name": "Number of ANC HIV positive (known+ and newly tested+) on ART",
         "id": "ANC_TS_ANC_HIV_positive_on_ART"
     },
-    { "name": "Number of abortions", "id": "ANC_TS_abortions" }
+    {
+        "name": "Number of abortions",
+        "id": "ANC_TS_abortions"
+    }
 ]

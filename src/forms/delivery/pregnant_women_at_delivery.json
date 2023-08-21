@@ -16,11 +16,19 @@
         "id": "Delivery_TS_Were_screened_for_syphilis_during_antenatal_period"
     },
     {
+        "name": "Were screened for anemia during antenatal period",
+        "id": "Delivery_TS_were_screened_for_anemia_during_antenatal_period"
+    },
+    {
+        "name": "Were screened for proteinuria during antenatal period",
+        "id": "Delivery_TS_were_screened_for_proteinuria_during_antenatal_period"
+    },
+    {
         "name": "Received 1 dose of mebendazole during antenatal period",
         "id": "Delivery_TS_Received_1_dose_of_mebendazole_during_antenatal_period"
     },
     {
-        "name": "Received 1 ITN* during antenatal period",
+        "name": "Received 1 LLIN during antenatal period",
         "id": "Delivery_TS_Received_1_ITN_during_antenatal_period"
     }
 ]

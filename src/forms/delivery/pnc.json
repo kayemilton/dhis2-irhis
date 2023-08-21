@@ -1,10 +1,34 @@
 [
     {
-        "name": "Attended for 3 postnatal visits < 6 weeks of delivery",
-        "id": "PNC_TS_Attended_for_3_postnatal_visits_lt_6_weeks_of_delivery"
+        "name": "Attended for 1st postnatal visits within 24 hours of delivery",
+        "id": "PNC_TS_attended_for_1st_postnatal_visits_within_24_hours_of_delivery"
     },
     {
-        "name": "Number of children received co-trimoxazole",
+        "name": "Attended for 2nd postnatal visits within 48 - 72 hours of delivery",
+        "id": "PNC_TS_attended_for_2nd_postnatal_visits_within_48_-_72_hours_of_delivery"
+    },
+    {
+        "name": "Attended for 3rd postnatal visits within 7 days - 14 days of delivery",
+        "id": "PNC_TS_attended_for_3rd_postnatal_visits_within_7_days_-_14_days_of_delivery"
+    },
+    {
+        "name": "Attended for 4th postnatal visits within 6 weeks of delivery",
+        "id": "PNC_TS_Attended_for_4_postnatal_visits_lt_6_weeks_of_delivery"
+    },
+    {
+        "name": "Number of new born from HIV+ mothers who received ARVs within 72 hours of birth",
+        "id": "PNC_TS_number_of_new_born_from_hiv+_mothers_who_received_arvs_within_72_hours_of_birth"
+    },
+    {
+        "name": "HIV exposed infants starting Cotrimoxazole Prophylaxis at  6 weeks",
         "id": "PNC_TS_children_received_co_trimoxazole"
+    },
+    {
+        "name": "Number of DBS/ PCR performed for exposed infants at 6 weeks",
+        "id": "PNC_TS_number_of_dbs/_pcr_performed_for_exposed_infants_at_6_weeks"
+    },
+    {
+        "name": "Number of positive DBS/PCR result at 6 weeks",
+        "id": "PNC_TS__number_of_positive_dbs/pcr_result_at_6_weeks"
     }
 ]

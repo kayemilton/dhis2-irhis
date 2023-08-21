@@ -1,18 +1,132 @@
 [
-    { "name": "Malaria (suspected)", "id": "Mort_TS_Malaria_susp" },
-    { "name": "Malaria (confirmed)", "id": "Mort_TS_Malaria_conf" },
-    { "name": "URTI", "id": "Mort_TS_URTI" },
-    { "name": "LRTI", "id": "Mort_TS_LRTI" },
-    { "name": "Neonatal Death", "id": "Mort_TS_Neonatal_Death" },
-    { "name": "Sexuality Transmitted Infections", "id": "Mort_TS_STI" },
-    { "name": "Watery Diarrhoea", "id": "Mort_TS_Watery_Diarrhoea" },
-    { "name": "Bloody Diarrhoea", "id": "Mort_TS_Bloody_Diarrhoea" },
-    { "name": "Tuberculosis", "id": "Mort_TS_TBC" },
-    { "name": "Meningitis (other)", "id": "Mort_TS_Meningitis" },
-    { "name": "HIV/AIDS", "id": "Mort_TS_HIV_AIDS" },
-    { "name": "Acute Malnutrition", "id": "Mort_TS_Acute_Malnutrition" },
-    { "name": "Chronic Malnutrition", "id": "Mort_TS_Chronic_Malnutrition" },
-    { "name": "Anaemia", "id": "Mort_TS_Anaemia" },
+    {
+        "name": "Malaria (confirmed)",
+        "id": "Mort_TS_Malaria_susp"
+    },
+    {
+        "name": "Malaria (suspected)",
+        "id": "Mort_TS_Malaria_conf"
+    },
+    {
+        "name": "URTI",
+        "id": "Mort_TS_URTI"
+    },
+    {
+        "name": "Pneumonia",
+        "id": "Mort_TS_pneumonia"
+    },
+    {
+        "name": "Bronchitis",
+        "id": "Mort_TS_bronchitis"
+    },
+    {
+        "name": "LRTI (other)",
+        "id": "Mort_TS_LRTI"
+    },
+    {
+        "name": "Neonatal death -Pre-term birth complications",
+        "id": "Mort_TS_neonatal_death_-pre-term_birth_complications"
+    },
+    {
+        "name": "Neonatal death -Birth trauma",
+        "id": "Mort_TS_neonatal_death_-birth_trauma"
+    },
+    {
+        "name": "Intrauterine hypoxia and birth asphyxia",
+        "id": "Mort_TS_intrauterine_hypoxia_and_birth_asphyxia"
+    },
+    {
+        "name": "Neonatal death -Sepsis",
+        "id": "Mort_TS_neonatal_death_-sepsis"
+    },
+    {
+        "name": "Neonatal death -Meningitis",
+        "id": "Mort_TS_neonatal_death_-meningitis"
+    },
+    {
+        "name": "Neonatal death -Congenital",
+        "id": "Mort_TS_neonatal_death_-congenital"
+    },
+    {
+        "name": "Neonatal death -Tetanus",
+        "id": "Mort_TS_neonatal_death_-tetanus"
+    },
+    {
+        "name": "Neonatal death -Pneumonia",
+        "id": "Mort_TS_neonatal_death_-pneumonia"
+    },
+    {
+        "name": "Neonatal death -Diarrhoea",
+        "id": "Mort_TS_neonatal_death_-diarrhoea"
+    },
+    {
+        "name": "Neonatal death -Others",
+        "id": "Mort_TS_Neonatal_Death"
+    },
+    {
+        "name": "Sexually Transmitted Infections",
+        "id": "Mort_TS_STI"
+    },
+    {
+        "name": "Watery Diarrhoea",
+        "id": "Mort_TS_Watery_Diarrhoea"
+    },
+    {
+        "name": "Bloody Diarrhoea",
+        "id": "Mort_TS_Bloody_Diarrhoea"
+    },
+    {
+        "name": "Gastric and duodenal ulcer",
+        "id": "Mort_TS_gastric_and_duodenal_ulcer"
+    },
+    {
+        "name": "Appendicitis",
+        "id": "Mort_TS_appendicitis"
+    },
+    {
+        "name": "Tuberculosis",
+        "id": "Mort_TS_TBC"
+    },
+    {
+        "name": "Meningitis (other)",
+        "id": "Mort_TS_Meningitis"
+    },
+    {
+        "name": "HIV/AIDS",
+        "id": "Mort_TS_HIV_AIDS"
+    },
+    {
+        "name": "Leishmaniasis",
+        "id": "Mort_TS_leishmaniasis"
+    },
+    {
+        "name": "Lymphatic Filariasis",
+        "id": "Mort_TS_lymphatic_filariasis"
+    },
+    {
+        "name": "Schistosomiasis",
+        "id": "Mort_TS_schistosomiasis"
+    },
+    {
+        "name": "Onchocerciasis",
+        "id": "Mort_TS_onchocerciasis"
+    },
+    {
+        "name": "Trypanosomiasis",
+        "id": "Mort_TS_trypanosomiasis"
+    },
+    {
+        "name": "Acute Malnutrition",
+        "id": "Mort_TS_Acute_Malnutrition"
+    },
+    {
+        "name": "Chronic Malnutrition",
+        "id": "Mort_TS_Chronic_Malnutrition"
+    },
+    {
+        "name": "Anaemia",
+        "id": "Mort_TS_Anaemia"
+    },
     {
         "name": "Acute Jaundice Syndrome",
         "id": "Mort_TS_Acute_Jaundice_Syndrome"
@@ -21,35 +135,126 @@
         "name": "Influenza-like Illness",
         "id": "Mort_TS_Influenza_like_Illness"
     },
-    { "name": "Other", "id": "Mort_TS_Other" },
-    { "name": "Asthma", "id": "Mort_TS_Asthma" },
-    { "name": "Cancer", "id": "Mort_TS_Cancer" },
+    {
+        "name": "Other",
+        "id": "Mort_TS_other"
+    },
+    {
+        "name": "Asthma",
+        "id": "Mort_TS_Asthma"
+    },
+    {
+        "name": "Cancer",
+        "id": "Mort_TS_Cancer"
+    },
     {
         "name": "Cardiovascular Disease (other)",
         "id": "Mort_TS_Cardiovascular"
     },
-    { "name": "Ischaemic Heart Disease", "id": "Mort_TS_Ischaemic_Heart" },
+    {
+        "name": "Ischaemic Heart Diseases",
+        "id": "Mort_TS_Ischaemic_Heart"
+    },
+    {
+        "name": "Chronic Heart Diseases",
+        "id": "Mort_TS_chronic_heart_diseases"
+    },
+    {
+        "name": "Rheumatic Heart Diseases",
+        "id": "Mort_TS_rheumatic_heart_diseases"
+    },
+    {
+        "name": "Heart Failure",
+        "id": "Mort_TS_heart_failure"
+    },
     {
         "name": "Chronic Obstructive Pulmonary Disease (other)",
         "id": "Mort_TS_Chronic_Obstructive_Pulmonary"
     },
-    { "name": "Diabetes", "id": "Mort_TS_Diabetes" },
-    { "name": "Hypertension", "id": "Mort_TS_Hypertension" },
-    { "name": "Liver Disease", "id": "Mort_TS_Liver" },
+    {
+        "name": "Diabetes",
+        "id": "Mort_TS_Diabetes"
+    },
+    {
+        "name": "Hypertension",
+        "id": "Mort_TS_Hypertension"
+    },
+    {
+        "name": "Liver Disease",
+        "id": "Mort_TS_Liver"
+    },
     {
         "name": "Musculoskeletal Disorders",
         "id": "Mort_TS_Musculoskeletal_Disorders"
     },
-    { "name": "Mental Health", "id": "Mort_TS_Mental_Health" },
-    { "name": "Others", "id": "Mort_TS_Others" },
-    { "name": "Mat Death -Hemorrhage", "id": "Mort_TS_Hemorrhage" },
+    {
+        "name": "Renal disease",
+        "id": "Mort_TS_renal_disease"
+    },
+    {
+        "name": "Sickle cell disease",
+        "id": "Mort_TS_sickle_cell_disease"
+    },
+    {
+        "name": "Thyroid disorders",
+        "id": "Mort_TS_thyroid_disorders"
+    },
+    {
+        "name": "Others",
+        "id": "Mort_TS_others"
+    },
+    {
+        "name": "Alcohol-related disorders",
+        "id": "Mort_TS_alcohol-related_disorders_"
+    },
+    {
+        "name": "Epilepsy / Seizures",
+        "id": "Mort_TS_epilepsy_/_seizures"
+    },
+    {
+        "name": "Self-harm",
+        "id": "Mort_TS_self-harm"
+    },
+    {
+        "name": "Substance use disorders (benzodiazepine or other prescription medication)",
+        "id": "Mort_TS_substance_use_disorders_(benzodiazepine_or_other_prescription_medication)"
+    },
+    {
+        "name": "Substance use disorders related to opiate use",
+        "id": "Mort_TS_substance_use_disorders_related_to_opiate_use_"
+    },
+    {
+        "name": "Self-harm/suicide",
+        "id": "Mort_TS_self-harm/suicide"
+    },
+    {
+        "name": "Suicidal Attempt",
+        "id": "Mort_TS_suicidal_attempt"
+    },
+    {
+        "name": "Other mental and behavioural disorders",
+        "id": "Mort_TS_Others"
+    },
+    {
+        "name": "Mat Death -Hemorrhage",
+        "id": "Mort_TS_Hemorrhage"
+    },
     {
         "name": "Mat Death -Hypertensive Disorder",
         "id": "Mort_TS_Hypertensive_Disorder"
     },
-    { "name": "Mat Death -Infections", "id": "Mort_TS_Infections" },
-    { "name": "Mat Death -Abortion", "id": "Mort_TS_Abortion" },
-    { "name": "Mat Death -Embolism", "id": "Mort_TS_Embolism" },
+    {
+        "name": "Mat Death -Infections",
+        "id": "Mort_TS_Infections"
+    },
+    {
+        "name": "Mat Death -Abortion",
+        "id": "Mort_TS_Abortion"
+    },
+    {
+        "name": "Mat Death -Embolism",
+        "id": "Mort_TS_Embolism"
+    },
     {
         "name": "Mat Death -Other Direct Causes",
         "id": "Mort_TS_Other_Direct_Causes"
@@ -62,31 +267,120 @@
         "name": "Acute Flaccid Paralysis",
         "id": "Mort_TS_Acute_Flaccid_Paralysis"
     },
-    { "name": "Cholera", "id": "Mort_TS_Cholera" },
-    { "name": "Yellow Fever", "id": "Mort_TS_Yellow_Fever" },
     {
-        "name": "Viral Hemorrhagic Fever",
-        "id": "Mort_TS_Viral_Hemorrhagic_Fever"
+        "name": "Acute viral hepatitis",
+        "id": "Mort_TS_acute_viral_hepatitis"
     },
-    { "name": "Plague", "id": "Mort_TS_Plague" },
-    { "name": "Measles", "id": "Mort_TS_Measles" },
+    {
+        "name": "Chikungunya",
+        "id": "Mort_TS_chikungunya"
+    },
+    {
+        "name": "Cholera",
+        "id": "Mort_TS_Cholera"
+    },
+    {
+        "name": "COVID-19",
+        "id": "Mort_TS_COVID-19"
+    },
+    {
+        "name": "Dengue",
+        "id": "Mort_TS_dengue"
+    },
+    {
+        "name": "Diphtheria",
+        "id": "Mort_TS_diphtheria"
+    },
+    {
+        "name": "Guinea worm",
+        "id": "Mort_TS_guinea_worm"
+    },
+    {
+        "name": "Influenza-Like Illness",
+        "id": "Mort_TS_influenza-like_illness"
+    },
+    {
+        "name": "Measles",
+        "id": "Mort_TS_Measles"
+    },
     {
         "name": "Meningococcal Meningitis",
         "id": "Mort_TS_Meningococcal_Meningitis"
     },
-    { "name": "Salmonelosis", "id": "Mort_TS_Salmonelosis" },
-    { "name": "Shigella", "id": "Mort_TS_Shigella" },
-    { "name": "Tetanus", "id": "Mort_TS_Tetanus" },
+    {
+        "name": "Monkey Pox",
+        "id": "Mort_TS_Monkey_Pox"
+    },
+    {
+        "name": "Plague",
+        "id": "Mort_TS_Plague"
+    },
+    {
+        "name": "Rabies",
+        "id": "Mort_TS_rabies"
+    },
+    {
+        "name": "Rubella",
+        "id": "Mort_TS_rubella"
+    },
+    {
+        "name": "Salmonelosis",
+        "id": "Mort_TS_Salmonelosis"
+    },
+    {
+        "name": "Severe Acute Respiratory Infections (SARI)",
+        "id": "Mort_TS_severe_acute_respiratory_infections_(sari)"
+    },
+    {
+        "name": "Severe Acute Respiratory Syndrome (SARS)",
+        "id": "Mort_TS_severe_acute_respiratory_syndrome_(sars)"
+    },
+    {
+        "name": "Shigella",
+        "id": "Mort_TS_Shigella"
+    },
+    {
+        "name": "Tetanus",
+        "id": "Mort_TS_Tetanus"
+    },
+    {
+        "name": "Typhoid fever",
+        "id": "Mort_TS_typhoid_fever"
+    },
     {
         "name": "Varicella (Chicken pox)",
         "id": "Mort_TS_Varicella_Chicken_pox"
     },
-    { "name": "Whooping Cough", "id": "Mort_TS_Whooping_Cough" },
-    { "name": "COVID-19", "id": "Mort_TS_COVID_19" },
-    { "name": "Monkey Pox", "id": "Mort_TS_Monkey_Pox" },
-    { "name": "Assault", "id": "Mort_TS_Assault" },
-    { "name": "Bites", "id": "Mort_TS_Bites" },
-    { "name": "Accidents", "id": "Mort_TS_Accidents" },
-    { "name": "Self-harm", "id": "Mort_TS_Self_harm" },
-    { "name": "Suicidal Attempt", "id": "Mort_TS_Suicidal_Attempt" }
+    {
+        "name": "Viral Hemorrhagic Fever",
+        "id": "Mort_TS_Viral_Hemorrhagic_Fever"
+    },
+    {
+        "name": "Whooping Cough",
+        "id": "Mort_TS_Whooping_Cough"
+    },
+    {
+        "name": "Yellow Fever",
+        "id": "Mort_TS_Yellow_Fever"
+    },
+    {
+        "name": "Assault",
+        "id": "Mort_TS_Assault"
+    },
+    {
+        "name": "Bites",
+        "id": "Mort_TS_Bites"
+    },
+    {
+        "name": "Accidents",
+        "id": "Mort_TS_Accidents"
+    },
+    {
+        "name": "Unknown",
+        "id": "Mort_TS_unknown"
+    },
+    {
+        "name": "Others",
+        "id": "Mort_TS_others"
+    }
 ]

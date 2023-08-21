@@ -3,26 +3,100 @@
         "name": "Acute Flaccid Paralysis",
         "id": "OPD_TS_nd_Acute_Flaccid_Paralysis"
     },
-    { "name": "Cholera", "id": "OPD_TS_nd_Cholera" },
-    { "name": "Yellow Fever", "id": "OPD_TS_nd_Yellow_Fever" },
     {
-        "name": "Viral Hemorrhagic Fever",
-        "id": "OPD_TS_nd_Viral_Hemorrhagic_Fever"
+        "name": "Acute viral hepatitis",
+        "id": "OPD_TS_nd_Acute_Viral_Hepatitis"
     },
-    { "name": "Plague", "id": "OPD_TS_nd_Plague" },
-    { "name": "Measles", "id": "OPD_TS_nd_Measles" },
+    {
+        "name": "Chikungunya",
+        "id": "OPD_TS_nd_chikungunya"
+    },
+    {
+        "name": "Cholera",
+        "id": "OPD_TS_nd_Cholera"
+    },
+    {
+        "name": "COVID-19",
+        "id": "OPD_TS_nd_COVID-19"
+    },
+    {
+        "name": "Dengue",
+        "id": "OPD_TS_nd_dengue"
+    },
+    {
+        "name": "Diphtheria",
+        "id": "OPD_TS_nd_diphtheria"
+    },
+    {
+        "name": "Guinea worm",
+        "id": "OPD_TS_nd_guinea_worm"
+    },
+    {
+        "name": "Influenza-Like Illness",
+        "id": "OPD_TS_nd_influenza-like_illness"
+    },
+    {
+        "name": "Measles",
+        "id": "OPD_TS_nd_Measles"
+    },
     {
         "name": "Meningococcal Meningitis",
         "id": "OPD_TS_nd_Meningococcal_Meningitis"
     },
-    { "name": "Salmonelosis", "id": "OPD_TS_nd_Salmonelosis" },
-    { "name": "Shigella", "id": "OPD_TS_nd_Shigella" },
-    { "name": "Tetanus", "id": "OPD_TS_nd_Tetanus" },
+    {
+        "name": "Monkey Pox",
+        "id": "OPD_TS_nd_MONKEY_POX"
+    },
+    {
+        "name": "Plague",
+        "id": "OPD_TS_nd_Plague"
+    },
+    {
+        "name": "Rabies",
+        "id": "OPD_TS_nd_rabies"
+    },
+    {
+        "name": "Rubella",
+        "id": "OPD_TS_nd_rubella"
+    },
+    {
+        "name": "Salmonelosis",
+        "id": "OPD_TS_nd_Salmonelosis"
+    },
+    {
+        "name": "Severe Acute Respiratory Infections (SARI)",
+        "id": "OPD_TS_nd_severe_acute_respiratory_infections_(sari)"
+    },
+    {
+        "name": "Severe Acute Respiratory Syndrome (SARS)",
+        "id": "OPD_TS_nd_severe_acute_respiratory_syndrome_(sars)"
+    },
+    {
+        "name": "Shigella",
+        "id": "OPD_TS_nd_Shigella"
+    },
+    {
+        "name": "Tetanus",
+        "id": "OPD_TS_nd_Tetanus"
+    },
+    {
+        "name": "Typhoid fever",
+        "id": "OPD_TS_nd_typhoid_fever"
+    },
     {
         "name": "Varicella (Chicken pox)",
         "id": "OPD_TS_nd_Varicella_Chicken_pox"
     },
-    { "name": "Whooping Cough", "id": "OPD_TS_nd_Whooping_Cough" },
-    { "name": "COVID-19", "id": "OPD_TS_nd_COVID_19" },
-    { "name": "Monkey Pox", "id": "OPD_TS_nd_MONKEY_POX" }
+    {
+        "name": "Viral Hemorrhagic Fever",
+        "id": "OPD_TS_nd_Viral_Hemorrhagic_Fever"
+    },
+    {
+        "name": "Whooping Cough",
+        "id": "OPD_TS_nd_Whooping_Cough"
+    },
+    {
+        "name": "Yellow Fever",
+        "id": "OPD_TS_nd_Yellow_Fever"
+    }
 ]
