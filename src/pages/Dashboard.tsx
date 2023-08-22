@@ -122,59 +122,58 @@ export default function Dashboard() {
                     new Date(end)
                 );
 
-                console.log(processDates(allDates));
-                // for (const unit of units) {
-                //     const iRHISUnit = facilityObjects2[unit];
-                //     const data = queryClient.getQueryData<any>([
-                //         "data-value-set",
-                //         unit,
-                //         period,
-                //     ]);
-                //     if (data) {
-                //         await sendData({
-                //             payload: data,
-                //             startDate: value
-                //                 .startOf("week")
-                //                 .format("YYYY-MM-DD"),
-                //             endDate: value.endOf("week").format("YYYY-MM-DD"),
-                //             facility: iRHISUnit,
-                //         });
-                //         toast({
-                //             title: "Data uploaded.",
-                //             description: `Data has sent to for ${facilityObjects1[unit]}  iRHIS successfully`,
-                //             status: "success",
-                //             duration: 9000,
-                //             isClosable: true,
-                //         });
-                //     } else {
-                //         const data = await queryClient.fetchQuery({
-                //             queryKey: ["data-value-set", unit, period],
-                //             queryFn: async () => {
-                //                 return await queryDataValues(
-                //                     engine,
-                //                     unit,
-                //                     period
-                //                 );
-                //             },
-                //         });
-                //         await sendData({
-                //             payload: data,
-                //             startDate: value
-                //                 .startOf("week")
-                //                 .format("YYYY-MM-DD"),
-                //             endDate: value.endOf("week").format("YYYY-MM-DD"),
-                //             facility: iRHISUnit,
-                //         });
+                const [startDate, endDate] = processDates(allDates);
 
-                //         toast({
-                //             title: "Data uploaded.",
-                //             description: `Data has sent to for ${facilityObjects1[unit]}  iRHIS successfully`,
-                //             status: "success",
-                //             duration: 9000,
-                //             isClosable: true,
-                //         });
-                //     }
-                // }
+                for (const unit of units) {
+                    const iRHISUnit = facilityObjects2[unit];
+                    const data = queryClient.getQueryData<any>([
+                        "data-value-set",
+                        unit,
+                        period,
+                    ]);
+                    if (data && startDate && endDate) {
+                        await sendData({
+                            payload: data,
+                            startDate,
+                            endDate,
+                            facility: iRHISUnit,
+                        });
+                        toast({
+                            title: "Data uploaded.",
+                            description: `Data has sent to for ${facilityObjects1[unit]}  iRHIS successfully`,
+                            status: "success",
+                            duration: 9000,
+                            isClosable: true,
+                        });
+                    } else {
+                        const data = await queryClient.fetchQuery({
+                            queryKey: ["data-value-set", unit, period],
+                            queryFn: async () => {
+                                return await queryDataValues(
+                                    engine,
+                                    unit,
+                                    period
+                                );
+                            },
+                        });
+                        await sendData({
+                            payload: data,
+                            startDate: value
+                                .startOf("week")
+                                .format("YYYY-MM-DD"),
+                            endDate: value.endOf("week").format("YYYY-MM-DD"),
+                            facility: iRHISUnit,
+                        });
+
+                        toast({
+                            title: "Data uploaded.",
+                            description: `Data has sent to for ${facilityObjects1[unit]}  iRHIS successfully`,
+                            status: "success",
+                            duration: 9000,
+                            isClosable: true,
+                        });
+                    }
+                }
             }
         } catch (error) {
             toast({
