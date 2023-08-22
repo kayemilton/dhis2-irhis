@@ -8,6 +8,7 @@ export default function AggTable({
     nationalColumns,
     rows,
     data,
+    reverse2,
     reverse,
     onlyRow,
 }: {
@@ -15,12 +16,15 @@ export default function AggTable({
     nationalColumns?: Array<Array<{ id: string; name: string; span?: number }>>;
     rows: Array<any>;
     data: Dictionary<{ value: string; expression: string }>;
+    reverse2?: boolean;
     reverse?: boolean;
     onlyRow?: boolean;
 }) {
-    const refugees = findMerged(refugeeColumns);
+    const refugees = findMerged(refugeeColumns, reverse2);
     const nationals =
-        nationalColumns !== undefined ? findMerged(nationalColumns) : undefined;
+        nationalColumns !== undefined
+            ? findMerged(nationalColumns, reverse2)
+            : undefined;
     return (
         <Table variant="unstyled" size="sm" w="100%">
             <Thead>

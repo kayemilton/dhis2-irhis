@@ -1,7 +1,7 @@
 [
     {
         "name": "Number at beginning of reporting period",
-        "id": "HIV_number_at_beginning_of_reporting_period"
+        "id": "HIV_HIV_ART_number_at_beginning_of_reporting_period"
     },
     {
         "name": "New cases started on ART",
@@ -13,38 +13,38 @@
     },
     {
         "name": "New cases restarted on ART",
-        "id": "HIV_New_Cases_Number_restarted_on"
+        "id": "HIV_New_Cases_Number_restarted_on_HIV_ART"
     },
     {
         "name": "New cases pregnant started on ART",
-        "id": "HIV_New_Cases_pregnant_started_on"
+        "id": "HIV_New_Cases_pregnant_started_on_HIV_ART"
     },
     {
         "name": "New cases lactating started on ART",
-        "id": "HIV_New_Cases_lactating_started_on"
+        "id": "HIV_New_Cases_lactating_started_on_HIV_ART"
     },
     {
         "name": "Stopped",
-        "id": "HIV_New_Cases_HIV_ART_Stopped"
+        "id": "HIV_New_Cases_HIV_ART_Stopped_HIV_ART"
     },
     {
         "name": "Transfer out",
-        "id": "HIV_New_Cases_Number_Transfer_out"
+        "id": "HIV_New_Cases_Number_Transfer_out_HIV_ART"
     },
     {
         "name": "Lost to follow up",
-        "id": "HIV_New_Cases_Number_Lost_to_follow"
+        "id": "HIV_New_Cases_Number_Lost_to_follow_HIV_ART"
     },
     {
         "name": "Deaths",
-        "id": "HIV_New_Cases_Number_Deaths"
+        "id": "HIV_New_Cases_Number_Deaths_HIV_ART"
     },
     {
         "name": "Unknown",
-        "id": "HIV_New_Cases_Number_Unknown"
+        "id": "HIV_New_Cases_Number_Unknown_HIV_ART"
     },
     {
         "name": "Number at the end of reporting period",
-        "id": "HIV_number_at_the_end_of_reporting_period"
+        "id": "HIV_HIV_ART_number_at_the_end_of_reporting_period"
     }
 ]

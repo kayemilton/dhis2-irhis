@@ -6,9 +6,5 @@
     {
         "name": "Number of full days OPD functioning",
         "id": "OPD_TS_Ind_full_days_OPD_functioning"
-    },
-    {
-        "name": "Number of new consultations (refugees only)",
-        "id": "OPD_TS_Ind_num_new_consultations"
     }
 ]

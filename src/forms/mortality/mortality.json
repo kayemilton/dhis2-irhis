@@ -136,10 +136,6 @@
         "id": "Mort_TS_Influenza_like_Illness"
     },
     {
-        "name": "Other",
-        "id": "Mort_TS_other"
-    },
-    {
         "name": "Asthma",
         "id": "Mort_TS_Asthma"
     },
@@ -200,20 +196,12 @@
         "id": "Mort_TS_thyroid_disorders"
     },
     {
-        "name": "Others",
-        "id": "Mort_TS_others"
-    },
-    {
         "name": "Alcohol-related disorders",
         "id": "Mort_TS_alcohol-related_disorders_"
     },
     {
         "name": "Epilepsy / Seizures",
         "id": "Mort_TS_epilepsy_/_seizures"
-    },
-    {
-        "name": "Self-harm",
-        "id": "Mort_TS_self-harm"
     },
     {
         "name": "Substance use disorders (benzodiazepine or other prescription medication)",
@@ -226,10 +214,6 @@
     {
         "name": "Self-harm/suicide",
         "id": "Mort_TS_self-harm/suicide"
-    },
-    {
-        "name": "Suicidal Attempt",
-        "id": "Mort_TS_suicidal_attempt"
     },
     {
         "name": "Other mental and behavioural disorders",

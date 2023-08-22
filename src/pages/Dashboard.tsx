@@ -39,7 +39,7 @@ import { Stabilization } from "../forms/stabilization";
 import { TSFP } from "../forms/tsfp";
 import { EventsGenerics } from "../interfaces";
 import { useDataValueSet, queryDataValues } from "../queries";
-import { sendData } from "../utils";
+import { sendData, getDatesBetween, processDates } from "../utils";
 
 dayjs.extend(weekday);
 dayjs.extend(isoWeek);
@@ -106,60 +106,75 @@ export default function Dashboard() {
     };
     const postData = async () => {
         setLoading(() => true);
+
         try {
             if (value && units.length > 0) {
-                for (const unit of units) {
-                    const iRHISUnit = facilityObjects2[unit];
-                    const data = queryClient.getQueryData<any>([
-                        "data-value-set",
-                        unit,
-                        period,
-                    ]);
-                    if (data) {
-                        await sendData({
-                            payload: data,
-                            startDate: value
-                                .startOf("week")
-                                .format("YYYY-MM-DD"),
-                            endDate: value.endOf("week").format("YYYY-MM-DD"),
-                            facility: iRHISUnit,
-                        });
-                        toast({
-                            title: "Data uploaded.",
-                            description: `Data has sent to for ${facilityObjects1[unit]}  iRHIS successfully`,
-                            status: "success",
-                            duration: 9000,
-                            isClosable: true,
-                        });
-                    } else {
-                        const data = await queryClient.fetchQuery({
-                            queryKey: ["data-value-set", unit, period],
-                            queryFn: async () => {
-                                return await queryDataValues(
-                                    engine,
-                                    unit,
-                                    period
-                                );
-                            },
-                        });
-                        await sendData({
-                            payload: data,
-                            startDate: value
-                                .startOf("week")
-                                .format("YYYY-MM-DD"),
-                            endDate: value.endOf("week").format("YYYY-MM-DD"),
-                            facility: iRHISUnit,
-                        });
+                const end = value
+                    .startOf("month")
+                    .endOf("week")
+                    .format("YYYY-MM-DD");
+                const start = value
+                    .startOf("month")
+                    .startOf("week")
+                    .format("YYYY-MM-DD");
+                const allDates = getDatesBetween(
+                    new Date(start),
+                    new Date(end)
+                );
 
-                        toast({
-                            title: "Data uploaded.",
-                            description: `Data has sent to for ${facilityObjects1[unit]}  iRHIS successfully`,
-                            status: "success",
-                            duration: 9000,
-                            isClosable: true,
-                        });
-                    }
-                }
+                console.log(processDates(allDates));
+                // for (const unit of units) {
+                //     const iRHISUnit = facilityObjects2[unit];
+                //     const data = queryClient.getQueryData<any>([
+                //         "data-value-set",
+                //         unit,
+                //         period,
+                //     ]);
+                //     if (data) {
+                //         await sendData({
+                //             payload: data,
+                //             startDate: value
+                //                 .startOf("week")
+                //                 .format("YYYY-MM-DD"),
+                //             endDate: value.endOf("week").format("YYYY-MM-DD"),
+                //             facility: iRHISUnit,
+                //         });
+                //         toast({
+                //             title: "Data uploaded.",
+                //             description: `Data has sent to for ${facilityObjects1[unit]}  iRHIS successfully`,
+                //             status: "success",
+                //             duration: 9000,
+                //             isClosable: true,
+                //         });
+                //     } else {
+                //         const data = await queryClient.fetchQuery({
+                //             queryKey: ["data-value-set", unit, period],
+                //             queryFn: async () => {
+                //                 return await queryDataValues(
+                //                     engine,
+                //                     unit,
+                //                     period
+                //                 );
+                //             },
+                //         });
+                //         await sendData({
+                //             payload: data,
+                //             startDate: value
+                //                 .startOf("week")
+                //                 .format("YYYY-MM-DD"),
+                //             endDate: value.endOf("week").format("YYYY-MM-DD"),
+                //             facility: iRHISUnit,
+                //         });
+
+                //         toast({
+                //             title: "Data uploaded.",
+                //             description: `Data has sent to for ${facilityObjects1[unit]}  iRHIS successfully`,
+                //             status: "success",
+                //             duration: 9000,
+                //             isClosable: true,
+                //         });
+                //     }
+                // }
             }
         } catch (error) {
             toast({
@@ -246,7 +261,6 @@ export default function Dashboard() {
                 <Stack
                     direction="row"
                     alignItems="center"
-                    w="500px"
                     justifyContent="space-between"
                 >
                     <Text>{facilityObjects1[facility || ""]}</Text>

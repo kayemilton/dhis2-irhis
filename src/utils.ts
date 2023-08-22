@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Facility } from "./interfaces";
-import { fromPairs } from "lodash";
+import { fromPairs, groupBy, minBy, maxBy } from "lodash";
+import dayjs, { Dayjs } from "dayjs";
 
 export function encodeToBinary(str: string): string {
     return btoa(
@@ -24,6 +25,8 @@ export function decodeFromBinary(str: string): string {
 
 export const MALE = { id: "M", name: "M" };
 export const FEMALE = { id: "F", name: "F" };
+export const MALE_INFANTS = { id: "M_Infants", name: "M" };
+export const FEMALE_INFANTS = { id: "F_Infants", name: "F" };
 export const YEARS_0_T0_4 = { id: "0_4_yrs", name: "0-4" };
 export const YEARS_0_T0_4_LT = { id: "lt_0_4", name: "0-4" };
 export const YEARS_T0_1 = { id: "lt_1", name: "<1" };
@@ -61,7 +64,7 @@ export const YEARS_TO_18 = { id: "lt_18", name: "<18" };
 export const YEARS_TO_18_YRS = { id: "lt_18_yrs", name: "<18" };
 export const HOME_DELIVERY = { id: "Home_delivery", name: "Home delivery" };
 export const FACILITY_DELIVERY = {
-    id: "Health_facility",
+    id: "Heath_facility",
     name: "Health Facility delivery",
 };
 export const YEARS_5_TO_14 = { id: "5_14_yrs", name: "5-14" };
@@ -127,7 +130,6 @@ export const AGE_0_TO_59_MONTHS = [
     MONTHS_0_TO_6,
     MONTHS_6_TO_23,
     MONTHS_24_TO_59,
-    YEARS_T0TAL_LT_5,
 ];
 
 export const AGE_0_TO_59_MONTHS_TB_PREG = [
@@ -165,7 +167,8 @@ export const NAT_AGE_0_TO_60_ADMIN = [
 ];
 
 export const findMerged = (
-    list: Array<Array<{ id: string; name: string; span?: number }>>
+    list: Array<Array<{ id: string; name: string; span?: number }>>,
+    reverse: boolean = false
 ) => {
     let finalColumns: Array<
         Array<{ id: string; name: string; span?: number }>
@@ -184,7 +187,7 @@ export const findMerged = (
                         ...nextValues,
                         {
                             name: p.name,
-                            id: `${v.id}_${p.id}`,
+                            id: reverse ? `${p.id}_${v.id}` : `${v.id}_${p.id}`,
                             span: 1,
                         },
                     ];
@@ -303,3 +306,38 @@ export const diseaseControlColumns = [
         })),
     ],
 ];
+
+export const getDatesBetween = (start: Date, end: Date) => {
+    for (
+        var arr: Date[] = [], dt = new Date(start);
+        dt <= new Date(end);
+        dt.setDate(dt.getDate() + 1)
+    ) {
+        arr.push(new Date(dt));
+    }
+    return arr;
+};
+
+export const processDates = (arr: Date[]) => {
+    const all = arr.map((d) => {
+        const year = dayjs(d).year();
+        const month = dayjs(d).month();
+        const day = dayjs(d).day();
+        return { year, month, day, date: dayjs(d).format("YYYY-MM-DD") };
+    });
+    const minMonth = minBy(all, "month");
+    const maxMonth = maxBy(all, "month");
+    const groups = groupBy(all, "month");
+
+    if (groups[minMonth?.month || ""] <= groups[maxMonth?.month || ""]) {
+        console.log(maxMonth);
+        return [minMonth?.date, maxMonth?.date];
+    }
+
+    return [
+        dayjs(arr[0]).add(7, "days").format("YYYY-MM-DD"),
+        dayjs(arr[arr.length - 1])
+            .add(7, "days")
+            .format("YYYY-MM-DD"),
+    ];
+};

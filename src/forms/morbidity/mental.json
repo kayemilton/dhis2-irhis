@@ -4,10 +4,6 @@
         "id": "OPD_TS_mh_Epilepsy_Seizures"
     },
     {
-        "name": "Alcohol or other substance use disorder",
-        "id": "OPD_TS_mh_"
-    },
-    {
         "name": "Alcohol-related disorders",
         "id": "OPD_TS_mh_alcohol-related_disorders_"
     },
@@ -24,20 +20,12 @@
         "id": "OPD_TS_mh_other_substance_use_disorders"
     },
     {
-        "name": "Intellectual disability and developmental disorder",
-        "id": "OPD_TS_mh_intellectual_disability_and_developmental_disorder"
-    },
-    {
         "name": "Intellectual disability",
         "id": "OPD_TS_mh_intellectual_disability"
     },
     {
         "name": "Developmental disorders",
         "id": "OPD_TS_mh_developmental_disorders"
-    },
-    {
-        "name": "Psychosis (including bipolar disorder)",
-        "id": "OPD_TS_mh_psychosis_(including_bipolar_disorder)"
     },
     {
         "name": "Acute psychosis",
@@ -52,20 +40,12 @@
         "id": "OPD_TS_mh_bipolar_disorders_(mania)"
     },
     {
-        "name": "Dementia or Delirium",
-        "id": "OPD_TS_mh_dementia_or_delirium"
-    },
-    {
         "name": "Dementia",
         "id": "OPD_TS_mh_dementia"
     },
     {
         "name": "Delirium",
         "id": "OPD_TS_mh_delirium"
-    },
-    {
-        "name": "Moderate-severe emotional disorder",
-        "id": "OPD_TS_mh_moderate-severe_emotional_disorder"
     },
     {
         "name": "Moderate-severe depression",

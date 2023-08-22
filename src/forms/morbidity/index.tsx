@@ -18,6 +18,7 @@ import {
 import acute from "./accute_health.json";
 import chronic from "./chronic.json";
 import consultation from "./consultation.json";
+import injuries from "./injuries.json";
 import mental from "./mental.json";
 import notifiable from "./notifiable.json";
 import sti from "./sti.json";
@@ -127,7 +128,7 @@ export const Morbidity = ({ data }: { data: any }) => {
             </Stack>
             <Stack>
                 <Text fontWeight="bold">Injuries</Text>
-                <AggTable2 columns={acuteColumns} rows={mental} data={data} />
+                <AggTable2 columns={acuteColumns} rows={injuries} data={data} />
             </Stack>
             <Stack>
                 <Text fontWeight="bold">Notifiable Diseases</Text>
@@ -139,16 +140,17 @@ export const Morbidity = ({ data }: { data: any }) => {
             </Stack>
             <Stack>
                 <Text fontWeight="bold">Outbreak Alert and Response</Text>
-                <AggTable2
-                    columns={[[{ id: "", name: "" }]]}
+                <AggTable
+                    refugeeColumns={[[{ id: "", name: "Total" }]]}
+                    onlyRow
                     rows={[
                         {
                             name: "Number of outbreaks reported",
-                            id: "OPD_TS_nr_outbreaks_rep",
+                            id: "OPD_TS_oar_nr_outbreaks_rep",
                         },
                         {
                             name: "Number of reported outbreaks investigated within 48 hours",
-                            id: "OPD_TS_nr_rep_invest",
+                            id: "OPD_TS_oar_nr_rep_invest",
                         },
                     ]}
                     data={data}

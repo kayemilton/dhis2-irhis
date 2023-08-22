@@ -9,14 +9,16 @@ export default function AggTable2({
     reverse,
     onlyRow,
 }: {
-    columns: Array<Array<{ id: string; name: string; span?: number }>>;
+    columns: Array<
+        Array<{ id: string; name: string; span?: number; row?: number }>
+    >;
     rows: Array<any>;
     data: Dictionary<{ value: string; expression: string }>;
     reverse?: boolean;
     onlyRow?: boolean;
 }) {
     return (
-        <Table variant="unstyled" size="sm">
+        <Table variant="unstyled" size="sm" w="100%">
             <Thead>
                 {columns.map((col, index) => (
                     <Tr key={index}>
@@ -35,6 +37,7 @@ export default function AggTable2({
                                 borderWidth="thin"
                                 borderStyle="solid"
                                 colSpan={col.span}
+                                rowSpan={col.row}
                                 textAlign="center"
                                 textTransform="none"
                             >

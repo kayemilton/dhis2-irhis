@@ -129,326 +129,306 @@
     },
     {
         "name": "Asthma",
-        "id": "IPD_TS_ahc_Asthma"
+        "id": "IPD_TS_ncd_Asthma"
     },
     {
         "name": "Cancer",
-        "id": "IPD_TS_ahc_Cancer"
+        "id": "IPD_TS_ncd_Cancer"
     },
     {
         "name": "Cardiovascular Disease (other)",
-        "id": "IPD_TS_ahc_Cardiovascular"
+        "id": "IPD_TS_ncd_Cardiovascular"
     },
     {
         "name": "Ischaemic Heart Diseases",
-        "id": "IPD_TS_ahc_Ischaemic_Heart_Diseases"
+        "id": "IPD_TS_ncd_Ischaemic_Heart_Diseases"
     },
     {
         "name": "Chronic Heart Diseases",
-        "id": "IPD_TS_ahc_chronic_heart_diseases"
+        "id": "IPD_TS_ncd_chronic_heart_diseases"
     },
     {
         "name": "Rheumatic Heart Diseases",
-        "id": "IPD_TS_ahc_rheumatic_heart_diseases"
+        "id": "IPD_TS_ncd_rheumatic_heart_diseases"
     },
     {
         "name": "Heart Failure",
-        "id": "IPD_TS_ahc_heart_failure"
+        "id": "IPD_TS_ncd_heart_failure"
     },
     {
         "name": "Chronic Obstructive Pulmonary Disease (other)",
-        "id": "IPD_TS_ahc_Chronic_Obstructive_Pulmonary"
+        "id": "IPD_TS_ncd_Chronic_Obstructive_Pulmonary"
     },
     {
         "name": "Diabetes",
-        "id": "IPD_TS_ahc_Diabetes"
+        "id": "IPD_TS_ncd_Diabetes"
     },
     {
         "name": "Hypertension",
-        "id": "IPD_TS_ahc_Hypertension"
+        "id": "IPD_TS_ncd_Hypertension"
     },
     {
         "name": "Liver Disease",
-        "id": "IPD_TS_ahc_Liver"
+        "id": "IPD_TS_ncd_Liver"
     },
     {
         "name": "Musculoskeletal Disorders",
-        "id": "IPD_TS_ahc_Musculoskeletal_Disorders"
+        "id": "IPD_TS_ncd_Musculoskeletal_Disorders"
     },
     {
         "name": "Renal disease",
-        "id": "IPD_TS_ahc_renal_disease"
+        "id": "IPD_TS_ncd_renal_disease"
     },
     {
         "name": "Sickle cell disease",
-        "id": "IPD_TS_ahc_sickle_cell_disease"
+        "id": "IPD_TS_ncd_sickle_cell_disease"
     },
     {
         "name": "Thyroid disorders",
-        "id": "IPD_TS_ahc_thyroid_disorders"
+        "id": "IPD_TS_ncd_thyroid_disorders"
     },
     {
         "name": "Other NCDs",
-        "id": "IPD_TS_ahc_Other"
+        "id": "IPD_TS_ncd_Other"
     },
     {
         "name": "Epilepsy / Seizures",
-        "id": "IPD_TS_ahc_Epilepsy_Seizures"
-    },
-    {
-        "name": "Alcohol or other substance use disorder",
-        "id": "IPD_TS_ahc_alcohol_or_other_substance_use_disorder"
+        "id": "IPD_TS_mh_Epilepsy_Seizures"
     },
     {
         "name": "Alcohol-related disorders",
-        "id": "IPD_TS_ahc_alcohol-related_disorders_"
+        "id": "IPD_TS_mh_alcohol-related_disorders_"
     },
     {
         "name": "Substance use disorders related to opiate use",
-        "id": "IPD_TS_ahc_substance_use_disorders_related_to_opiate_use_"
+        "id": "IPD_TS_mh_substance_use_disorders_related_to_opiate_use_"
     },
     {
         "name": "Substance use disorders related to benzodiazepine or other prescription medication",
-        "id": "IPD_TS_ahc_substance_use_disorders_related_to_benzodiazepine_or_other_prescription_medication"
+        "id": "IPD_TS_mh_substance_use_disorders_related_to_benzodiazepine_or_other_prescription_medication"
     },
     {
         "name": "Other substance use disorders",
-        "id": "IPD_TS_ahc_other_substance_use_disorders_"
-    },
-    {
-        "name": "Intellectual disability and developmental disorder",
-        "id": "IPD_TS_ahc_intellectual_disability_and_developmental_disorder"
+        "id": "IPD_TS_mh_other_substance_use_disorders_"
     },
     {
         "name": "Intellectual disability",
-        "id": "IPD_TS_ahc_intellectual_disability_"
+        "id": "IPD_TS_mh_intellectual_disability_"
     },
     {
         "name": "Developmental disorders",
-        "id": "IPD_TS_ahc_developmental_disorders"
-    },
-    {
-        "name": "Psychosis (including bipolar disorder)",
-        "id": "IPD_TS_ahc_psychosis_(including_bipolar_disorder)"
+        "id": "IPD_TS_mh_developmental_disorders"
     },
     {
         "name": "Acute psychosis",
-        "id": "IPD_TS_ahc_acute_psychosis_"
+        "id": "IPD_TS_mh_acute_psychosis_"
     },
     {
         "name": "Chronic psychosis",
-        "id": "IPD_TS_ahc_chronic_psychosis_"
+        "id": "IPD_TS_mh_chronic_psychosis_"
     },
     {
         "name": "Bipolar disorders (Mania)",
-        "id": "IPD_TS_ahc_bipolar_disorders_(mania)"
-    },
-    {
-        "name": "Dementia or Delirium",
-        "id": "IPD_TS_ahc_dementia_or_delirium"
+        "id": "IPD_TS_mh_bipolar_disorders_(mania)"
     },
     {
         "name": "Dementia",
-        "id": "IPD_TS_ahc_dementia"
+        "id": "IPD_TS_mh_dementia"
     },
     {
         "name": "Delirium",
-        "id": "IPD_TS_ahc_delirium"
-    },
-    {
-        "name": "Moderate-severe emotional disorder",
-        "id": "IPD_TS_ahc_moderate-severe_emotional_disorder"
+        "id": "IPD_TS_mh_delirium"
     },
     {
         "name": "Moderate-severe depression",
-        "id": "IPD_TS_ahc_moderate-severe_depression_"
+        "id": "IPD_TS_mh_moderate-severe_depression_"
     },
     {
         "name": "Posttraumatic stress disorder",
-        "id": "IPD_TS_ahc_posttraumatic_stress_disorder_"
+        "id": "IPD_TS_mh_posttraumatic_stress_disorder_"
     },
     {
         "name": "Other moderate-severe emotional disorders",
-        "id": "IPD_TS_ahc_other_moderate-severe_emotional_disorders_"
+        "id": "IPD_TS_mh_other_moderate-severe_emotional_disorders_"
     },
     {
         "name": "Medically unexplained somatic complaint",
-        "id": "IPD_TS_ahc_Medically_unexplained_somatic_complaint"
+        "id": "IPD_TS_mh_Medically_unexplained_somatic_complaint"
     },
     {
         "name": "Self-harm/suicide attempt",
-        "id": "IPD_TS_ahc_self-harm/suicide_attempt"
+        "id": "IPD_TS_mh_self-harm/suicide_attempt"
     },
     {
         "name": "Acute Stress",
-        "id": "IPD_TS_ahc_acute_stress_"
+        "id": "IPD_TS_mh_acute_stress_"
     },
     {
         "name": "Dissociative disorder",
-        "id": "IPD_TS_ahc_dissociative_disorder_"
+        "id": "IPD_TS_mh_dissociative_disorder_"
     },
     {
         "name": "Grief",
-        "id": "IPD_TS_ahc_grief"
+        "id": "IPD_TS_mh_grief"
     },
     {
         "name": "Other psychological complaint",
-        "id": "IPD_TS_ahc_Other_psychological_complaint"
+        "id": "IPD_TS_mh_Other_psychological_complaint"
     },
     {
         "name": "Urethral Discharge Syndrome",
-        "id": "IPD_TS_ahc_Urethral_Discharge_Syndrome"
+        "id": "IPD_TS_std_Urethral_Discharge_Syndrome"
     },
     {
         "name": "Vaginal Discharge Syndrome",
-        "id": "IPD_TS_ahc_Vaginal_Discharge_Syndrome"
+        "id": "IPD_TS_std_Vaginal_Discharge_Syndrome"
     },
     {
         "name": "Genital Ulcer Disease",
-        "id": "IPD_TS_ahc_Genital_Ulcer"
+        "id": "IPD_TS_std_Genital_Ulcer"
     },
     {
         "name": "Pelvic Inflammatory Disease",
-        "id": "IPD_TS_ahc_Pelvic_Inflammatory"
+        "id": "IPD_TS_std_Pelvic_Inflammatory"
     },
     {
         "name": "Congenital Syphilis",
-        "id": "IPD_TS_ahc_Congenital_Syphilis"
+        "id": "IPD_TS_std_Congenital_Syphilis"
     },
     {
         "name": "Ophthalmia Neonatorum",
-        "id": "IPD_TS_ahc_Ophthalmia_Neonatorum"
+        "id": "IPD_TS_std_Ophthalmia_Neonatorum"
     },
     {
         "name": "Other STI",
-        "id": "IPD_TS_ahc_Other"
+        "id": "IPD_TS_std_Other"
     },
     {
         "name": "Assault",
-        "id": "IPD_TS_ahc_Assault"
+        "id": "IPD_TS_inj_Assault"
     },
     {
         "name": "Bites",
-        "id": "IPD_TS_ahc_Bites"
+        "id": "IPD_TS_inj_Bites"
     },
     {
         "name": "Accidents",
-        "id": "IPD_TS_ahc_Accidents"
+        "id": "IPD_TS_inj_Accidents"
     },
     {
         "name": "Other injuries",
-        "id": "IPD_TS_ahc_Other_injuries"
+        "id": "IPD_TS_inj_Other_injuries"
     },
     {
         "name": "Self-harm",
-        "id": "IPD_TS_ahc_Self-harm"
+        "id": "IPD_TS_std_Self-harm"
     },
     {
         "name": "Suicidal attempt/suicide",
-        "id": "IPD_TS_ahc_Suicidal_attempt/suicide"
+        "id": "IPD_TS_std_Suicidal_attempt/suicide"
     },
     {
         "name": "Acute Flaccid Paralysis",
-        "id": "IPD_TS_ahc_Acute_Flaccid_Paralysis"
+        "id": "IPD_TS_nd_Acute_Flaccid_Paralysis"
     },
     {
         "name": "Acute viral hepatitis",
-        "id": "IPD_TS_ahc_acute_viral_hepatitis"
+        "id": "IPD_TS_nd_acute_viral_hepatitis"
     },
     {
         "name": "Chikungunya",
-        "id": "IPD_TS_ahc_chikungunya"
+        "id": "IPD_TS_nd_chikungunya"
     },
     {
         "name": "Cholera",
-        "id": "IPD_TS_ahc_Cholera"
+        "id": "IPD_TS_nd_Cholera"
     },
     {
         "name": "COVID-19",
-        "id": "IPD_TS_ahc_COVID-19"
+        "id": "IPD_TS_nd_COVID-19"
     },
     {
         "name": "Dengue",
-        "id": "IPD_TS_ahc_dengue"
+        "id": "IPD_TS_nd_dengue"
     },
     {
         "name": "Diphtheria",
-        "id": "IPD_TS_ahc_diphtheria"
+        "id": "IPD_TS_nd_diphtheria"
     },
     {
         "name": "Guinea worm",
-        "id": "IPD_TS_ahc_guinea_worm"
+        "id": "IPD_TS_nd_guinea_worm"
     },
     {
         "name": "Influenza-Like Illness",
-        "id": "IPD_TS_ahc_influenza-like_illness"
+        "id": "IPD_TS_nd_influenza-like_illness"
     },
     {
         "name": "Measles",
-        "id": "IPD_TS_ahc_Measles"
+        "id": "IPD_TS_nd_Measles"
     },
     {
         "name": "Meningococcal Meningitis",
-        "id": "IPD_TS_ahc_Meningococcal_Meningitis"
+        "id": "IPD_TS_nd_Meningococcal_Meningitis"
     },
     {
         "name": "Monkey Pox",
-        "id": "IPD_TS_ahc_Monkey_Pox"
+        "id": "IPD_TS_nd_Monkey_Pox"
     },
     {
         "name": "Plague",
-        "id": "IPD_TS_ahc_Plague"
+        "id": "IPD_TS_nd_Plague"
     },
     {
         "name": "Rabies",
-        "id": "IPD_TS_ahc_rabies"
+        "id": "IPD_TS_nd_rabies"
     },
     {
         "name": "Rubella",
-        "id": "IPD_TS_ahc_rubella"
+        "id": "IPD_TS_nd_rubella"
     },
     {
         "name": "Salmonelosis",
-        "id": "IPD_TS_ahc_Salmonelosis"
+        "id": "IPD_TS_nd_Salmonelosis"
     },
     {
         "name": "Severe Acute Respiratory Infections (SARI)",
-        "id": "IPD_TS_ahc_severe_acute_respiratory_infections_sari"
+        "id": "IPD_TS_nd_severe_acute_respiratory_infections_sari"
     },
     {
         "name": "Severe Acute Respiratory Syndrome (SARS)",
-        "id": "IPD_TS_ahc_severe_acute_respiratory_syndrome_sars"
+        "id": "IPD_TS_nd_severe_acute_respiratory_syndrome_sars"
     },
     {
         "name": "Shigella",
-        "id": "IPD_TS_ahc_Shigella"
+        "id": "IPD_TS_nd_Shigella"
     },
     {
         "name": "Tetanus",
-        "id": "IPD_TS_ahc_Tetanus"
+        "id": "IPD_TS_nd_Tetanus"
     },
     {
         "name": "Typhoid fever",
-        "id": "IPD_TS_ahc_typhoid_fever"
+        "id": "IPD_TS_nd_typhoid_fever"
     },
     {
         "name": "Varicella (Chicken pox)",
-        "id": "IPD_TS_ahc_Varicella_Chicken_pox"
+        "id": "IPD_TS_nd_Varicella_Chicken_pox"
     },
     {
         "name": "Viral Hemorrhagic Fever",
-        "id": "IPD_TS_ahc_Viral_Hemorrhagic_Fever"
+        "id": "IPD_TS_nd_Viral_Hemorrhagic_Fever"
     },
     {
         "name": "Whooping Cough",
-        "id": "IPD_TS_ahc_Whooping_Cough"
+        "id": "IPD_TS_nd_Whooping_Cough"
     },
     {
         "name": "Yellow Fever",
-        "id": "IPD_TS_ahc_Yellow_Fever"
+        "id": "IPD_TS_nd_Yellow_Fever"
     },
     {
         "name": "Other conditions not classified elswhere",
-        "id": "IPD_TS_ahc_other_conditions_not_classified_elswhere"
+        "id": "IPD_TS_nd_other_conditions_not_classified_elswhere"
     }
 ]

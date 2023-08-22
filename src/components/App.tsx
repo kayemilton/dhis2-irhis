@@ -89,7 +89,6 @@ export default function App() {
                         <ILink search="anc" label="Antenatal Care" />
                         <ILink search="delivery" label="Deliveries & PNC" />
                         <ILink search="fp" label="Family Planning" />
-                        <ILink search="sgbv" label="SGBV" />
                         <ILink search="hiv" label="HIV" />
                         <Spacer />
 
@@ -102,6 +101,7 @@ export default function App() {
                     <Stack
                         p="10px"
                         bg="white"
+                        w="100%"
                         // overflow="auto"
                         // w="calc(100vw - 210px)"
                     >

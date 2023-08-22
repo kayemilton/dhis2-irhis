@@ -1,8 +1,7 @@
 import { useDataEngine } from "@dhis2/app-runtime";
 import { useQuery } from "@tanstack/react-query";
-import { Dictionary, fromPairs } from "lodash";
+import { fromPairs, orderBy } from "lodash";
 import { evaluate } from "mathjs";
-import { Facility } from "./interfaces";
 import mapping from "./mapping.json";
 
 export const useInitial = () => {
@@ -34,7 +33,7 @@ export const useHistory = () => {
                 },
             };
             const { data }: any = await engine.query(query);
-            return data;
+            return orderBy(data, "date", "desc");
         },
         { refetchInterval: 1000 * 10 }
     );
@@ -81,6 +80,7 @@ export const queryDataValues = async (
             );
             return fromPairs(
                 mapping.map(({ key, value }) => {
+                    value = String(value);
                     let attribute = "";
                     if (key.indexOf("_Ref") !== -1) {
                         attribute = "TFRceXDkJ95";
@@ -92,7 +92,7 @@ export const queryDataValues = async (
                         return [key, { value: "0", expression: "0" }];
                     } else if (value) {
                         let value2 = value;
-                        const splitString = value.split(/\+|\-/);
+                        const splitString = String(value).split(/\+|\-/);
                         const splitString2 = String(value2).split(/\+|\-/);
 
                         splitString.forEach((val) => {

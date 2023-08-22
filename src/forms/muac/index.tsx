@@ -5,6 +5,7 @@ import {
     AGE_0_TO_59_MONTHS,
     PREGNANT_LACTATING,
     YEARS_T0TAL,
+    YEARS_T0TAL_LT_5,
 } from "../../utils";
 import AggTable from "../../components/AggTable";
 
@@ -36,7 +37,11 @@ export const MUAC = ({ data }: { data: any }) => {
             <Stack>
                 <Text>GMP (Community)</Text>
                 <AggTable
-                    refugeeColumns={[REFUGEE_NATIONAL, AGE_0_TO_59_MONTHS]}
+                    reverse2
+                    refugeeColumns={[
+                        REFUGEE_NATIONAL,
+                        [...AGE_0_TO_59_MONTHS, YEARS_T0TAL_LT_5],
+                    ]}
                     rows={rows}
                     data={data}
                 />
@@ -48,10 +53,12 @@ export const MUAC = ({ data }: { data: any }) => {
                         REFUGEE_NATIONAL,
                         [
                             ...AGE_0_TO_59_MONTHS,
+                            YEARS_T0TAL_LT_5,
                             PREGNANT_LACTATING,
                             YEARS_T0TAL,
                         ],
                     ]}
+                    reverse2
                     rows={rows1}
                     data={data}
                 />

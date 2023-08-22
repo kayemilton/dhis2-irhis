@@ -7,9 +7,18 @@ import {
     REFUGEE_NATIONAL,
     AGE_18_G,
     AGE_18,
+    YEARS_T0TAL,
+    YEARS_LT_20,
+    YEARS_GT_20,
+    join2,
+    FEMALE,
+    MALE,
+    MALE_INFANTS,
+    FEMALE_INFANTS,
 } from "../../utils";
 import AggTable from "../../components/AggTable";
 import art from "./art.json";
+import AggTable2 from "../../components/AggTable2";
 
 const rows = [
     { id: "HIV_HIV_Testing_ANC_Total", name: "Total" },
@@ -33,18 +42,177 @@ const other = [
 ];
 
 export const HIV = ({ data }: { data: any }) => {
+    const maleFemaleTotal = [...MALE_FEMALE, YEARS_T0TAL];
+    const consultationColumns = [
+        [
+            { ...REFUGEE, span: maleFemaleTotal.length },
+            { ...NATIONAL, span: maleFemaleTotal.length },
+        ],
+        [
+            ...maleFemaleTotal.map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+            ...[YEARS_T0TAL].map((a) => ({
+                ...a,
+                id: `${NATIONAL.id}_${a.id}`,
+            })),
+        ],
+    ];
+
+    const pitcColumns = [
+        [
+            { ...REFUGEE, span: 5 },
+            { ...NATIONAL, span: 3 },
+        ],
+        [
+            ...join2([YEARS_LT_20], [FEMALE]).map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+            ...join2([YEARS_GT_20], [FEMALE]).map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+
+            ...join2([YEARS_LT_20], [MALE]).map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+            ...join2([YEARS_GT_20], [MALE]).map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+            ...[YEARS_T0TAL].map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+
+            ...join2([YEARS_LT_20], [FEMALE]).map((a) => ({
+                ...a,
+                id: `${NATIONAL.id}_${a.id}`,
+            })),
+            ...join2([YEARS_GT_20], [FEMALE]).map((a) => ({
+                ...a,
+                id: `${NATIONAL.id}_${a.id}`,
+            })),
+
+            ...[YEARS_T0TAL].map((a) => ({
+                ...a,
+                id: `${NATIONAL.id}_${a.id}`,
+            })),
+        ],
+    ];
+
+    const pitcColumns2 = [
+        [
+            { ...REFUGEE, span: 5 },
+            { ...NATIONAL, span: 3 },
+        ],
+        [
+            ...join2([YEARS_LT_20], [FEMALE]).map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+            ...join2([YEARS_GT_20], [FEMALE]).map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+
+            ...join2([YEARS_LT_20], [MALE]).map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+            ...join2([YEARS_GT_20], [MALE]).map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+            ...[YEARS_T0TAL].map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+
+            ...[YEARS_LT_20].map((a) => ({
+                ...a,
+                id: `${NATIONAL.id}_${a.id}`,
+            })),
+            ...[YEARS_GT_20].map((a) => ({
+                ...a,
+                id: `${NATIONAL.id}_${a.id}`,
+            })),
+
+            ...[YEARS_T0TAL].map((a) => ({
+                ...a,
+                id: `${NATIONAL.id}_${a.id}`,
+            })),
+        ],
+    ];
+
+    const pitcFemaleColumns = [
+        [
+            { ...REFUGEE, span: 5 },
+            { ...NATIONAL, span: 3 },
+        ],
+        [
+            ...join2([YEARS_LT_20], [FEMALE]).map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+            ...join2([YEARS_GT_20], [FEMALE]).map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+            ...[YEARS_T0TAL].map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+
+            ...join2([YEARS_LT_20], [FEMALE]).map((a) => ({
+                ...a,
+                id: `${NATIONAL.id}_${a.id}`,
+            })),
+            ...[YEARS_GT_20].map((a) => ({
+                ...a,
+                id: `${NATIONAL.id}_${a.id}`,
+            })),
+
+            ...[YEARS_T0TAL].map((a) => ({
+                ...a,
+                id: `${NATIONAL.id}_${a.id}`,
+            })),
+        ],
+    ];
+
+    const pcrColumns = [
+        [
+            { ...REFUGEE, span: 3 },
+            { ...NATIONAL, span: 1 },
+        ],
+        [
+            ...[MALE_INFANTS, FEMALE_INFANTS, YEARS_T0TAL].map((a) => ({
+                ...a,
+                id: `${REFUGEE.id}_${a.id}`,
+            })),
+            ...[YEARS_T0TAL].map((a) => ({
+                ...a,
+                id: `${NATIONAL.id}_${a.id}`,
+            })),
+        ],
+    ];
     return (
-        <Stack spacing="40px">
+        <Stack spacing="40px" w="100%">
             <Stack>
                 <Text fontWeight="bold">Condom Distribution</Text>
-                <AggTable
-                    refugeeColumns={[[REFUGEE], MALE_FEMALE]}
-                    nationalColumns={[[NATIONAL]]}
+                <AggTable2
+                    columns={consultationColumns}
                     rows={[
-                        { id: "HIV_Condom_Distribution_OPD", name: "OPD" },
-                        { id: "HIV_Condom_Distribution_FP", name: "FP Clinic" },
+                        { id: "HIV_Condom_Distribuition_OPD", name: "OPD" },
                         {
-                            id: "HIV_Condom_Distribution_Community",
+                            id: "HIV_Condom_Distribuition_FP_Clinic",
+                            name: "FP Clinic",
+                        },
+                        {
+                            id: "HIV_Condom_Distribuition_Community",
                             name: "Community",
                         },
                     ]}
@@ -54,47 +222,27 @@ export const HIV = ({ data }: { data: any }) => {
 
             <Stack>
                 <Text fontWeight="bold">ANC Testing</Text>
-                <AggTable
-                    refugeeColumns={[REFUGEE_NATIONAL, AGE_18_G]}
+                <AggTable2
+                    columns={pitcFemaleColumns}
                     rows={rows}
                     data={data}
                 />
             </Stack>
             <Stack>
                 <Text fontWeight="bold">PITC Testing</Text>
-                <AggTable
-                    refugeeColumns={[[REFUGEE], AGE_18_G, MALE_FEMALE]}
-                    nationalColumns={[[NATIONAL], AGE_18_G]}
-                    rows={ipt}
-                    data={data}
-                />
+                <AggTable2 columns={pitcColumns} rows={ipt} data={data} />
             </Stack>
             <Stack>
                 <Text fontWeight="bold">HCT/VCT Testing</Text>
-                <AggTable
-                    refugeeColumns={[[REFUGEE], AGE_18_G, MALE_FEMALE]}
-                    nationalColumns={[[NATIONAL], AGE_18_G]}
-                    rows={hct}
-                    data={data}
-                />
+                <AggTable2 columns={pitcColumns} rows={hct} data={data} />
             </Stack>
             <Stack>
                 <Text fontWeight="bold">PCR Testing</Text>
-                <AggTable
-                    refugeeColumns={[[REFUGEE], MALE_FEMALE]}
-                    nationalColumns={[[NATIONAL]]}
-                    rows={pcr}
-                    data={data}
-                />
+                <AggTable2 columns={pcrColumns} rows={pcr} data={data} />
             </Stack>
             <Stack>
                 <Text fontWeight="bold">ART</Text>
-                <AggTable
-                    refugeeColumns={[[REFUGEE], AGE_18_G, MALE_FEMALE]}
-                    nationalColumns={[[NATIONAL], AGE_18_G]}
-                    rows={art}
-                    data={data}
-                />
+                <AggTable2 columns={pitcColumns2} rows={art} data={data} />
             </Stack>
         </Stack>
     );
