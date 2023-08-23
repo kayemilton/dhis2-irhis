@@ -120,10 +120,6 @@
         "id": "IPD_TS_ahc_Urinary_Tract_Infections"
     },
     {
-        "name": "Influenza-Like Illness",
-        "id": "IPD_TS_ahc_Influenza-Like_Illness"
-    },
-    {
         "name": "Other acute health conditions",
         "id": "IPD_TS_ahc_Other"
     },

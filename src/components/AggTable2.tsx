@@ -1,6 +1,7 @@
-import { Stack, Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react";
+import { Stack, Table, Tbody, Td, Th, Thead, Tr, Box } from "@chakra-ui/react";
 import { Dictionary } from "lodash";
 import React from "react";
+import { useElementSize } from "usehooks-ts";
 
 export default function AggTable2({
     columns,
@@ -17,8 +18,10 @@ export default function AggTable2({
     reverse?: boolean;
     onlyRow?: boolean;
 }) {
+    const [squareRef, { height, width }] = useElementSize();
+
     return (
-        <Table variant="unstyled" size="sm" w="100%">
+        <Table variant="unstyled" size="sm">
             <Thead>
                 {columns.map((col, index) => (
                     <Tr key={index}>
@@ -40,6 +43,7 @@ export default function AggTable2({
                                 rowSpan={col.row}
                                 textAlign="center"
                                 textTransform="none"
+                                key={col.id}
                             >
                                 {col.name}
                             </Th>

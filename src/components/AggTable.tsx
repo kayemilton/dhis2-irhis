@@ -1,7 +1,8 @@
-import { Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react";
+import { Table, Tbody, Td, Th, Thead, Tr, Box } from "@chakra-ui/react";
 import { Dictionary } from "lodash";
 import React from "react";
 import { findMerged } from "../utils";
+import { useElementSize } from "usehooks-ts";
 
 export default function AggTable({
     refugeeColumns,
@@ -20,13 +21,15 @@ export default function AggTable({
     reverse?: boolean;
     onlyRow?: boolean;
 }) {
+    const [squareRef, { height, width }] = useElementSize();
+
     const refugees = findMerged(refugeeColumns, reverse2);
     const nationals =
         nationalColumns !== undefined
             ? findMerged(nationalColumns, reverse2)
             : undefined;
     return (
-        <Table variant="unstyled" size="sm" w="100%">
+        <Table variant="unstyled" size="sm">
             <Thead>
                 {refugees.map((col, index) => (
                     <Tr key={index}>
@@ -47,6 +50,7 @@ export default function AggTable({
                                 colSpan={col.span}
                                 textAlign="center"
                                 textTransform="none"
+                                key={col.id}
                             >
                                 {col.name}
                             </Th>
@@ -110,6 +114,7 @@ export default function AggTable({
                                         )}
                                     >
                                         {data[finalKey]?.value}
+                                        {/* {finalKey} */}
                                     </Td>
                                 );
                             })}

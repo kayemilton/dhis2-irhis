@@ -102,7 +102,8 @@ export default function App() {
                         p="10px"
                         bg="white"
                         w="100%"
-                        // overflow="auto"
+                        overflow="auto"
+                        h="100%"
                         // w="calc(100vw - 210px)"
                     >
                         <Outlet />

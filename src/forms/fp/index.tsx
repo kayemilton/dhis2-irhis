@@ -1,92 +1,466 @@
-import React from "react";
-import { Stack, Text } from "@chakra-ui/react";
-
-import AggTable from "../../components/AggTable";
-import family_planning from "./family_planning.json";
 import {
-    REFUGEE,
-    NEW_USER,
-    REPEAT_USER,
-    DISCONTINUED_USER,
-    AGE_18_G_YRS,
-    MALE_FEMALE,
-    NATIONAL,
-    join2,
-    REFUGEE_NATIONAL,
-    YEARS_LT_20,
-    YEARS_GT_20,
-    YEARS_T0TAL,
-} from "../../utils";
-import AggTable2 from "../../components/AggTable2";
+    Stack,
+    Table,
+    Tbody,
+    Td,
+    Text,
+    Th,
+    Thead,
+    Tr,
+    Box,
+} from "@chakra-ui/react";
+import { useElementSize } from "usehooks-ts";
+
+import React from "react";
+import family_planning from "./family_planning.json";
+
 export const FP = ({ data }: { data: any }) => {
-    const userAndNat = join2(REFUGEE_NATIONAL, [
-        NEW_USER,
-        REPEAT_USER,
-        DISCONTINUED_USER,
-    ]);
-    const userAndNatAndAge = join2(userAndNat, [YEARS_LT_20, YEARS_GT_20]);
+    const [squareRef, { height }] = useElementSize();
 
-    // const nationalColumn = [...AGE_0_TO_60, YEARS_T0TAL];
-
-    const acuteColumns = [
-        [
-            { ...REFUGEE, span: 15 },
-            { ...NATIONAL, span: 3 },
-        ],
-        [
-            { ...NEW_USER, span: 2 },
-            { ...YEARS_T0TAL, row: 3 },
-            { ...REPEAT_USER, span: 2 },
-            { ...YEARS_T0TAL, row: 3 },
-            { ...DISCONTINUED_USER, span: 2 },
-            { ...YEARS_T0TAL, row: 3 },
-        ],
-        [
-            { ...YEARS_LT_20, span: 2 },
-            { ...YEARS_GT_20, span: 2 },
-            { ...YEARS_LT_20, span: 2 },
-            { ...YEARS_GT_20, span: 2 },
-            { ...YEARS_LT_20, span: 2 },
-            { ...YEARS_GT_20, span: 2 },
-        ],
-        [
-            ...join2([NEW_USER], [YEARS_LT_20, YEARS_GT_20]),
-            // YEARS_T0TAL,
-            ...join2([REPEAT_USER], [YEARS_LT_20, YEARS_GT_20]),
-            // YEARS_T0TAL,
-            ...join2([DISCONTINUED_USER], [YEARS_LT_20, YEARS_GT_20]),
-            // YEARS_T0TAL,
-        ],
-        // [
-        //     ...yearsColumns.map((a) => ({
-        //         ...a,
-        //         id: `${REFUGEE.id}_${a.id}`,
-        //     })),
-        //     ...nationalColumn.map((a) => ({
-        //         ...a,
-        //         id: `${NATIONAL.id}_${a.id}`,
-        //     })),
-        // ],
+    const realColumns = [
+        "New_user_Ref_lt_20_yrs_M",
+        "New_user_Ref_lt_20_yrs_F",
+        "New_user_Ref_gte_20_yrs_M",
+        "New_user_Ref_gte_20_yrs_F",
+        "New_user_Ref_total_crude",
+        "Repeat_user_Ref_lt_20_yrs_M",
+        "Repeat_user_Ref_lt_20_yrs_F",
+        "Repeat_user_Ref_gte_20_yrs_M",
+        "Repeat_user_Ref_gte_20_yrs_F",
+        "Repeat_user_Ref_total_crude",
+        "Discontinued_user_Ref_lt_20_yrs_M",
+        "Discontinued_user_Ref_lt_20_yrs_F",
+        "Discontinued_user_Ref_gte_20_yrs_M",
+        "Discontinued_user_Ref_gte_20_yrs_F",
+        "Discontinued_user_Ref_total_crude",
+        "New_user_Nat",
+        "Repeat_user_Nat",
+        "Discontinued_user_Nat",
     ];
     return (
-        <Stack>
+        <Stack w="100%" h="100%">
             <Text>Family Planning </Text>
-            <AggTable2
-                // refugeeColumns={[
-                //     [NEW_USER, REPEAT_USER, DISCONTINUED_USER],
-                //     [REFUGEE],
+            <Box h="100%" w="100%" ref={squareRef}>
+                <Box
+                    position="relative"
+                    overflow="auto"
+                    h={`${height - 20}px`}
+                    w="100%"
+                >
+                    <Table variant="unstyled" size="sm">
+                        <Thead>
+                            <Tr>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    rowSpan={4}
+                                >
+                                    Family Planning
+                                </Th>
 
-                //     AGE_18_G_YRS,
-                //     MALE_FEMALE,
-                // ]}
-                // nationalColumns={[
-                //     [NEW_USER, REPEAT_USER, DISCONTINUED_USER],
-                //     [NATIONAL],
-                // ]}
-                columns={acuteColumns}
-                rows={family_planning}
-                data={data}
-            />
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    colSpan={15}
+                                    textAlign="center"
+                                >
+                                    Ref
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    colSpan={3}
+                                    textAlign="center"
+                                >
+                                    Nat
+                                </Th>
+                            </Tr>
+                            <Tr>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    colSpan={5}
+                                    textAlign="center"
+                                >
+                                    New_user
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    colSpan={5}
+                                    textAlign="center"
+                                >
+                                    Repeat_user
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    colSpan={5}
+                                    textAlign="center"
+                                >
+                                    Discontinued_user
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    rowSpan={3}
+                                    textAlign="center"
+                                >
+                                    New_user
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    rowSpan={3}
+                                    textAlign="center"
+                                >
+                                    Repeat_user
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    rowSpan={3}
+                                    textAlign="center"
+                                >
+                                    Discontinued_user
+                                </Th>
+                            </Tr>
+                            <Tr>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    colSpan={2}
+                                    textAlign="center"
+                                >
+                                    &lt;20 yrs
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    colSpan={2}
+                                    textAlign="center"
+                                >
+                                    &gt;=20 yrs
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    rowSpan={2}
+                                    textAlign="center"
+                                >
+                                    Total Crude
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    colSpan={2}
+                                    textAlign="center"
+                                >
+                                    &lt;20 yrs
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    colSpan={2}
+                                    textAlign="center"
+                                >
+                                    &gt;=20 yrs
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    rowSpan={2}
+                                    textAlign="center"
+                                >
+                                    Total Crude
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    colSpan={2}
+                                    textAlign="center"
+                                >
+                                    &lt;20 yrs
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    colSpan={2}
+                                    textAlign="center"
+                                >
+                                    &gt;=20 yrs
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    rowSpan={2}
+                                    textAlign="center"
+                                >
+                                    Total Crude
+                                </Th>
+                            </Tr>
+                            <Tr>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    textAlign="center"
+                                >
+                                    M
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    textAlign="center"
+                                >
+                                    F
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    textAlign="center"
+                                >
+                                    M
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    textAlign="center"
+                                >
+                                    F
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    textAlign="center"
+                                >
+                                    M
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    textAlign="center"
+                                >
+                                    F
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    textAlign="center"
+                                >
+                                    M
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    textAlign="center"
+                                >
+                                    F
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    textAlign="center"
+                                >
+                                    M
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    textAlign="center"
+                                >
+                                    F
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    textAlign="center"
+                                >
+                                    M
+                                </Th>
+                                <Th
+                                    borderColor="#DDDDDD"
+                                    borderWidth="thin"
+                                    borderStyle="solid"
+                                    textAlign="center"
+                                >
+                                    F
+                                </Th>
+                            </Tr>
+                        </Thead>
+                        <Tbody>
+                            {family_planning.map(({ id, name }) => (
+                                <Tr key={id}>
+                                    <Td
+                                        borderColor="#DDDDDD"
+                                        borderWidth="thin"
+                                        borderStyle="solid"
+                                    >
+                                        {name}
+                                    </Td>
+                                    {realColumns.map((r) => {
+                                        const finalKey = `${id}_${r}`;
+                                        return (
+                                            <Td
+                                                borderColor="#DDDDDD"
+                                                borderWidth="thin"
+                                                borderStyle="solid"
+                                                key={finalKey}
+                                                textAlign="center"
+                                            >
+                                                {data[finalKey]?.value}
+                                                {/* {finalKey} */}
+                                            </Td>
+                                        );
+                                    })}
+                                    {/* <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            >
+                                &nbsp;
+                            </Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            ></Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            >
+                                &nbsp;
+                            </Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            ></Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            >
+                                &nbsp;
+                            </Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            >
+                                &nbsp;
+                            </Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            ></Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            >
+                                &nbsp;
+                            </Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            ></Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            >
+                                &nbsp;
+                            </Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            >
+                                &nbsp;
+                            </Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            >
+                                &nbsp;
+                            </Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            >
+                                &nbsp;
+                            </Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            >
+                                &nbsp;
+                            </Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            >
+                                &nbsp;
+                            </Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            ></Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            ></Td>
+                            <Td
+                                borderColor="#DDDDDD"
+                                borderWidth="thin"
+                                borderStyle="solid"
+                            >
+                                &nbsp;
+                            </Td> */}
+                                </Tr>
+                            ))}
+                        </Tbody>
+                    </Table>
+                </Box>
+            </Box>
         </Stack>
     );
 };
