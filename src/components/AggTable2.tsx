@@ -1,7 +1,6 @@
-import { Stack, Table, Tbody, Td, Th, Thead, Tr, Box } from "@chakra-ui/react";
+import { Box, Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react";
 import { Dictionary } from "lodash";
 import React from "react";
-import { useElementSize } from "usehooks-ts";
 
 export default function AggTable2({
     columns,
@@ -18,79 +17,92 @@ export default function AggTable2({
     reverse?: boolean;
     onlyRow?: boolean;
 }) {
-    const [squareRef, { height, width }] = useElementSize();
-
     return (
-        <Table variant="unstyled" size="sm">
-            <Thead>
-                {columns.map((col, index) => (
-                    <Tr key={index}>
-                        {index === 0 && (
-                            <Th
-                                borderColor="#DDDDDD"
-                                borderWidth="thin"
-                                borderStyle="solid"
-                                rowSpan={columns.length}
-                                textTransform="none"
-                            ></Th>
-                        )}
-                        {col.map((col) => (
-                            <Th
-                                borderColor="#DDDDDD"
-                                borderWidth="thin"
-                                borderStyle="solid"
-                                colSpan={col.span}
-                                rowSpan={col.row}
-                                textAlign="center"
-                                textTransform="none"
-                                key={col.id}
-                            >
-                                {col.name}
-                            </Th>
+        <Box h="100%" w="100%">
+            <Box overflow="auto" whiteSpace="nowrap">
+                <Table variant="unstyled" size="sm">
+                    <Thead>
+                        {columns.map((col, index) => (
+                            <Tr key={index}>
+                                {index === 0 && (
+                                    <Th
+                                        borderColor="#DDDDDD"
+                                        borderWidth="thin"
+                                        borderStyle="solid"
+                                        rowSpan={columns.length}
+                                        textTransform="none"
+                                    ></Th>
+                                )}
+                                {col.map((col) => (
+                                    <Th
+                                        borderColor="#DDDDDD"
+                                        borderWidth="thin"
+                                        borderStyle="solid"
+                                        colSpan={col.span}
+                                        rowSpan={col.row}
+                                        textAlign="center"
+                                        textTransform="none"
+                                        key={col.id}
+                                    >
+                                        {col.name}
+                                    </Th>
+                                ))}
+                            </Tr>
                         ))}
-                    </Tr>
-                ))}
-            </Thead>
-            <Tbody>
-                {rows.map(({ name, id }: any) => (
-                    <Tr key={name}>
-                        <Td
-                            borderColor="#DDDDDD"
-                            borderWidth="thin"
-                            borderStyle="solid"
-                        >
-                            {name}
-                        </Td>
-
-                        {columns[columns.length - 1].map((col) => {
-                            let finalKey = `${id}_${col.id}`;
-                            if (reverse) {
-                                finalKey = `${col.id}_${id}`;
-                            }
-                            if (onlyRow) {
-                                finalKey = id;
-                            }
-                            return (
+                    </Thead>
+                    <Tbody>
+                        {rows.map(({ name, id }: any) => (
+                            <Tr key={name}>
                                 <Td
-                                    key={`${id}_${col.id}`}
                                     borderColor="#DDDDDD"
                                     borderWidth="thin"
                                     borderStyle="solid"
-                                    textAlign="center"
-                                    title={JSON.stringify(
-                                        data[finalKey]?.expression,
-                                        null,
-                                        2
-                                    )}
                                 >
-                                    {data[finalKey]?.value}
-                                    {/* {finalKey} */}
+                                    {name}
                                 </Td>
-                            );
-                        })}
-                    </Tr>
-                ))}
-            </Tbody>
-        </Table>
+
+                                {columns[columns.length - 1].map((col) => {
+                                    let finalKey = `${id}_${col.id}`;
+                                    if (
+                                        id === "IPD_TS" &&
+                                        [
+                                            "Nat_5_17_yrs",
+                                            "Nat_18_59_yrs",
+                                            "Nat_gt_60_yrs",
+                                            "Nat_total_crude",
+                                        ].indexOf(col.id) !== -1
+                                    ) {
+                                        finalKey = `${id}__${col.id}`;
+                                    }
+                                    if (reverse) {
+                                        finalKey = `${col.id}_${id}`;
+                                    }
+                                    if (onlyRow) {
+                                        finalKey = id;
+                                    }
+                                    return (
+                                        <Td
+                                            key={`${id}_${col.id}`}
+                                            borderColor="#DDDDDD"
+                                            borderWidth="thin"
+                                            borderStyle="solid"
+                                            textAlign="center"
+                                            title={JSON.stringify(
+                                                data[finalKey]?.expression,
+                                                null,
+                                                2
+                                            )}
+                                        >
+                                            {data[finalKey]?.value}
+                                            {/* {finalKey} */}
+                                        </Td>
+                                    );
+                                })}
+                            </Tr>
+                        ))}
+                    </Tbody>
+                </Table>
+            </Box>
+        </Box>
     );
 }

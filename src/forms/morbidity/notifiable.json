@@ -5,7 +5,7 @@
     },
     {
         "name": "Acute viral hepatitis",
-        "id": "OPD_TS_nd_Acute_Viral_Hepatitis"
+        "id": "OPD_TS_nd_acute_viral_hepatitis"
     },
     {
         "name": "Chikungunya",
@@ -78,10 +78,6 @@
     {
         "name": "Tetanus",
         "id": "OPD_TS_nd_Tetanus"
-    },
-    {
-        "name": "Typhoid fever",
-        "id": "OPD_TS_nd_typhoid_fever"
     },
     {
         "name": "Varicella (Chicken pox)",

@@ -1,13 +1,13 @@
-import React from "react";
 import { Stack, Text } from "@chakra-ui/react";
-import { REFUGEE_NATIONAL, EPI_AGE, ADMINISTERED, SUPPLIED } from "../../utils";
+import React from "react";
 import AggTable from "../../components/AggTable";
+import { ADMINISTERED, EPI_AGE, REFUGEE_NATIONAL, SUPPLIED } from "../../utils";
 import vaccinated from "./vaccinated.json";
 import vaccine_supply from "./vaccine_supply.json";
 
 export const EPI = ({ data }: { data: any }) => {
     return (
-        <Stack spacing="40px">
+        <Stack spacing="20px">
             <Stack>
                 <Text fontWeight="bold">People vaccinated</Text>
                 <AggTable

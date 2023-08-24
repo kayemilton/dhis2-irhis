@@ -5,18 +5,19 @@ import {
     Stack,
     Text,
     useToast,
+    Box,
 } from "@chakra-ui/react";
+import { useDataEngine } from "@dhis2/app-runtime";
 import { useNavigate, useSearch } from "@tanstack/react-location";
 import { useQueryClient } from "@tanstack/react-query";
 import { DatePicker, DatePickerProps } from "antd";
-import { useDataEngine } from "@dhis2/app-runtime";
 import dayjs, { Dayjs } from "dayjs";
 import isoWeek from "dayjs/plugin/isoWeek";
 import updateLocale from "dayjs/plugin/updateLocale";
 import utc from "dayjs/plugin/utc";
 import weekday from "dayjs/plugin/weekday";
-import { fromPairs, uniq } from "lodash";
-import React, { useState } from "react";
+import { fromPairs } from "lodash";
+import React, { useEffect, useState } from "react";
 import FacilityTree from "../components/FacilityTree";
 import facilities from "../facilities.json";
 import { ANC } from "../forms/anc";
@@ -38,8 +39,8 @@ import { SGBV } from "../forms/sgbv";
 import { Stabilization } from "../forms/stabilization";
 import { TSFP } from "../forms/tsfp";
 import { EventsGenerics } from "../interfaces";
-import { useDataValueSet, queryDataValues } from "../queries";
-import { sendData, getDatesBetween, processDates } from "../utils";
+import { queryDataValues, useDataValueSet } from "../queries";
+import { getDatesBetween, processDates, sendData } from "../utils";
 
 dayjs.extend(weekday);
 dayjs.extend(isoWeek);
@@ -64,6 +65,7 @@ export default function Dashboard() {
     const engine = useDataEngine();
     const [index, setIndex] = useState<number>(0);
     const [units, setUnits] = useState<string[]>(["lvbkNrwAFmE"]);
+
     const onChangeTree = (newValue: string[], rest: any) => {
         setUnits(() => newValue);
         navigate({
@@ -73,14 +75,29 @@ export default function Dashboard() {
             }),
         });
     };
-    const { form, facility } = useSearch<EventsGenerics>();
-    const [period, setPeriod] = useState<[string, string]>([
-        dayjs("2023-06-01").startOf("month").format("YYYY-MM-DD"),
-        dayjs("2023-06-01").endOf("month").format("YYYY-MM-DD"),
-    ]);
-    const [value, setValue] = useState<Dayjs | undefined | null>(dayjs());
+    const { form, facility, period } = useSearch<EventsGenerics>();
+    const [value, setValue] = useState<Dayjs | undefined | null>(
+        dayjs().subtract(2, "months")
+    );
 
     const [loading, setLoading] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (facility === undefined && period === undefined && value) {
+            const startDate = value.startOf("month").format("YYYY-MM-DD");
+            const endDate = value.endOf("month").format("YYYY-MM-DD");
+
+            navigate({
+                search: (prev) => ({
+                    ...prev,
+                    period: [startDate, endDate],
+                    facility: "lvbkNrwAFmE",
+                    form: "mortality",
+                }),
+            });
+        }
+        return () => {};
+    }, []);
 
     const { isError, isLoading, isSuccess, data, error } = useDataValueSet(
         facility,
@@ -108,7 +125,6 @@ export default function Dashboard() {
     };
     const postData = async () => {
         setLoading(() => true);
-
         try {
             if (value && units.length > 0) {
                 const end = value
@@ -194,12 +210,10 @@ export default function Dashboard() {
         if (date) {
             const startDate = date.startOf("month").format("YYYY-MM-DD");
             const endDate = date.endOf("month").format("YYYY-MM-DD");
-            setPeriod(() => [startDate, endDate]);
             navigate({
                 search: (prev) => ({
                     ...prev,
-                    startDate,
-                    endDate,
+                    period: [startDate, endDate],
                 }),
             });
         }
@@ -217,7 +231,7 @@ export default function Dashboard() {
         }
     };
     return (
-        <Stack h="calc(100vh - 71px)">
+        <Stack h="calc(100vh - 78px)" spacing="5px">
             <Stack
                 h="96px"
                 direction="row"
@@ -231,19 +245,13 @@ export default function Dashboard() {
                     <DatePicker
                         onChange={onChange}
                         picker="month"
-                        // format="YYYYMM"
                         mode="month"
                         style={{ padding: "8px" }}
                         value={value}
                     />
                 </Stack>
             </Stack>
-            <Stack
-                overflow="auto"
-                h="calc(100vh - 112px)"
-                alignItems="center"
-                w="100%"
-            >
+            <Box overflow="auto" h="calc(100vh - 112px)" w="100%" p="0">
                 {isLoading && (
                     <Stack
                         w="100%"
@@ -256,10 +264,10 @@ export default function Dashboard() {
                 )}
                 {isSuccess && (forms[form || ""] || <Text>Select form</Text>)}
                 {isError && <pre>{JSON.stringify(error)}</pre>}
-            </Stack>
+            </Box>
             <Stack
                 h="48px"
-                boxShadow="xl"
+                // boxShadow="xl"
                 direction="row"
                 alignItems="center"
                 p="5px"

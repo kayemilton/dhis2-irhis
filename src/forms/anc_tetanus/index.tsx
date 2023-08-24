@@ -1,7 +1,7 @@
-import React from "react";
 import { Stack, Text } from "@chakra-ui/react";
-import { REFUGEE_NATIONAL } from "../../utils";
+import React from "react";
 import AggTable from "../../components/AggTable";
+import { REFUGEE_NATIONAL } from "../../utils";
 
 export const ANCTetanus = ({ data }: { data: any }) => {
     return (

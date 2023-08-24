@@ -33,6 +33,7 @@ export const YEARS_T0_1 = { id: "lt_1", name: "<1" };
 export const YEARS_T0TAL_LT_5 = { id: "lt_5", name: "Total < 5" };
 export const YEARS_T0TAL_GT_5 = { id: "gte_5", name: "Total > 5" };
 export const YEARS_T0TAL = { id: "total_crude", name: "Total Crude" };
+export const YEARS_T0TAL_ONLY = { id: "total", name: "Total Crude" };
 export const YEARS_T0_1L = { id: "lt1", name: "<1" };
 export const YEARS_1_T0_4 = { id: "1_4_yrs", name: "1-4" };
 export const YEARS_5_TO_17 = { id: "5_17_yrs", name: "5-17" };

@@ -17,11 +17,11 @@
     },
     {
         "name": "Other substance use disorders",
-        "id": "OPD_TS_mh_other_substance_use_disorders"
+        "id": "OPD_TS_mh_other_substance_use_disorders_"
     },
     {
         "name": "Intellectual disability",
-        "id": "OPD_TS_mh_intellectual_disability"
+        "id": "OPD_TS_mh_intellectual_disability_"
     },
     {
         "name": "Developmental disorders",
@@ -29,11 +29,11 @@
     },
     {
         "name": "Acute psychosis",
-        "id": "OPD_TS_mh_acute_psychosis"
+        "id": "OPD_TS_mh_acute_psychosis_"
     },
     {
         "name": "Chronic psychosis",
-        "id": "OPD_TS_mh_chronic_psychosis"
+        "id": "OPD_TS_mh_chronic_psychosis_"
     },
     {
         "name": "Bipolar disorders (Mania)",
@@ -49,15 +49,15 @@
     },
     {
         "name": "Moderate-severe depression",
-        "id": "OPD_TS_mh_moderate-severe_depression"
+        "id": "OPD_TS_mh_moderate-severe_depression_"
     },
     {
         "name": "Posttraumatic stress disorder",
-        "id": "OPD_TS_mh_posttraumatic_stress_disorder"
+        "id": "OPD_TS_mh_posttraumatic_stress_disorder_"
     },
     {
         "name": "Other moderate-severe emotional disorders",
-        "id": "OPD_TS_mh_other_moderate-severe_emotional_disorders"
+        "id": "OPD_TS_mh_other_moderate-severe_emotional_disorders_"
     },
     {
         "name": "Medically unexplained somatic complaint",
@@ -69,11 +69,11 @@
     },
     {
         "name": "Acute Stress",
-        "id": "OPD_TS_mh_acute_stress"
+        "id": "OPD_TS_mh_acute_stress_"
     },
     {
         "name": "Dissociative disorder",
-        "id": "OPD_TS_mh_dissociative_disorder"
+        "id": "OPD_TS_mh_dissociative_disorder_"
     },
     {
         "name": "Grief",

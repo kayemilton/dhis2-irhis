@@ -1,13 +1,13 @@
-import React from "react";
 import { Stack, Text } from "@chakra-ui/react";
+import React from "react";
+import AggTable from "../../components/AggTable";
 import {
-    REFUGEE_NATIONAL,
     AGE_0_TO_59_MONTHS,
     PREGNANT_LACTATING,
+    REFUGEE_NATIONAL,
     YEARS_T0TAL,
     YEARS_T0TAL_LT_5,
 } from "../../utils";
-import AggTable from "../../components/AggTable";
 
 const rows = [
     { id: "MUAC_TS_Green_gt_12_5_cm_Community_GMP", name: "Green (normal)" },

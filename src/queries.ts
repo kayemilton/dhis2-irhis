@@ -104,23 +104,23 @@ export const queryDataValues = async (
             return fromPairs(
                 mapping.map(({ key, value }) => {
                     let actualValue = String(value);
-                    let attribute = "HllvX50cXC0";
+                    let attribute = "";
                     if (
                         [
                             "OPD_TS_oar_nr_outbreaks_rep",
                             "OPD_TS_oar_nr_rep_invest",
-                        ].indexOf(key) !== -1
+                        ].indexOf(String(key)) !== -1
                     ) {
                         attribute = "HllvX50cXC0";
-                    } else if (key.indexOf("_Ref") !== -1) {
+                    } else if (String(key).indexOf("_Ref") !== -1) {
                         attribute = "TFRceXDkJ95";
-                    } else if (key.indexOf("_Nat")) {
+                    } else if (String(key).indexOf("_Nat") !== -1) {
                         attribute = "Lf2Axb9E6B4";
                     }
 
-                    if (value === "0") {
+                    if (value === "0" || value === 0) {
                         return [key, { value: "0", expression: "0" }];
-                    } else if (value) {
+                    } else if (String(value) && attribute) {
                         let value2 = actualValue;
                         const splitString = String(value).split(/\+|\-/);
                         const splitString2 = String(value2).split(/\+|\-/);
@@ -146,6 +146,41 @@ export const queryDataValues = async (
                             console.log(error);
                         }
                         return [key, { value: val, expression: value2 }];
+                    } else {
+                        let national = String(value);
+                        let refugee = String(value);
+
+                        const natSplit = national.split(/\+|\-/);
+                        const refSplit = refugee.split(/\+|\-/);
+
+                        natSplit.forEach((val) => {
+                            national = national.replace(
+                                val,
+                                allValues[`${val}.Lf2Axb9E6B4`] || "0"
+                            );
+                        });
+
+                        refSplit.forEach((val) => {
+                            refugee = refugee.replace(
+                                val,
+                                allValues[`${val}.TFRceXDkJ95`] || "0"
+                            );
+                        });
+
+                        try {
+                            const natValue = evaluate(national);
+                            const refValue = evaluate(refugee);
+                            return [
+                                key,
+                                {
+                                    value: String(natValue + refValue),
+                                    expression: "",
+                                },
+                            ];
+                        } catch (error) {
+                            console.log(key, value);
+                            console.log(error);
+                        }
                     }
                     return [key, { value: "0", expression: "0" }];
                 })
@@ -161,7 +196,10 @@ export function useDataValueSet(
 ) {
     const engine = useDataEngine();
 
-    return useQuery<any, Error>(["data-value-set", orgUnit, period], async () =>
-        queryDataValues(engine, orgUnit, period)
+    return useQuery<any, Error>(
+        ["data-value-set", orgUnit, ...[period ? period : ""]],
+        async () => {
+            return queryDataValues(engine, orgUnit, period);
+        }
     );
 }

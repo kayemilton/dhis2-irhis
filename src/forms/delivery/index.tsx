@@ -1,30 +1,21 @@
-import React from "react";
 import { Stack, Text } from "@chakra-ui/react";
-import {
-    AGE_18,
-    REFUGEE_NATIONAL,
-    HOME_DELIVERY,
-    FACILITY_DELIVERY,
-    AGE_18_G_YRS,
-    REFUGEE,
-    NATIONAL,
-    YEARS_LT_20,
-    YEARS_GT_20,
-    YEARS_T0TAL,
-    MALE_FEMALE,
-    join2,
-    YEARS_0_T0_4,
-    YEARS_5_TO_17,
-    YEARS_18_TO_59,
-    YEARS_FROM_60,
-    YEARS_T0TAL_LT_5,
-    AGE_0_TO_60,
-} from "../../utils";
+import React from "react";
 import AggTable from "../../components/AggTable";
+import AggTable2 from "../../components/AggTable2";
+import {
+    FACILITY_DELIVERY,
+    HOME_DELIVERY,
+    join2,
+    NATIONAL,
+    REFUGEE,
+    REFUGEE_NATIONAL,
+    YEARS_GT_20,
+    YEARS_LT_20,
+    YEARS_T0TAL,
+} from "../../utils";
 import deliveries from "./deliveries.json";
 import pnc from "./pnc.json";
 import pregnant_women_at_delivery from "./pregnant_women_at_delivery.json";
-import AggTable2 from "../../components/AggTable2";
 
 export const Delivery = ({ data }: { data: any }) => {
     const columns0To4 = join2(
@@ -53,7 +44,7 @@ export const Delivery = ({ data }: { data: any }) => {
         ],
     ];
     return (
-        <Stack spacing="40px">
+        <Stack spacing="20px">
             <Stack>
                 <Text fontWeight="bold">Deliveries</Text>
                 <AggTable2

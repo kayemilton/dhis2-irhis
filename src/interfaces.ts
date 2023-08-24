@@ -56,7 +56,7 @@ export interface Field {
 export type EventsSearch = {
     form: string;
     facility: string;
-    period: string;
+    period: [string, string];
 };
 
 export type EventsGenerics = MakeGenerics<{

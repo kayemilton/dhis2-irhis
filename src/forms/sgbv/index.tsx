@@ -1,15 +1,13 @@
-import React from "react";
 import { Stack, Text } from "@chakra-ui/react";
-
+import React from "react";
 import AggTable from "../../components/AggTable";
 import {
     AGE_18_G_YRS,
     MALE_FEMALE,
     NATIONAL,
     REFUGEE,
-    YEARS_LT_20,
     YEARS_GT_20,
-    YEARS_T0TAL,
+    YEARS_LT_20,
 } from "../../utils";
 import sgbv from "./sgbv.json";
 

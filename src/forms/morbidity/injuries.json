@@ -14,13 +14,5 @@
     {
         "name": "Other injuries",
         "id": "OPD_TS_inj_Other"
-    },
-    {
-        "name": "Self-harm",
-        "id": "OPD_TS_inj_Self-harm"
-    },
-    {
-        "name": "Suicidal attempt/suicide",
-        "id": "OPD_TS_inj_Suicidal_attempt"
     }
 ]

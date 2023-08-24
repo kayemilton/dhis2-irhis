@@ -73,7 +73,7 @@ export const Morbidity = ({ data }: { data: any }) => {
         ],
     ];
     return (
-        <Stack spacing="40px">
+        <Stack spacing="20px">
             <Stack>
                 <Text fontWeight="bold">Consultation</Text>
                 <AggTable2

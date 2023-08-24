@@ -1,11 +1,11 @@
-import React from "react";
 import { Stack, Text } from "@chakra-ui/react";
-import { POSITIVE, DONE } from "../../utils";
+import React from "react";
 import AggTable from "../../components/AggTable";
+import { DONE, POSITIVE } from "../../utils";
 
 export const LAB = ({ data }: { data: any }) => {
     return (
-        <Stack spacing="35px">
+        <Stack spacing="20px">
             <AggTable
                 refugeeColumns={[[{ id: "", name: "Total" }]]}
                 rows={[

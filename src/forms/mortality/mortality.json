@@ -132,10 +132,6 @@
         "id": "Mort_TS_Acute_Jaundice_Syndrome"
     },
     {
-        "name": "Influenza-like Illness",
-        "id": "Mort_TS_Influenza_like_Illness"
-    },
-    {
         "name": "Asthma",
         "id": "Mort_TS_Asthma"
     },
@@ -214,10 +210,6 @@
     {
         "name": "Self-harm/suicide",
         "id": "Mort_TS_self-harm/suicide"
-    },
-    {
-        "name": "Other mental and behavioural disorders",
-        "id": "Mort_TS_Others"
     },
     {
         "name": "Mat Death -Hemorrhage",
@@ -326,10 +318,6 @@
     {
         "name": "Tetanus",
         "id": "Mort_TS_Tetanus"
-    },
-    {
-        "name": "Typhoid fever",
-        "id": "Mort_TS_typhoid_fever"
     },
     {
         "name": "Varicella (Chicken pox)",

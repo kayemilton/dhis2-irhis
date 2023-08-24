@@ -1,18 +1,18 @@
-import React from "react";
 import { Stack, Text } from "@chakra-ui/react";
+import React from "react";
+import AggTable from "../../components/AggTable";
+import AggTable2 from "../../components/AggTable2";
 import {
-    REFUGEE,
     AGE_0_TO_59_MONTHS,
+    join2,
     MALE_FEMALE,
     NATIONAL,
-    join2,
-    YEARS_T0TAL_LT_5,
+    REFUGEE,
     YEARS_T0TAL,
     YEARS_T0TAL_GT_5,
+    YEARS_T0TAL_LT_5,
 } from "../../utils";
-import AggTable from "../../components/AggTable";
 import otp from "./otp.json";
-import AggTable2 from "../../components/AggTable2";
 
 export const OTP = ({ data }: { data: any }) => {
     const columns0To4 = join2(AGE_0_TO_59_MONTHS, MALE_FEMALE);
@@ -54,19 +54,24 @@ export const OTP = ({ data }: { data: any }) => {
             </Stack>
 
             <AggTable
-                refugeeColumns={[[REFUGEE, NATIONAL]]}
+                refugeeColumns={[
+                    [
+                        { ...REFUGEE, id: `OTP_TS_${REFUGEE.id}` },
+                        { ...NATIONAL, id: `OTP_TS_${NATIONAL.id}` },
+                    ],
+                ]}
                 rows={[
                     {
-                        id: "OTP_TS_Ind_Sum_number_of_days_stay_for_discharged_children_lt_5",
+                        id: "Ind_Sum_number_of_days_stay_for_discharged_children_lt_5",
                         name: "Sum number of days stay for exit promoted to otp/tsfp and recovered (< 5)",
                     },
                     {
-                        id: "OTP_TS_Ind_Sum_average_weight_gain_for_discharged_children_lt_5",
+                        id: "Ind_Sum_average_weight_gain_for_discharged_children_lt_5",
                         name: "Sum average weight gain for exit promoted to otp/tsfp and recovered (< 5)",
                     },
                 ]}
                 data={data}
-                onlyRow
+                reverse
             />
         </Stack>
     );

@@ -2,18 +2,15 @@ import { Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import AggTable2 from "../../components/AggTable2";
 import {
-    diseaseControlColumns,
     join2,
-    YEARS_0_T0_4,
     MALE_FEMALE,
-    YEARS_5_TO_14,
-    YEARS_FROM_14,
-    YEARS_T0TAL_LT_5,
-    YEARS_T0TAL,
-    REFUGEE,
     NATIONAL,
+    REFUGEE,
     YEARS_0_T0_4_LT,
     YEARS_5_TO_14_NO,
+    YEARS_FROM_14,
+    YEARS_T0TAL,
+    YEARS_T0TAL_LT_5,
 } from "../../utils";
 import leprossy from "./leprossy.json";
 import tb from "./tb.json";
@@ -69,7 +66,7 @@ export const DiseaseControl = ({ data }: { data: any }) => {
     ];
 
     return (
-        <Stack spacing="40px">
+        <Stack spacing="20px">
             <Stack>
                 <Text fontWeight="bold">Tuberculosis</Text>
                 <AggTable2 columns={tbColumns} rows={tb} data={data} />

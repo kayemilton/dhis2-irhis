@@ -46,6 +46,7 @@ export const Stabilization = ({ data }: { data: any }) => {
             })),
         ],
     ];
+
     return (
         <Stack>
             <Stack>
@@ -54,19 +55,24 @@ export const Stabilization = ({ data }: { data: any }) => {
             </Stack>
 
             <AggTable
-                refugeeColumns={[[REFUGEE, NATIONAL]]}
+                refugeeColumns={[
+                    [
+                        { ...REFUGEE, id: `SC_TS_${REFUGEE.id}` },
+                        { ...NATIONAL, id: `SC_TS_${NATIONAL.id}` },
+                    ],
+                ]}
                 rows={[
                     {
-                        id: "SC_TS_Ind_Sum_number_of_days_stay_for_discharged_children_lt_5",
+                        id: "Ind_Sum_number_of_days_stay_for_discharged_children_lt_5",
                         name: "Sum number of days stay for exit promoted to otp/tsfp and recovered (< 5)",
                     },
                     {
-                        id: "SC_TS_Ind_Sum_average_weight_gain_for_discharged_children_lt_5",
+                        id: "Ind_Sum_average_weight_gain_for_discharged_children_lt_5",
                         name: "Sum average weight gain for exit promoted to otp/tsfp and recovered (< 5)",
                     },
                 ]}
                 data={data}
-                onlyRow
+                reverse
             />
         </Stack>
     );

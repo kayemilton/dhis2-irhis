@@ -1,24 +1,20 @@
-import React from "react";
 import { Stack, Text } from "@chakra-ui/react";
-import {
-    REFUGEE,
-    MALE_FEMALE,
-    NATIONAL,
-    REFUGEE_NATIONAL,
-    AGE_18_G,
-    AGE_18,
-    YEARS_T0TAL,
-    YEARS_LT_20,
-    YEARS_GT_20,
-    join2,
-    FEMALE,
-    MALE,
-    MALE_INFANTS,
-    FEMALE_INFANTS,
-} from "../../utils";
-import AggTable from "../../components/AggTable";
-import art from "./art.json";
+import React from "react";
 import AggTable2 from "../../components/AggTable2";
+import {
+    FEMALE,
+    FEMALE_INFANTS,
+    join2,
+    MALE,
+    MALE_FEMALE,
+    MALE_INFANTS,
+    NATIONAL,
+    REFUGEE,
+    YEARS_GT_20,
+    YEARS_LT_20,
+    YEARS_T0TAL,
+} from "../../utils";
+import art from "./art.json";
 
 const rows = [
     { id: "HIV_HIV_Testing_ANC_Total", name: "Total" },
@@ -200,7 +196,7 @@ export const HIV = ({ data }: { data: any }) => {
         ],
     ];
     return (
-        <Stack spacing="40px" w="100%">
+        <Stack spacing="20px" w="100%">
             <Stack>
                 <Text fontWeight="bold">Condom Distribution</Text>
                 <AggTable2

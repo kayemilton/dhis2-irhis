@@ -33,7 +33,7 @@
     },
     {
         "name": "Ear Diseases",
-        "id": "OPD_TS_ahc_Ear"
+        "id": "OPD_TS_ahc_Ear_s"
     },
     {
         "name": "Dental Conditions",
@@ -121,7 +121,7 @@
     },
     {
         "name": "Influenza-Like Illness",
-        "id": "OPD_TS_ahc_influenza-like_illness"
+        "id": "OPD_TS_nd_influenza-like_illness"
     },
     {
         "name": "Other acute health conditions",

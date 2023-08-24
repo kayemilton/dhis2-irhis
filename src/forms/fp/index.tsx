@@ -1,4 +1,5 @@
 import {
+    Box,
     Stack,
     Table,
     Tbody,
@@ -7,11 +8,9 @@ import {
     Th,
     Thead,
     Tr,
-    Box,
 } from "@chakra-ui/react";
-import { useElementSize } from "usehooks-ts";
-
 import React from "react";
+import { useElementSize } from "usehooks-ts";
 import family_planning from "./family_planning.json";
 
 export const FP = ({ data }: { data: any }) => {
@@ -41,12 +40,7 @@ export const FP = ({ data }: { data: any }) => {
         <Stack w="100%" h="100%">
             <Text>Family Planning </Text>
             <Box h="100%" w="100%" ref={squareRef}>
-                <Box
-                    position="relative"
-                    overflow="auto"
-                    h={`${height - 20}px`}
-                    w="100%"
-                >
+                <Box position="relative" overflow="auto">
                     <Table variant="unstyled" size="sm">
                         <Thead>
                             <Tr>
