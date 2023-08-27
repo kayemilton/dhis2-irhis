@@ -64,41 +64,38 @@ export default function Dashboard() {
     const navigate = useNavigate<EventsGenerics>();
     const engine = useDataEngine();
     const [index, setIndex] = useState<number>(0);
-    const [units, setUnits] = useState<string[]>(["lvbkNrwAFmE"]);
+    const [units, setUnits] = useState<string[]>([]);
 
     const onChangeTree = (newValue: string[]) => {
-        console.log(newValue);
         setUnits(() => newValue);
         setIndex(() => 0);
         navigate({
             search: (prev) => ({
                 ...prev,
-                facility: units[index],
+                facility: newValue[0],
             }),
         });
     };
     const { form, facility, period } = useSearch<EventsGenerics>();
-    const [value, setValue] = useState<Dayjs | undefined | null>(
-        dayjs().subtract(2, "months")
-    );
+    const [value, setValue] = useState<Dayjs | undefined | null>(null);
 
     const [loading, setLoading] = useState<boolean>(false);
 
-    useEffect(() => {
-        if (facility === undefined && period === undefined && value) {
-            const startDate = value.startOf("month").format("YYYY-MM-DD");
-            const endDate = value.endOf("month").format("YYYY-MM-DD");
-            navigate({
-                search: (prev) => ({
-                    ...prev,
-                    period: [startDate, endDate],
-                    facility: "lvbkNrwAFmE",
-                    form: "mortality",
-                }),
-            });
-        }
-        return () => {};
-    }, []);
+    // useEffect(() => {
+    //     if (facility === undefined && period === undefined && value) {
+    //         const startDate = value.startOf("month").format("YYYY-MM-DD");
+    //         const endDate = value.endOf("month").format("YYYY-MM-DD");
+    //         navigate({
+    //             search: (prev) => ({
+    //                 ...prev,
+    //                 period: [startDate, endDate],
+    //                 facility: "lvbkNrwAFmE",
+    //                 form: "mortality",
+    //             }),
+    //         });
+    //     }
+    //     return () => {};
+    // }, []);
 
     const { isError, isLoading, isSuccess, data, error } = useDataValueSet(
         facility,
@@ -156,7 +153,7 @@ export default function Dashboard() {
                                 payload: data,
                                 startDate,
                                 endDate,
-                                facility: iRHISUnit,
+                                facility: String(iRHISUnit),
                             });
                             toast({
                                 title: "Data uploaded.",
@@ -184,7 +181,7 @@ export default function Dashboard() {
                                 endDate: value
                                     .endOf("week")
                                     .format("YYYY-MM-DD"),
-                                facility: iRHISUnit,
+                                facility: String(iRHISUnit),
                             });
 
                             toast({
@@ -226,7 +223,6 @@ export default function Dashboard() {
 
     const next = () => {
         setIndex((index) => index + 1);
-        console.log(units);
         navigate({
             search: (prev) => ({
                 ...prev,
@@ -277,7 +273,10 @@ export default function Dashboard() {
                         <Spinner />
                     </Stack>
                 )}
-                {isSuccess && (forms[form || ""] || <Text>Select form</Text>)}
+                {isSuccess &&
+                    facility &&
+                    period &&
+                    (forms[form || ""] || <Text>Select form</Text>)}
                 {isError && <pre>{JSON.stringify(error)}</pre>}
             </Box>
             <Stack

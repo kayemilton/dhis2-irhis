@@ -26,9 +26,5 @@
     {
         "name": "Death within 24 hours",
         "id": "IPD_TS_Death_lt24h"
-    },
-    {
-        "name": "Number at the end of reporting period",
-        "id": "IPD_TS_Exits"
     }
 ]
