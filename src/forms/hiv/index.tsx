@@ -146,7 +146,7 @@ export const HIV = ({ data }: { data: any }) => {
 
     const pitcFemaleColumns = [
         [
-            { ...REFUGEE, span: 5 },
+            { ...REFUGEE, span: 3 },
             { ...NATIONAL, span: 3 },
         ],
         [
@@ -167,7 +167,7 @@ export const HIV = ({ data }: { data: any }) => {
                 ...a,
                 id: `${NATIONAL.id}_${a.id}`,
             })),
-            ...[YEARS_GT_20].map((a) => ({
+            ...join2([YEARS_GT_20], [FEMALE]).map((a) => ({
                 ...a,
                 id: `${NATIONAL.id}_${a.id}`,
             })),
@@ -189,7 +189,7 @@ export const HIV = ({ data }: { data: any }) => {
                 ...a,
                 id: `${REFUGEE.id}_${a.id}`,
             })),
-            ...[YEARS_T0TAL].map((a) => ({
+            ...[{ id: "Infants", name: "Infants" }].map((a) => ({
                 ...a,
                 id: `${NATIONAL.id}_${a.id}`,
             })),

@@ -70,9 +70,5 @@
     {
         "name": "Number of ANC HIV positive (known+ and newly tested+) on ART",
         "id": "ANC_TS_ANC_HIV_positive_on_ART"
-    },
-    {
-        "name": "Number of abortions",
-        "id": "ANC_TS_abortions"
     }
 ]

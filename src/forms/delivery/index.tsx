@@ -25,7 +25,11 @@ export const Delivery = ({ data }: { data: any }) => {
 
     const yearsColumns = [...columns0To4, YEARS_T0TAL];
 
-    const nationalColumn = [YEARS_LT_20, YEARS_GT_20, YEARS_T0TAL];
+    const nationalColumn = [
+        YEARS_LT_20,
+        { ...YEARS_GT_20, id: " >= 20 yrs" },
+        { ...YEARS_T0TAL, id: "Total Crude" },
+    ];
 
     const acuteColumns = [
         [

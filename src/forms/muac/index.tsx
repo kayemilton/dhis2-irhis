@@ -55,7 +55,7 @@ export const MUAC = ({ data }: { data: any }) => {
                             ...AGE_0_TO_59_MONTHS,
                             YEARS_T0TAL_LT_5,
                             PREGNANT_LACTATING,
-                            YEARS_T0TAL,
+                            { ...YEARS_T0TAL, id: "Pregnant_and_Lactating" },
                         ],
                     ]}
                     reverse2

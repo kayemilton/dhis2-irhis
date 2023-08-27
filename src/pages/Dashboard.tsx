@@ -66,12 +66,14 @@ export default function Dashboard() {
     const [index, setIndex] = useState<number>(0);
     const [units, setUnits] = useState<string[]>(["lvbkNrwAFmE"]);
 
-    const onChangeTree = (newValue: string[], rest: any) => {
+    const onChangeTree = (newValue: string[]) => {
+        console.log(newValue);
         setUnits(() => newValue);
+        setIndex(() => 0);
         navigate({
             search: (prev) => ({
                 ...prev,
-                facility: newValue.length > 0 ? newValue[0] : undefined,
+                facility: units[index],
             }),
         });
     };
@@ -86,7 +88,6 @@ export default function Dashboard() {
         if (facility === undefined && period === undefined && value) {
             const startDate = value.startOf("month").format("YYYY-MM-DD");
             const endDate = value.endOf("month").format("YYYY-MM-DD");
-
             navigate({
                 search: (prev) => ({
                     ...prev,
@@ -143,54 +144,58 @@ export default function Dashboard() {
                 const [startDate, endDate] = processDates(allDates);
 
                 for (const unit of units) {
-                    const iRHISUnit = facilityObjects2[unit];
-                    const data = queryClient.getQueryData<any>([
-                        "data-value-set",
-                        unit,
-                        period,
-                    ]);
-                    if (data && startDate && endDate) {
-                        await sendData({
-                            payload: data,
-                            startDate,
-                            endDate,
-                            facility: iRHISUnit,
-                        });
-                        toast({
-                            title: "Data uploaded.",
-                            description: `Data has sent to for ${facilityObjects1[unit]}  iRHIS successfully`,
-                            status: "success",
-                            duration: 9000,
-                            isClosable: true,
-                        });
-                    } else {
-                        const data = await queryClient.fetchQuery({
-                            queryKey: ["data-value-set", unit, period],
-                            queryFn: async () => {
-                                return await queryDataValues(
-                                    engine,
-                                    unit,
-                                    period
-                                );
-                            },
-                        });
-                        await sendData({
-                            payload: data,
-                            startDate: value
-                                .startOf("week")
-                                .format("YYYY-MM-DD"),
-                            endDate: value.endOf("week").format("YYYY-MM-DD"),
-                            facility: iRHISUnit,
-                        });
+                    try {
+                        const iRHISUnit = facilityObjects2[unit];
+                        const data = queryClient.getQueryData<any>([
+                            "data-value-set",
+                            unit,
+                            period,
+                        ]);
+                        if (data && startDate && endDate) {
+                            await sendData({
+                                payload: data,
+                                startDate,
+                                endDate,
+                                facility: iRHISUnit,
+                            });
+                            toast({
+                                title: "Data uploaded.",
+                                description: `Data has sent to for ${facilityObjects1[unit]}  iRHIS successfully`,
+                                status: "success",
+                                duration: 9000,
+                                isClosable: true,
+                            });
+                        } else {
+                            const data = await queryClient.fetchQuery({
+                                queryKey: ["data-value-set", unit, period],
+                                queryFn: async () => {
+                                    return await queryDataValues(
+                                        engine,
+                                        unit,
+                                        period
+                                    );
+                                },
+                            });
+                            await sendData({
+                                payload: data,
+                                startDate: value
+                                    .startOf("week")
+                                    .format("YYYY-MM-DD"),
+                                endDate: value
+                                    .endOf("week")
+                                    .format("YYYY-MM-DD"),
+                                facility: iRHISUnit,
+                            });
 
-                        toast({
-                            title: "Data uploaded.",
-                            description: `Data has sent to for ${facilityObjects1[unit]}  iRHIS successfully`,
-                            status: "success",
-                            duration: 9000,
-                            isClosable: true,
-                        });
-                    }
+                            toast({
+                                title: "Data uploaded.",
+                                description: `Data for facility ${facilityObjects1[unit]} sent to iRHIS successfully`,
+                                status: "success",
+                                duration: 9000,
+                                isClosable: true,
+                            });
+                        }
+                    } catch (error) {}
                 }
             }
         } catch (error) {
@@ -220,15 +225,25 @@ export default function Dashboard() {
     };
 
     const next = () => {
-        if (units.length > 0) {
-            setIndex((s: number) => (s + 1) % units.length);
-            navigate({
-                search: (prev) => ({
-                    ...prev,
-                    facility: units[index],
-                }),
-            });
-        }
+        setIndex((index) => index + 1);
+        console.log(units);
+        navigate({
+            search: (prev) => ({
+                ...prev,
+                facility: units[index],
+            }),
+        });
+    };
+
+    const prev = () => {
+        setIndex((index) => index - 1);
+
+        navigate({
+            search: (prev) => ({
+                ...prev,
+                facility: units[index],
+            }),
+        });
     };
     return (
         <Stack h="calc(100vh - 78px)" spacing="5px">
@@ -277,8 +292,16 @@ export default function Dashboard() {
                     alignItems="center"
                     justifyContent="space-between"
                 >
+                    <Button onClick={prev} isDisabled={index === 0}>
+                        Prev
+                    </Button>
                     <Text>{facilityObjects1[facility || ""]}</Text>
-                    <Button onClick={() => next()}>Next</Button>
+                    <Button
+                        onClick={next}
+                        isDisabled={index >= units.length - 1}
+                    >
+                        Next
+                    </Button>
                 </Stack>
                 <Spacer />
                 <Button

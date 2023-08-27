@@ -73,6 +73,12 @@ export default function AggTable2({
                                         ].indexOf(col.id) !== -1
                                     ) {
                                         finalKey = `${id}__${col.id}`;
+                                    } else if (
+                                        id ===
+                                            "HIV_HIV_ART_number_at_the_end_of_reporting_period" &&
+                                        col.id.indexOf("Nat_") !== -1
+                                    ) {
+                                        finalKey = `HIV_number_at_the_end_of_reporting_period_HIV_ART_${col.id}`;
                                     }
                                     if (reverse) {
                                         finalKey = `${col.id}_${id}`;

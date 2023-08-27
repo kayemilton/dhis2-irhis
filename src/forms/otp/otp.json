@@ -58,9 +58,5 @@
     {
         "name": "Other exits",
         "id": "OTP_TS_other_exits"
-    },
-    {
-        "name": "Number at the end of reporting period",
-        "id": "OTP_TS_number_at_the_end_of_reporting_period"
     }
 ]

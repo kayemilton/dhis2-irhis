@@ -316,14 +316,6 @@
         "id": "IPD_TS_inj_Other_injuries"
     },
     {
-        "name": "Self-harm",
-        "id": "IPD_TS_std_Self-harm"
-    },
-    {
-        "name": "Suicidal attempt/suicide",
-        "id": "IPD_TS_std_Suicidal_attempt/suicide"
-    },
-    {
         "name": "Acute Flaccid Paralysis",
         "id": "IPD_TS_nd_Acute_Flaccid_Paralysis"
     },

@@ -94,6 +94,26 @@ export default function AggTable({
                                 {refugees.length > 0 &&
                                     refugees[refugees.length - 1].map((col) => {
                                         let finalKey = `${id}_${col.id}`;
+
+                                        if (
+                                            id === "IPD_TS_std_Other" &&
+                                            [
+                                                "Ref_0_4_yrs_Death",
+                                                "Ref_5_17_yrs_Adm",
+                                                "Ref_5_17_yrs_Death",
+                                                "Ref_18_59_yrs_Adm",
+                                                "Ref_18_59_yrs_Death",
+                                                "Ref_gt_60_yrs_Adm",
+                                                "Ref_gt_60_yrs_Death",
+                                                "Ref_total_Adm",
+                                                "Ref_total_Death",
+                                            ].indexOf(col.id) !== -1
+                                        ) {
+                                            finalKey = `${id.replace(
+                                                "_std_",
+                                                "_mh_"
+                                            )}_${col.id}`;
+                                        }
                                         if (reverse) {
                                             finalKey = `${col.id}_${id}`;
                                         }

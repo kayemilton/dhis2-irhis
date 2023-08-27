@@ -32,9 +32,9 @@ export const FP = ({ data }: { data: any }) => {
         "Discontinued_user_Ref_gte_20_yrs_M",
         "Discontinued_user_Ref_gte_20_yrs_F",
         "Discontinued_user_Ref_total_crude",
-        "New_user_Nat",
-        "Repeat_user_Nat",
-        "Discontinued_user_Nat",
+        "New_user _Nat",
+        "Repeat_user _Nat",
+        "Discontinued_user _Nat",
     ];
     return (
         <Stack w="100%" h="100%">

@@ -1,5 +1,57 @@
 [
     {
+        "key": "IMM_TS_BCG_administered",
+        "value": "MxAg9De4cra.LbCqcOuZipd+MxAg9De4cra.kBLpiQanUSy"
+    },
+    {
+        "key": "IMM_TS_BCG_supplied",
+        "value": "QGoQrfDCKYl.HllvX50cXC0+\nJSRCj9aRZcz.HllvX50cXC0"
+    },
+    {
+        "key": "IMM_TS_Tetanus_administered",
+        "value": 0
+    },
+    {
+        "key": "HIV_HIV_Testing_PITC_Total_Ref_lt_20_yrs_F",
+        "value": "SWyDuZLO6MC.rDIYMMteqBO+SWyDuZLO6MC.EwFHO5G420a+SWyDuZLO6MC.PXZxiZcVelu+SWyDuZLO6MC.nuMYxrh0R2i+SWyDuZLO6MC.tDRDjpo0YoL+\nmPbUQ5nEAJS.rDIYMMteqBO+mPbUQ5nEAJS.EwFHO5G420a+mPbUQ5nEAJS.PXZxiZcVelu+mPbUQ5nEAJS.nuMYxrh0R2i+mPbUQ5nEAJS.tDRDjpo0YoL"
+    },
+    {
+        "key": "HIV_HIV_Testing_PITC_Total_Ref_gte_20_yrs_F",
+        "value": "SWyDuZLO6MC.hQErX90w0QX+SWyDuZLO6MC.kAIFR5chGAF+SWyDuZLO6MC.kE2hYoEOdKZ+SWyDuZLO6MC.hzxRKJVw1qz+SWyDuZLO6MC.IINRfWBo1HP+SWyDuZLO6MC.wwyAx7XFJxl+SWyDuZLO6MC.f0IY8VORiY9+\nmPbUQ5nEAJS.hQErX90w0QX+mPbUQ5nEAJS.kAIFR5chGAF+mPbUQ5nEAJS.kE2hYoEOdKZ+mPbUQ5nEAJS.hzxRKJVw1qz+mPbUQ5nEAJS.IINRfWBo1HP+mPbUQ5nEAJS.wwyAx7XFJxl+mPbUQ5nEAJS.f0IY8VORiY9"
+    },
+    {
+        "key": "HIV_HIV_Testing_PITC_Total_Ref_lt_20_yrs_M",
+        "value": "SWyDuZLO6MC.NuGCerWN58O+SWyDuZLO6MC.Os9njqZEjOb+SWyDuZLO6MC.suw2uRYvps1+SWyDuZLO6MC.qMHtANd83kh+SWyDuZLO6MC.kBpgzphXpAR+\nmPbUQ5nEAJS.NuGCerWN58O+mPbUQ5nEAJS.Os9njqZEjOb+mPbUQ5nEAJS.suw2uRYvps1+mPbUQ5nEAJS.qMHtANd83kh+mPbUQ5nEAJS.kBpgzphXpAR"
+    },
+    {
+        "key": "HIV_HIV_Testing_PITC_Total_Ref_gte_20_yrs_M",
+        "value": "SWyDuZLO6MC.aQ1xl7PpEBR+SWyDuZLO6MC.uTEkUkUPGlT+SWyDuZLO6MC.Q6BZZU5OqUz+SWyDuZLO6MC.YvuAd9YbUW1+SWyDuZLO6MC.TNRCya9Zcnm+SWyDuZLO6MC.zHIgRxojTnV+SWyDuZLO6MC.KQym92Lq7PP+\nmPbUQ5nEAJS.aQ1xl7PpEBR+mPbUQ5nEAJS.uTEkUkUPGlT+mPbUQ5nEAJS.Q6BZZU5OqUz+mPbUQ5nEAJS.YvuAd9YbUW1+mPbUQ5nEAJS.TNRCya9Zcnm+mPbUQ5nEAJS.zHIgRxojTnV+mPbUQ5nEAJS.KQym92Lq7PP"
+    },
+    {
+        "key": "HIV_HIV_Testing_PITC_Total_Ref_total_crude",
+        "value": 0
+    },
+    {
+        "key": "HIV_HIV_Testing_PITC_Positive_Ref_lt_20_yrs_F",
+        "value": "zr8RscthjI8.rDIYMMteqBO+zr8RscthjI8.EwFHO5G420a+zr8RscthjI8.PXZxiZcVelu+zr8RscthjI8.nuMYxrh0R2i+zr8RscthjI8.tDRDjpo0YoL+\nMLml19ikx5S.rDIYMMteqBO+MLml19ikx5S.EwFHO5G420a+MLml19ikx5S.PXZxiZcVelu+MLml19ikx5S.nuMYxrh0R2i+MLml19ikx5S.tDRDjpo0YoL"
+    },
+    {
+        "key": "HIV_HIV_Testing_PITC_Positive_Ref_gte_20_yrs_F",
+        "value": "zr8RscthjI8.hQErX90w0QX+zr8RscthjI8.kAIFR5chGAF+zr8RscthjI8.kE2hYoEOdKZ+zr8RscthjI8.hzxRKJVw1qz+zr8RscthjI8.IINRfWBo1HP+zr8RscthjI8.wwyAx7XFJxl+zr8RscthjI8.f0IY8VORiY9+\nMLml19ikx5S.hQErX90w0QX+MLml19ikx5S.kAIFR5chGAF+MLml19ikx5S.kE2hYoEOdKZ+MLml19ikx5S.hzxRKJVw1qz+MLml19ikx5S.IINRfWBo1HP+MLml19ikx5S.wwyAx7XFJxl+MLml19ikx5S.f0IY8VORiY9"
+    },
+    {
+        "key": "HIV_HIV_Testing_PITC_Positive_Ref_lt_20_yrs_M",
+        "value": "zr8RscthjI8.NuGCerWN58O+zr8RscthjI8.Os9njqZEjOb+zr8RscthjI8.suw2uRYvps1+zr8RscthjI8.qMHtANd83kh+zr8RscthjI8.kBpgzphXpAR+\nMLml19ikx5S.NuGCerWN58O+MLml19ikx5S.Os9njqZEjOb+MLml19ikx5S.suw2uRYvps1+MLml19ikx5S.qMHtANd83kh+MLml19ikx5S.kBpgzphXpAR"
+    },
+    {
+        "key": "HIV_HIV_Testing_PITC_Positive_Ref_gte_20_yrs_M",
+        "value": "zr8RscthjI8.aQ1xl7PpEBR+zr8RscthjI8.uTEkUkUPGlT+zr8RscthjI8.Q6BZZU5OqUz+zr8RscthjI8.YvuAd9YbUW1+zr8RscthjI8.TNRCya9Zcnm+zr8RscthjI8.zHIgRxojTnV+zr8RscthjI8.KQym92Lq7PP+\nMLml19ikx5S.aQ1xl7PpEBR+MLml19ikx5S.uTEkUkUPGlT+MLml19ikx5S.Q6BZZU5OqUz+MLml19ikx5S.YvuAd9YbUW1+MLml19ikx5S.TNRCya9Zcnm+MLml19ikx5S.zHIgRxojTnV+MLml19ikx5S.KQym92Lq7PP"
+    },
+    {
+        "key": "HIV_HIV_Testing_PITC_Positive_Ref_total_crude",
+        "value": 0
+    },
+    {
         "key": "Mort_TS_M_Refugee_lt_1",
         "value": 0
     },

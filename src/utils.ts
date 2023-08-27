@@ -309,30 +309,33 @@ export const diseaseControlColumns = [
 ];
 
 export const getDatesBetween = (start: Date, end: Date) => {
+    const all: Date[] = [];
     for (
-        var arr: Date[] = [], dt = new Date(start);
+        let dt = new Date(start);
         dt <= new Date(end);
         dt.setDate(dt.getDate() + 1)
     ) {
-        arr.push(new Date(dt));
+        all.push(new Date(dt));
     }
-    return arr;
+    return all;
 };
 
 export const processDates = (arr: Date[]) => {
     const all = arr.map((d) => {
-        const year = dayjs(d).year();
-        const month = dayjs(d).month();
-        const day = dayjs(d).day();
-        return { year, month, day, date: dayjs(d).format("YYYY-MM-DD") };
+        return { date: dayjs(d).format("YYYY-MM-DD") };
     });
-    const minMonth = minBy(all, "month");
-    const maxMonth = maxBy(all, "month");
-    const groups = groupBy(all, "month");
+    const minMonth = minBy(all, (d) => d.date.slice(0, 7));
+    const maxMonth = maxBy(all, (d) => d.date.slice(0, 7));
+    const groups = groupBy(all, (d) => d.date.slice(0, 7));
 
-    if (groups[minMonth?.month || ""] <= groups[maxMonth?.month || ""]) {
-        console.log(maxMonth);
-        return [minMonth?.date, maxMonth?.date];
+    if (
+        groups[String(minMonth?.date.slice(0, 7))]?.length <=
+        groups[String(maxMonth?.date.slice(0, 7))]?.length
+    ) {
+        return [
+            dayjs(arr[0]).format("YYYY-MM-DD"),
+            dayjs(arr[arr.length - 1]).format("YYYY-MM-DD"),
+        ];
     }
 
     return [
