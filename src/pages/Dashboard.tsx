@@ -1,11 +1,11 @@
 import {
+    Box,
     Button,
     Spacer,
     Spinner,
     Stack,
     Text,
     useToast,
-    Box,
 } from "@chakra-ui/react";
 import { useDataEngine } from "@dhis2/app-runtime";
 import { useNavigate, useSearch } from "@tanstack/react-location";
@@ -17,7 +17,7 @@ import updateLocale from "dayjs/plugin/updateLocale";
 import utc from "dayjs/plugin/utc";
 import weekday from "dayjs/plugin/weekday";
 import { fromPairs } from "lodash";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import FacilityTree from "../components/FacilityTree";
 import facilities from "../facilities.json";
 import { ANC } from "../forms/anc";
@@ -80,23 +80,6 @@ export default function Dashboard() {
     const [value, setValue] = useState<Dayjs | undefined | null>(null);
 
     const [loading, setLoading] = useState<boolean>(false);
-
-    // useEffect(() => {
-    //     if (facility === undefined && period === undefined && value) {
-    //         const startDate = value.startOf("month").format("YYYY-MM-DD");
-    //         const endDate = value.endOf("month").format("YYYY-MM-DD");
-    //         navigate({
-    //             search: (prev) => ({
-    //                 ...prev,
-    //                 period: [startDate, endDate],
-    //                 facility: "lvbkNrwAFmE",
-    //                 form: "mortality",
-    //             }),
-    //         });
-    //     }
-    //     return () => {};
-    // }, []);
-
     const { isError, isLoading, isSuccess, data, error } = useDataValueSet(
         facility,
         period
@@ -123,87 +106,79 @@ export default function Dashboard() {
     };
     const postData = async () => {
         setLoading(() => true);
-        try {
-            if (value && units.length > 0) {
-                const end = value
-                    .startOf("month")
-                    .endOf("week")
-                    .format("YYYY-MM-DD");
-                const start = value
-                    .startOf("month")
-                    .startOf("week")
-                    .format("YYYY-MM-DD");
-                const allDates = getDatesBetween(
-                    new Date(start),
-                    new Date(end)
-                );
+        if (value && units.length > 0) {
+            const end = value
+                .startOf("month")
+                .endOf("week")
+                .format("YYYY-MM-DD");
+            const start = value
+                .startOf("month")
+                .startOf("week")
+                .format("YYYY-MM-DD");
+            const allDates = getDatesBetween(new Date(start), new Date(end));
 
-                const [startDate, endDate] = processDates(allDates);
+            const [startDate, endDate] = processDates(allDates);
 
-                for (const unit of units) {
-                    try {
-                        const iRHISUnit = facilityObjects2[unit];
-                        const data = queryClient.getQueryData<any>([
-                            "data-value-set",
-                            unit,
-                            period,
-                        ]);
-                        if (data && startDate && endDate) {
-                            await sendData({
-                                payload: data,
-                                startDate,
-                                endDate,
-                                facility: String(iRHISUnit),
-                            });
-                            toast({
-                                title: "Data uploaded.",
-                                description: `Data has sent to for ${facilityObjects1[unit]}  iRHIS successfully`,
-                                status: "success",
-                                duration: 9000,
-                                isClosable: true,
-                            });
-                        } else {
-                            const data = await queryClient.fetchQuery({
-                                queryKey: ["data-value-set", unit, period],
-                                queryFn: async () => {
-                                    return await queryDataValues(
-                                        engine,
-                                        unit,
-                                        period
-                                    );
-                                },
-                            });
-                            await sendData({
-                                payload: data,
-                                startDate: value
-                                    .startOf("week")
-                                    .format("YYYY-MM-DD"),
-                                endDate: value
-                                    .endOf("week")
-                                    .format("YYYY-MM-DD"),
-                                facility: String(iRHISUnit),
-                            });
+            for (const unit of units) {
+                try {
+                    const iRHISUnit = facilityObjects2[unit];
+                    const data = queryClient.getQueryData<any>([
+                        "data-value-set",
+                        unit,
+                        period,
+                    ]);
+                    if (data && startDate && endDate) {
+                        await sendData({
+                            payload: data,
+                            startDate,
+                            endDate,
+                            facility: String(iRHISUnit),
+                        });
+                        toast({
+                            title: "Data uploaded.",
+                            description: `Data has sent to for ${facilityObjects1[unit]}  iRHIS successfully from ${startDate} to ${endDate}`,
+                            status: "success",
+                            duration: 9000,
+                            isClosable: true,
+                        });
+                    } else {
+                        const data = await queryClient.fetchQuery({
+                            queryKey: ["data-value-set", unit, period],
+                            queryFn: async () => {
+                                return await queryDataValues(
+                                    engine,
+                                    unit,
+                                    period
+                                );
+                            },
+                        });
+                        await sendData({
+                            payload: data,
+                            startDate,
+                            endDate,
+                            facility: String(iRHISUnit),
+                        });
 
-                            toast({
-                                title: "Data uploaded.",
-                                description: `Data for facility ${facilityObjects1[unit]} sent to iRHIS successfully`,
-                                status: "success",
-                                duration: 9000,
-                                isClosable: true,
-                            });
-                        }
-                    } catch (error) {}
+                        toast({
+                            title: "Data uploaded.",
+                            description: `Data for facility ${facilityObjects1[unit]} sent to iRHIS successfully from ${startDate} to ${endDate}`,
+                            status: "success",
+                            duration: 9000,
+                            isClosable: true,
+                        });
+                    }
+                } catch (error) {
+                    toast({
+                        title: "Sending to iRHIS failed",
+                        description: `${error.message} from ${startDate} to ${endDate}`,
+                        status: "error",
+                        duration: 9000,
+                        isClosable: true,
+                    });
                 }
             }
-        } catch (error) {
-            toast({
-                title: "Sending to iRHIS failed",
-                description: error.message,
-                status: "error",
-                duration: 9000,
-                isClosable: true,
-            });
         }
+
         setLoading(() => false);
     };
 
