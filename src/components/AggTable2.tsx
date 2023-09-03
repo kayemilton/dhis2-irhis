@@ -98,6 +98,24 @@ export default function AggTable2({
                                                 null,
                                                 2
                                             )}
+                                            bg={
+                                                data[finalKey]
+                                                    ? Number(
+                                                          data[finalKey].value
+                                                      ) < 0
+                                                        ? "red.600"
+                                                        : ""
+                                                    : ""
+                                            }
+                                            color={
+                                                data[finalKey]
+                                                    ? Number(
+                                                          data[finalKey].value
+                                                      ) < 0
+                                                        ? "white"
+                                                        : ""
+                                                    : ""
+                                            }
                                         >
                                             {data[finalKey]?.value}
                                             {/* {finalKey} */}

@@ -66,7 +66,7 @@ export const queryDataValues = async (
                 "quMWqLxzcfO",
                 "GyD9wEs2NYG",
                 "EBqVAQRmiPm",
-                "C4oUitImBPK",
+                // "C4oUitImBPK",
             ].join(",")
         );
 
@@ -78,7 +78,7 @@ export const queryDataValues = async (
         allParams.append("dataSet", "quMWqLxzcfO");
         allParams.append("dataSet", "GyD9wEs2NYG");
         allParams.append("dataSet", "EBqVAQRmiPm");
-        allParams.append("dataSet", "C4oUitImBPK");
+        // allParams.append("dataSet", "C4oUitImBPK");
         allParams.append("orgUnit", orgUnit);
         allParams.append("startDate", period[0]);
         allParams.append("endDate", period[1]);
@@ -101,27 +101,27 @@ export const queryDataValues = async (
         let allValuesPrev: { [key: string]: any } = {};
 
         if (dataValues) {
-            const withWeeks = dataValues.filter(
-                (d: any) => d.period.indexOf("W") !== -1
-            );
-            const withoutWeeks = dataValues.filter(
-                (d: any) => d.period.indexOf("W") === -1
-            );
+            // const withWeeks = dataValues.filter(
+            //     (d: any) => d.period.indexOf("W") !== -1
+            // );
+            // const withoutWeeks = dataValues.filter(
+            //     (d: any) => d.period.indexOf("W") === -1
+            // );
 
-            const processed = Object.entries(
-                groupBy(
-                    withWeeks,
-                    (v) =>
-                        `${v.attributeOptionCombo}${v.categoryOptionCombo}${v.dataElement}${v.orgUnit}`
-                )
-            ).map(([k, values]) => ({
-                ...values[0],
-                value: String(sum(values.map((d: any) => Number(d.value)))),
-            }));
+            // const processed = Object.entries(
+            //     groupBy(
+            //         withWeeks,
+            //         (v) =>
+            //             `${v.attributeOptionCombo}${v.categoryOptionCombo}${v.dataElement}${v.orgUnit}`
+            //     )
+            // ).map(([k, values]) => ({
+            //     ...values[0],
+            //     value: String(sum(values.map((d: any) => Number(d.value)))),
+            // }));
 
             allValues = fromPairs<string>(
-                withoutWeeks
-                    .concat(processed)
+                dataValues
+                    // .concat(processed)
                     .map(
                         ({
                             dataElement,

@@ -46,5 +46,9 @@
     {
         "name": "Number of exits defaulter",
         "id": "SC_TS_Report_defaulter"
+    },
+    {
+        "name": "Number at the end of reporting period",
+        "id": "SC_TS_number_at_the_end_of_reporting_period"
     }
 ]

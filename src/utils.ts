@@ -215,15 +215,15 @@ export const sendData = async ({
     startDate,
     endDate,
     facility,
+    authentication,
 }: {
     payload: any;
     startDate: string;
     endDate: string;
     facility: string;
+    authentication: { username: string; baseURL: string; password: string };
 }) => {
-    const username = process.env["REACT_APP_USERNAME"];
-    const password = process.env["REACT_APP_PASSWORD"];
-    const baseURL = process.env["REACT_APP_URL"];
+    const { username, password, baseURL } = authentication;
 
     const instance = axios.create({
         baseURL: baseURL,

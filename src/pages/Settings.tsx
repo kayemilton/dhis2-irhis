@@ -12,7 +12,6 @@ import {
     useToast,
 } from "@chakra-ui/react";
 import { useDataEngine } from "@dhis2/app-runtime";
-import dayjs from "dayjs";
 import React, { ChangeEvent, useState } from "react";
 import History from "../components/History";
 export default function Settings({
@@ -21,9 +20,6 @@ export default function Settings({
     data: { username: string; password: string; baseURL: string };
 }) {
     const toast = useToast();
-    const period = "202208";
-    const startDate = dayjs(period, "YYYYMM").startOf("week").add(3, "hours");
-    const endDate = dayjs(period, "YYYYMM").endOf("week");
     const [user, setUser] = useState<{
         username: string;
         password: string;
