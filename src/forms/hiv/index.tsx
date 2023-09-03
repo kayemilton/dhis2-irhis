@@ -84,11 +84,11 @@ export const HIV = ({ data }: { data: any }) => {
                 id: `${REFUGEE.id}_${a.id}`,
             })),
 
-            ...join2([YEARS_LT_20], [FEMALE]).map((a) => ({
+            ...[YEARS_LT_20].map((a) => ({
                 ...a,
                 id: `${NATIONAL.id}_${a.id}`,
             })),
-            ...join2([YEARS_GT_20], [FEMALE]).map((a) => ({
+            ...[YEARS_GT_20].map((a) => ({
                 ...a,
                 id: `${NATIONAL.id}_${a.id}`,
             })),

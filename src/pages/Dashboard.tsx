@@ -65,7 +65,7 @@ export default function Dashboard() {
     const engine = useDataEngine();
     const [index, setIndex] = useState<number>(0);
     const { form, facility, period } = useSearch<EventsGenerics>();
-    const [units, setUnits] = useState<string[]>(facility ? [facility] : []);
+    const [units, setUnits] = useState<string[]>([]);
 
     const onChangeTree = (newValue: string[]) => {
         setUnits(() => newValue);
@@ -77,9 +77,7 @@ export default function Dashboard() {
             }),
         });
     };
-    const [value, setValue] = useState<Dayjs | undefined | null>(
-        dayjs(period?.[0])
-    );
+    const [value, setValue] = useState<Dayjs | undefined | null>(null);
 
     const [loading, setLoading] = useState<boolean>(false);
     const { isError, isLoading, isSuccess, data, error } = useDataValueSet(
