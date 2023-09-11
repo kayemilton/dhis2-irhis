@@ -1,7 +1,6 @@
 import axios from "axios";
-import { Facility } from "./interfaces";
-import { fromPairs, groupBy, minBy, maxBy } from "lodash";
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
+import { fromPairs, groupBy, maxBy, minBy } from "lodash";
 
 export function encodeToBinary(str: string): string {
     return btoa(
@@ -128,7 +127,7 @@ export const AGE_0_TO_14_LT = [
 ];
 
 export const AGE_0_TO_59_MONTHS = [
-    MONTHS_0_TO_6,
+    // MONTHS_0_TO_6,
     MONTHS_6_TO_23,
     MONTHS_24_TO_59,
 ];

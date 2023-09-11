@@ -101,78 +101,38 @@ export const queryDataValues = async (
         let allValuesPrev: { [key: string]: any } = {};
 
         if (dataValues) {
-            // const withWeeks = dataValues.filter(
-            //     (d: any) => d.period.indexOf("W") !== -1
-            // );
-            // const withoutWeeks = dataValues.filter(
-            //     (d: any) => d.period.indexOf("W") === -1
-            // );
-
-            // const processed = Object.entries(
-            //     groupBy(
-            //         withWeeks,
-            //         (v) =>
-            //             `${v.attributeOptionCombo}${v.categoryOptionCombo}${v.dataElement}${v.orgUnit}`
-            //     )
-            // ).map(([k, values]) => ({
-            //     ...values[0],
-            //     value: String(sum(values.map((d: any) => Number(d.value)))),
-            // }));
-
             allValues = fromPairs<string>(
-                dataValues
-                    // .concat(processed)
-                    .map(
-                        ({
-                            dataElement,
-                            categoryOptionCombo,
-                            attributeOptionCombo,
-                            value,
-                        }: any) => [
-                            `${dataElement}.${categoryOptionCombo}.${attributeOptionCombo}`,
-                            value,
-                        ]
-                    )
+                dataValues.map(
+                    ({
+                        dataElement,
+                        categoryOptionCombo,
+                        attributeOptionCombo,
+                        value,
+                    }: any) => [
+                        `${dataElement}.${categoryOptionCombo}.${attributeOptionCombo}`,
+                        value,
+                    ]
+                )
             );
         }
 
         if (prev) {
-            const withWeeks = prev.filter(
-                (d: any) => d.period.indexOf("W") !== -1
-            );
-            const withoutWeeks = prev.filter(
-                (d: any) => d.period.indexOf("W") === -1
-            );
-
-            const processed = Object.entries(
-                groupBy(
-                    withWeeks,
-                    (v) =>
-                        `${v.attributeOptionCombo}${v.categoryOptionCombo}${v.dataElement}${v.orgUnit}`
-                )
-            ).map(([k, values]) => ({
-                ...values[0],
-                value: String(sum(values.map((d: any) => Number(d.value)))),
-            }));
-
             allValuesPrev = fromPairs<string>(
-                withoutWeeks
-                    .concat(processed)
-                    .map(
-                        ({
-                            dataElement,
-                            categoryOptionCombo,
-                            attributeOptionCombo,
-                            value,
-                        }: any) => [
-                            `${dataElement}.${categoryOptionCombo}.${attributeOptionCombo}`,
-                            value,
-                        ]
-                    )
+                prev.map(
+                    ({
+                        dataElement,
+                        categoryOptionCombo,
+                        attributeOptionCombo,
+                        value,
+                    }: any) => [
+                        `${dataElement}.${categoryOptionCombo}.${attributeOptionCombo}`,
+                        value,
+                    ]
+                )
             );
         }
 
-        return fromPairs(
+        const processed = fromPairs(
             mapping.map(({ key, value }) => {
                 let actualValue = String(value);
                 let attribute = "";
@@ -278,6 +238,28 @@ export const queryDataValues = async (
                 return [key, { value: "0", expression: "0" }];
             })
         );
+
+        const reprocessed = Object.entries(processed).map(([key, val]) => {
+            if (key.indexOf("at_the_end_of_reporting_period") !== -1) {
+                const theOtherKey = key.replace(
+                    "at_the_end_of_reporting_period",
+                    "at_beginning_of_reporting_period"
+                );
+                const currentValue = val.value;
+                const otherValue = processed[theOtherKey]?.value;
+                if (currentValue !== undefined && otherValue !== undefined) {
+                    return [
+                        key,
+                        {
+                            ...val,
+                            value: evaluate(`${currentValue} + ${otherValue}`),
+                        },
+                    ];
+                }
+            }
+            return [key, val];
+        });
+        return fromPairs(reprocessed);
     }
     return {};
 };

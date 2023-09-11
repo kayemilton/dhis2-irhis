@@ -111,7 +111,6 @@ export default function Dashboard() {
                 resource: "dataStore/irhis/user",
             },
         };
-
         try {
             const {
                 data: { baseURL, username, password },

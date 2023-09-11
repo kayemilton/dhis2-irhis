@@ -193,11 +193,11 @@
     },
     {
         "name": "Alcohol-related disorders",
-        "id": "IPD_TS_mh_alcohol-related_disorders_"
+        "id": "IPD_TS_mh_alcohol-related_disorders"
     },
     {
         "name": "Substance use disorders related to opiate use",
-        "id": "IPD_TS_mh_substance_use_disorders_related_to_opiate_use_"
+        "id": "IPD_TS_mh_substance_use_disorders_related_to_opiate_use"
     },
     {
         "name": "Substance use disorders related to benzodiazepine or other prescription medication",
@@ -205,11 +205,11 @@
     },
     {
         "name": "Other substance use disorders",
-        "id": "IPD_TS_mh_other_substance_use_disorders_"
+        "id": "IPD_TS_mh_other_substance_use_disorders"
     },
     {
         "name": "Intellectual disability",
-        "id": "IPD_TS_mh_intellectual_disability_"
+        "id": "IPD_TS_mh_intellectual_disability"
     },
     {
         "name": "Developmental disorders",
@@ -217,11 +217,11 @@
     },
     {
         "name": "Acute psychosis",
-        "id": "IPD_TS_mh_acute_psychosis_"
+        "id": "IPD_TS_mh_acute_psychosis"
     },
     {
         "name": "Chronic psychosis",
-        "id": "IPD_TS_mh_chronic_psychosis_"
+        "id": "IPD_TS_mh_chronic_psychosis"
     },
     {
         "name": "Bipolar disorders (Mania)",
@@ -237,15 +237,15 @@
     },
     {
         "name": "Moderate-severe depression",
-        "id": "IPD_TS_mh_moderate-severe_depression_"
+        "id": "IPD_TS_mh_moderate-severe_depression"
     },
     {
         "name": "Posttraumatic stress disorder",
-        "id": "IPD_TS_mh_posttraumatic_stress_disorder_"
+        "id": "IPD_TS_mh_posttraumatic_stress_disorder"
     },
     {
         "name": "Other moderate-severe emotional disorders",
-        "id": "IPD_TS_mh_other_moderate-severe_emotional_disorders_"
+        "id": "IPD_TS_mh_other_moderate-severe_emotional_disorders"
     },
     {
         "name": "Medically unexplained somatic complaint",
@@ -257,11 +257,11 @@
     },
     {
         "name": "Acute Stress",
-        "id": "IPD_TS_mh_acute_stress_"
+        "id": "IPD_TS_mh_acute_stress"
     },
     {
         "name": "Dissociative disorder",
-        "id": "IPD_TS_mh_dissociative_disorder_"
+        "id": "IPD_TS_mh_dissociative_disorder"
     },
     {
         "name": "Grief",

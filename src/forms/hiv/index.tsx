@@ -13,6 +13,7 @@ import {
     YEARS_GT_20,
     YEARS_LT_20,
     YEARS_T0TAL,
+    YEARS_T0TAL_ONLY,
 } from "../../utils";
 import art from "./art.json";
 
@@ -49,7 +50,7 @@ export const HIV = ({ data }: { data: any }) => {
                 ...a,
                 id: `${REFUGEE.id}_${a.id}`,
             })),
-            ...[YEARS_T0TAL].map((a) => ({
+            ...[YEARS_T0TAL_ONLY].map((a) => ({
                 ...a,
                 id: `${NATIONAL.id}_${a.id}`,
             })),
