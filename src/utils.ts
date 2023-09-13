@@ -234,32 +234,49 @@ export const sendData = async ({
         username,
         password,
     });
-    const finalPayload = {
-        user: 5389,
-        schema: 96,
-        data: fromPairs(
-            Object.entries(payload).map(([key, val]: any) => [
-                key,
-                val ? Number(val.value) : 0,
-            ])
-        ),
-        timelevel: 3,
-        location: Number(facility),
-        date_start: startDate,
-        date_end: endDate,
-    };
 
-    if (access) {
-        const { data: data1 } = await instance.post(
-            "reports/form_data/",
-            finalPayload,
-            {
-                headers: {
-                    Authorization: `Bearer ${access}`,
-                    "Content-Type": "application/json",
-                },
-            }
-        );
+    const {
+        data: { results },
+    } = await instance.post(
+        "users/user/query/",
+        { selector: { username }, fields: ["id"] },
+        {
+            headers: {
+                Authorization: `Bearer ${access}`,
+                "Content-Type": "application/json",
+            },
+        }
+    );
+
+    if (results.length > 0) {
+        const [{ id }] = results;
+        const finalPayload = {
+            user: id,
+            schema: 96,
+            data: fromPairs(
+                Object.entries(payload).map(([key, val]: any) => [
+                    key,
+                    val ? Number(val.value) : 0,
+                ])
+            ),
+            timelevel: 3,
+            location: Number(facility),
+            date_start: startDate,
+            date_end: endDate,
+        };
+
+        if (access) {
+            const { data: data1 } = await instance.post(
+                "reports/form_data/",
+                finalPayload,
+                {
+                    headers: {
+                        Authorization: `Bearer ${access}`,
+                        "Content-Type": "application/json",
+                    },
+                }
+            );
+        }
     }
 };
 
