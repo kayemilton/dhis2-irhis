@@ -185,7 +185,7 @@ export default function Dashboard() {
                     } catch (error) {
                         toast({
                             title: "Sending to iRHIS failed",
-                            description: `${error.message} from ${startDate} to ${endDate}`,
+                            description: `Sending data for ${facilityObjects1[unit]} from ${startDate} to ${endDate} has failed with error ${error.message}`,
                             status: "error",
                             duration: 9000,
                             isClosable: true,
