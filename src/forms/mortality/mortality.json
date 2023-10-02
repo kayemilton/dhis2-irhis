@@ -193,7 +193,7 @@
     },
     {
         "name": "Alcohol-related disorders",
-        "id": "Mort_TS_alcohol-related_disorders_"
+        "id": "Mort_TS_alcohol-related_disorders"
     },
     {
         "name": "Epilepsy / Seizures",
@@ -205,7 +205,7 @@
     },
     {
         "name": "Substance use disorders related to opiate use",
-        "id": "Mort_TS_substance_use_disorders_related_to_opiate_use_"
+        "id": "Mort_TS_substance_use_disorders_related_to_opiate_use"
     },
     {
         "name": "Self-harm/suicide",

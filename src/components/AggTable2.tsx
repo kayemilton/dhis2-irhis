@@ -64,16 +64,6 @@ export default function AggTable2({
                                 {columns[columns.length - 1].map((col) => {
                                     let finalKey = `${id}_${col.id}`;
                                     if (
-                                        id === "IPD_TS" &&
-                                        [
-                                            "Nat_5_17_yrs",
-                                            "Nat_18_59_yrs",
-                                            "Nat_gt_60_yrs",
-                                            "Nat_total_crude",
-                                        ].indexOf(col.id) !== -1
-                                    ) {
-                                        finalKey = `${id}__${col.id}`;
-                                    } else if (
                                         id ===
                                             "HIV_HIV_ART_number_at_the_end_of_reporting_period" &&
                                         col.id.indexOf("Nat_") !== -1

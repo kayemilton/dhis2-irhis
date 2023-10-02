@@ -81,11 +81,11 @@ export const Morbidity = ({ data }: { data: any }) => {
                     rows={[
                         {
                             name: "Number of new consultations",
-                            id: "OPD_TS_number_of_new_consultations_",
+                            id: "OPD_TS_number_of_new_consultations",
                         },
                         {
                             name: "Number of new NCD consultations",
-                            id: "OPD_TS_number_of_new_ncd_consultations_",
+                            id: "OPD_TS_number_of_new_ncd_consultations",
                         },
                         {
                             name: "Number of new MH consultations",

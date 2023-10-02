@@ -252,7 +252,7 @@ export const sendData = async ({
         const [{ id }] = results;
         const finalPayload = {
             user: id,
-            schema: 96,
+            schema: 143,
             data: fromPairs(
                 Object.entries(payload).map(([key, val]: any) => [
                     key,

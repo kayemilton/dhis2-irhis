@@ -114,12 +114,23 @@ export default function AggTable({
                                                 "_mh_"
                                             )}_${col.id}`;
                                         }
+                                        if (
+                                            id === "IMM_TS_Tetanus_Toxoid" &&
+                                            col.id === "administered"
+                                        ) {
+                                            finalKey = `${String(id).replace(
+                                                "_Toxoid",
+                                                ""
+                                            )}_${col.id}`;
+                                        }
                                         if (reverse) {
                                             finalKey = `${col.id}_${id}`;
                                         }
+
                                         if (onlyRow) {
                                             finalKey = id;
                                         }
+
                                         return (
                                             <Td
                                                 key={`${id}_${col.id}`}
